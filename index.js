@@ -6,7 +6,7 @@ const stripe = require("stripe")("sk_test_51HH2r9JsblpImHftoGmN5bUwtize3mcokSGDQ
 
 const app = express();
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.set('port', port);
 
