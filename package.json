@@ -1,0 +1,19 @@
+{
+  "name": "asuka-s-personal-website",
+  "version": "0.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Asuka Akagawa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "stripe": "^8.92.0"
+  },
+  "engines": {
+    "node": "12.18.3"
+  }
+}
