@@ -621,7 +621,7 @@ img {
 }
 
 /* iPad Pro vertical / iPad horizontal */
-/* leftoff work on font size! */
+/* left off work on font size! */
 @media(max-width: 1024px) { 
     body { 
         width: auto;
@@ -704,6 +704,13 @@ img {
     }
 }
 
+/* iPad horizontal  */
+@media(max-width: 768px) {
+    
+
+}
+
+/* iPhone / mobile devices */
 @media(max-width: 425px) {
     main {
         height: 60vh;

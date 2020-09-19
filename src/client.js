@@ -3,7 +3,7 @@ var stripe = Stripe("pk_test_51HH2r9JsblpImHft0SJHRBIUU0hKK86jQKoep1aoXVtgaGJcEb
 
 // The items the customer wants to buy
 var purchase = {
-  items: [{ id: "xl-tshirt" }]
+  items: [{ id: "album1" }]
 };
 
 // Disable the button until we have Stripe set up on the page
@@ -20,18 +20,18 @@ fetch("/create-payment-intent", {
   })
   .then(function(data) {
     var elements = stripe.elements();
-
     var style = {
       base: {
+        // fontFamily: 'Arial, sans-serif',
+        fontFamily: "'Helvetica Neue', Helveetica, Arial",
         color: "#32325d",
-        fontFamily: 'Arial, sans-serif',
         fontSmoothing: "antialiased",
         fontSize: "16px",
         "::placeholder": {
         }
       },
       invalid: {
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: "'Helvetica Neue', Helveetica, Arial",
         color: "#fa755a",
       }
     };
