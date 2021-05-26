@@ -356,11 +356,12 @@ input:hover {
 }
 
 #sns {
-    position: absolute;
-    top: 56vh;
+    position: relative;
+    top: 36vh;
 }
 
 img {
+    vertical-align: bottom;
     margin-right: 16px;
 }
 
