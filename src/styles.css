@@ -122,7 +122,7 @@ div.bio {
     width: 1192px;
 }
 
-/* sounds.html / works.html*/ 
+/* sounds.html / notations.html*/ 
 div.window {
     display: inline-block;
     width: 1200px;
@@ -268,7 +268,7 @@ div.progressBar{
     margin-left: 6px;
 }
 
-/* works.html */
+/* notations.html */
 #compositions, #arrangements {
     width: 600px;
     height: 60px;
@@ -315,105 +315,20 @@ div.description {
     font-weight: 200;
 }
 
-/* photosVideos.html */
-#videos, #photos {
-    width: 600px;
-    height: 60px;
-
-    font-size: 20pt;
-    font-weight: 400;
-    letter-spacing: 0.24em;
-    font-variant: small-caps;
-    color: rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-}
-
-.vcontainer {
+div.visuals {
     position: relative;
-    
-    width: 596px;
-    height: auto;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
-    margin-bottom: 48px;
-}
-
-.vplayer {
-    display: inline-block;
     width: 320px;
-    height: auto;
+    height: 213px;
+    margin-bottom: 36px;
     margin-left: 2px;
 
     outline-style: solid;
     outline-color: rgb(245, 245, 245);
     outline-width: 2px;
-}
-
-video::-webkit-media-controls-enclosure {
-    display:none !important;
-}
-
-div.vcontrols {
-    position: absolute;
-    width: 320px;
-
-    padding-left: 12px;
-    bottom: 12px;
-
-    z-index: 4;
-}
-
-.vdescription {
-    position: absolute;
-    width: 596px;
-
-    top: 0px;
-    padding-left: 356px;
-
-    font-size: 9pt;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    font-weight: 200;
-}
-
-.vprogressBarContainer {
-    vertical-align: middle;
-    width: 160px; /* Width of the outside container */
-    height: 3pt;
-    border-radius: 1.6pt;
-    display: inline-block;
-    background: rgb(127, 127, 127);
-}
-
-.vprogressBar {
-    vertical-align: middle;
-    width: 0%;
-    height: 3pt;
-    border-radius: 1.6pt;
-    background-color: rgb(245, 245, 245);
-}
-
-.vprogress {
-    width: 36px;
-    vertical-align: middle;
-    font-size: 6pt;
-    display: inline-block;
-    margin-left: 6px;
-}
-
-.vend {
-    width: 36px;
-    vertical-align: middle;
-    font-size: 6pt;
-    display: inline-block;
-    margin-left: 6px;
-}
-
-.bi-fullscreen {
-    margin-left: 2px;
 }
 
 /* contact.html */
@@ -424,7 +339,7 @@ input {
     font-weight: 200;
     text-align: left;
     color: rgb(245, 245, 245);
-    width: 240px;
+    width: 720px;
     border: none;
     background: none;
 }
@@ -478,7 +393,7 @@ img {
         width: 99%;
     }
 
-    /* sounds.html / works.html*/ 
+    /* sounds.html / notations.html*/ 
     div.window {
         width: 100%;
     }
@@ -515,7 +430,7 @@ img {
         margin-left: 2px;
     }
 
-    /* works.html */
+    /* notations.html / visuals.html */
     #compositions, #arrangements {
         width: 49.5%;
     }
@@ -535,89 +450,7 @@ img {
         line-height: 20px;
     }
 
-    /* PhotosVideos.html */
-    #videos, #photos {
-        width: 49.5%;
-    }
-
-    .vcontainer {
-        width: 100%;
-
-        margin-bottom: 36px;
-    }
-
-    .vplayer {
-        width: 256px; /* absval */
-    }
-
-    div.vcontrols {
-        width: 256px; /* absval */
-        padding-left: 2%;
-        bottom: 6%;
-    }
-
-    .vdescription {
-        width: 100%;
-        height: 95%;
-        overflow-y: scroll;
-
-        padding-left: 54%;
-
-        line-height: 20px;
-    }
-
-    .vprogressBarContainer {
-        width: 48%; /* Width of the outside container */
-    }
-
-    .vprogress {
-        width: 12.5%;
-                
-        margin-left: 1.2%;
-    }
-
-    .vend {
-        width: 12.5%;
-
-        margin-left: 1.2%;
-    }
-
-    .bi-fullscreen {
-        margin-left: 2%;
-    }
-
-    /* contact.html */
-    input {
-        font-size: 9pt;
-        line-height: 24px;
-        letter-spacing: 0.12em;
-        font-weight: 200;
-        text-align: left;
-        color: rgb(245, 245, 245);
-        width: 240px;
-        border: none;
-        background: none;
-    }
-
-    input:focus {
-        border: none;
-        background: none;
-        outline: none; 
-        
-    }
-
-    input:hover {
-        cursor: pointer;
-    }
-
-    #sns {
-        position: absolute;
-        top: 56vh;
-    }
-
-    img {
-        margin-right: 16px;
-    }
+    /* visuals.html */
 }
 
 /* iPad Pro vertical / iPad horizontal */
@@ -633,7 +466,7 @@ img {
         background-size: 120%, 120%;
     }
 
-    /* sounds.html / works.html */
+    /* sounds.html / notations.html */
     div.column1 {
         width: 49%;
     }
@@ -662,7 +495,7 @@ img {
         margin-left: 2px;
     }
 
-    /* works.html */
+    /* notations.html / visuals.html */
     #compositions, #arrangements {
         width: 49%;
     }
@@ -676,38 +509,8 @@ img {
         line-height: 20px;
         font-size: 7pt;
     }
-
-    /* photosVideos.html */
-    .vcontainer {
-        width: 100%;
-
-        margin-bottom: 48px;
-    }
-
-    .vplayer {
-        width: 213px; /* absval */
-    }
-
-    div.vcontrols {
-        width: 213px; /* absval */
-        bottom: 6%;
-    }
-
-    .vdescription { 
-        padding-left: 60%;
-        line-height: 20px;
-        font-size: 7pt;
-    }
-
-    .vprogressBarContainer {
-        width: 40%; /* Width of the outside container */
-
-        margin-left: 2%;
-    }
-
-    .bi-fullscreen {
-        margin-left: 4%;
-    }
+    
+    /* visuals.html */
 }
 
 /* iPad vertical */
@@ -751,7 +554,7 @@ img {
         font-size: 7pt;
     }
 
-     /* sounds.html / works.html*/ 
+     /* sounds.html / notations.html*/ 
 
     /* sounds.html */
     div.table {
@@ -767,7 +570,7 @@ img {
         line-height: 36px;
     }
 
-    /* works.html */
+    /* notations.html */
     #compositions, #arrangements {
         width: 99%;
         margin-top: 10px;
@@ -792,70 +595,17 @@ img {
 
         overflow-y: hidden;
     }
-
-    /* PhotosVideos.html */
-    #videos, #photos {
-        width: 99%;
-        margin-top: 10px;
-    }
-    
-    .vcontainer { 
-        width: 213px;
-
-        margin-bottom: 144px;
-    }
-
-    .vdescription {
-        width: 100%;
-        height: auto;
-
-        padding-top: 60%;
-        padding-left: 0%;
-
-        font-size: 7pt;
-        line-height: 16px;
-
-        overflow-y: hidden;
-    }
-
-    .progressBar svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    #playpause {
-        margin-right: 2%;
-        margin-left: 2%;
-    }
-    
-    #previousButton{
-        margin-right: 10px;
-        margin-left: 38%;
-    } 
-
-    #nextButton {
-        margin-right: 38%;
-        margin-left: 10px;
-    }
-
-    #progressBarContainer { 
-        width: 70%;
-    }
-
-    /* contact.html */
-    #sns {
-        position: absolute;
-        top: 26vh;
-    }
 }
 
 /* iPhone / mobile devices */
 @media(max-width: 425px) {
     main {
+        width: 275px;
         height: 66vh;
         margin-top: 12px;
         font-size: 7pt;
         line-height: 16px;
+        
     }
 
     body {
@@ -899,7 +649,7 @@ img {
         font-size: 7pt;
     }
 
-    /* sounds.html / works.html*/ 
+    /* sounds.html / notations.html*/ 
     div.column1 { 
         width: 99%;
     }
@@ -920,11 +670,10 @@ img {
         text-align: center;
 
         line-height: 36px;
-
         margin-top: 0px;
     }
 
-    /* works.html */
+    /* notations.html / visuals.html */
     #compositions, #arrangements {
         width: 99%;
         margin-top: 10px;
@@ -950,57 +699,15 @@ img {
         overflow-y: hidden;
     }
 
-    /* PhotosVideos.html */
-    #videos, #photos {
-        width: 99%;
-        margin-top: 10px;
-    }
-    
-    .vcontainer {
-        margin-bottom: 60%;
-    }
-
-    .vdescription {
-        width: 100%;
-        height: auto;
-
-        padding-top: 60%;
-        padding-left: 0%;
-
-        font-size: 7pt;
-        line-height: 16px;
-
-        overflow-y: hidden;
-    }
-
-    .progressBar svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    #playpause {
-        margin-right: 2%;
-        margin-left: 2%;
-    }
-    
-    #previousButton{
-        margin-right: 10px;
-        margin-left: 30%;
-    } 
-
-    #nextButton {
-        margin-right: 30%;
-        margin-left: 10px;
-    }
-
-    #progressBarContainer { 
-        width: 70%;
-    }
-
     /* contact.html */
     #sns {
         position: absolute;
         top: 48vh;
+    }
+
+    input {
+        font-size: 7pt;
+        width: 120px;
     }
 }
 
@@ -1013,7 +720,5 @@ img {
         line-height: 16px;
     }
 
-    .vdescription { 
-        line-height: 16px;
-    }
+
 } 
