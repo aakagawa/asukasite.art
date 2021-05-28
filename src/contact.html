@@ -16,6 +16,14 @@
             <!-- https://getbootstrap.com/ -->
             <nav class="global" id="navBar">
                 <div class="global">
+                    <a href="index.html" class="notextdecoration">
+                        <svg class="bi bi-arrow-bar-left" width="24px" height="24px" viewBox="0 0 16 16" fill="rgb(245,245,245)" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L3.207 8l2.647-2.646a.5.5 0 0 0 0-.708z"/>
+                            <path fill-rule="evenodd" d="M10 8a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0 0 1h6.5A.5.5 0 0 0 10 8zm2.5 6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 1 0v11a.5.5 0 0 1-.5.5z"/>
+                          </svg>
+                    </a>
+                </div>
+                <div class="global">
                     <a href="bio.html" class="notextdecoration">
                         <svg class="bi bi-justify-left" width="24px" height="24px" viewBox="0 0 16 16" fill="rgb(245,245,245)" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M2 12.5a.5.5 0 01.5-.5h7a.5.5 0 010 1h-7a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
@@ -59,18 +67,19 @@
         </header>
         <main>
             <div> 
-                <form>
+                <form method="post" action="formToEmail.php">
                     <label for="name">Name:</label>
-                    <input type="text" placeholder="Your Name"><br>
+                    <input type="text" name="name" placeholder="Your Name"><br><br>
                     <label for="name">Email:</label>
-                    <input type="email" placeholder="example@gmail.com"><br>
+                    <input type="email" name="email" placeholder="youremailaddress@example.com"><br><br>
                     <label for="whatsup">What's up?:</label>
-                    <input type="text"><br><br>
+                    <input type="text" name="inquiry" placeholder="e.g. I'd like to purchase a big band arrangement."><br><br>
+                    <input type="submit" id="submit" value="Send">
                 </form>
             </div>
             <p></p>
             <div class="emailAddress">
-                Email: <input type="text" id="emailAddress" value="contact@asukasite.art" readonly>
+                Email: <input type="text" id="emailAddress" value="info@asukasite.art" readonly>
             </div>
             <script>
                 document.getElementById('emailAddress').addEventListener('click', copyText);

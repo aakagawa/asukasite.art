@@ -285,7 +285,7 @@ div.progressBar{
     animation-fill-mode: forwards;
 }
 
-div.sheetMusic {
+div.notations {
     position: relative;
     vertical-align: top;
     background-repeat: no-repeat;
@@ -339,7 +339,7 @@ input {
     font-weight: 200;
     text-align: left;
     color: rgb(245, 245, 245);
-    width: 720px;
+    width: 100%;
     border: none;
     background: none;
 }
@@ -348,16 +348,36 @@ input:focus {
     border: none;
     background: none;
     outline: none; 
-    
 }
 
 input:hover {
-    cursor: pointer;
+    cursor: default;
 }
+
+input[type=submit] {
+    border:2px rgb(245, 245, 245);
+    border-radius: 2px;
+
+}
+
+#submit {
+    width: 60px;
+    cursor: default;
+    padding: 0px;
+}
+
+#submit:hover {
+    cursor: default;
+}
+
+#emailAddress {
+    width: 240px;
+}
+
 
 #sns {
     position: relative;
-    top: 36vh;
+    top: 12vh;
 }
 
 img {
@@ -436,7 +456,7 @@ img {
         width: 49.5%;
     }
 
-    div.sheetMusic {
+    div.notations {
         width: 256px; /* absval */
         height: 170px;
     }
@@ -501,7 +521,7 @@ img {
         width: 49%;
     }
 
-    div.sheetMusic {
+    div.notations {
         width: 200px; /* absval */
         height: 133px;
     }
@@ -577,7 +597,7 @@ img {
         margin-top: 10px;
     }
 
-    div.sheetMusic {
+    div.notations {
         width: 213px;
         height: 142px;
 
@@ -680,7 +700,7 @@ img {
         margin-top: 10px;
     }
 
-    div.sheetMusic {
+    div.notations {
         width: 213px;
         height: 142px;
 
