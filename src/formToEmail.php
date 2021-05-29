@@ -7,7 +7,7 @@
     $visitor_email = $_POST['email'];
     $message = $_POST['inquiry'];
 
-    if(empty($name)||empty($visitor_email||empty($message))) {
+    if(empty($name)||empty($visitor_email)||empty($message)) {
         echo "Error: all fields are required!";
         exit;
     }
