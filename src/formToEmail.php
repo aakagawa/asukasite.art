@@ -1,6 +1,5 @@
 <?php
-    if(!isset($_POST['submit']))
-    {
+    if(!isset($_POST['submit'])) {
         echo "error; please submit the form!";
     }
 
