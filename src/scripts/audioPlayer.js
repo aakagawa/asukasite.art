@@ -7,9 +7,9 @@ function findAudio() {
 
 var i = 0;
 var playlist = [
-        "sounds/200731ImHereI.mp3",
-        "sounds/200731ImHereII.mp3",
-        "sounds/200731ImHereIII.mp3"
+        "Untitled nº1.wav",
+        "Untitled nº2.wav",
+        "Untitled nº3.wav"
     ];
 var elem = document.getElementById('progressBar');
 var playpauseTrack = document.getElementsByClassName('playpauseTrack');

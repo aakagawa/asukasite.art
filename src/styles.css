@@ -4,8 +4,14 @@
     to{opacity:1;}
 }
 
+@-webkit-keyframes fadeIN{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
 .fadeIN{
     animation-name: fadeIN;
+    -webkit-animation-name: fadeIN;
 }
 
 @keyframes LtoR{
@@ -14,8 +20,15 @@
     to{left:0px;}
 }
 
+@-webkit-keyframes LtoR {
+    from{left:-20px;} 
+    /* initial position of animation from left to right */
+    to{left:0px;}
+}
+
 .LtoR{
     animation-name: LtoR;
+    -webkit-animation-name: LtoR;
 }
 
 html {
@@ -41,15 +54,19 @@ header {
     background-color: transparent;
 
     font-size: 24pt;
-    font-weight: 400;
+    font-weight: 120;
     letter-spacing: 0.36em;
     font-variant: small-caps;
     color: rgb(245, 245, 245);
 
     opacity: 0;
     animation-name: fadeIN;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
+
+    -webkit-animation-name: fadeIN;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
 }
 
 div.header {
@@ -60,10 +77,16 @@ div.header {
 nav.global {
     float: right;
     position: relative;
+    background-color: transparent;
+
     animation-name: LtoR;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    background-color: transparent;
+
+    -webkit-animation-name: LtoR;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+
 }
 
 div.global {
@@ -84,15 +107,21 @@ main {
     font-size: 9pt;
     line-height: 24px;
     letter-spacing: 0.12em;
-    font-weight: 200;
+    font-weight: 80;
     text-align: left;
     overflow-y: scroll;
     color:  rgb(245, 245, 245);
 
     opacity: 0;
     animation-name: fadeIN;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    -webkit-animation-name: fadeIN;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
 
     cursor: default;
 }
@@ -105,14 +134,20 @@ footer.global {
     
     font-size: 8pt;
     line-height: 24px;
-    font-weight: 200;
+    font-weight: 80;
     letter-spacing: 0.12em;
     color:  rgb(245, 245, 245);
 
     opacity: 0;
     animation-name: fadeIN;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    -webkit-animation-name: fadeIN;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
 
     cursor: default;
 }
@@ -205,20 +240,27 @@ footer.progressBar{
     position: relative;
     width: 1200px;
     margin-top: 24px;
-    font-weight: 200;
+    font-weight: 80;
     letter-spacing: 0.1em;
     color: rgb(245, 245, 245);
-    animation-name: fadeIN;
-    animation-duration: 4s;
-    opacity: 0;
-    animation-fill-mode: forwards;
 
+    opacity: 0;
+    animation-name: fadeIN;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+    -webkit-animation-name: fadeIN;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+    
     cursor: default;
 }
 
 div.progressBar{
     display: inline-block;
-    margin-right: 8px;
+    width: 36px;
 }
 
 #play {
@@ -268,21 +310,104 @@ div.progressBar{
     margin-left: 6px;
 }
 
+/* visuals.html */
+
+div.visuals {
+    position: relative;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 320px;
+    height: auto;
+    margin-bottom: 60px;
+
+    outline-style: none;
+}
+
+.vplayer {
+    display: inline-block;
+    width: 320px;
+    height: auto;
+    margin-left: 2px;
+
+    outline-style: solid;
+    outline-color: rgb(245, 245, 245);
+    outline-width: 2px;
+
+}
+
+video::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+div.vcontrol {
+    position: absolute;
+    width: 100%;
+
+    padding-left: 12px;
+    bottom: 8px;
+
+    z-index: 4;
+}
+
+.vprogressBarContainer {
+    vertical-align: middle;
+    width: 54%; /* Width of the outside container */
+    height: 3pt;
+    border-radius: 1.6pt;
+    display: inline-block;
+    background: rgb(127, 127, 127);
+}
+
+.vprogressBar {
+    vertical-align: middle;
+    width: 0%;
+    height: 3pt;
+    border-radius: 1.6pt;
+    background-color: rgb(245, 245, 245);
+}
+
+.vprogress {
+    width: 36px;
+    vertical-align: middle;
+    font-size: 6pt;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.vend {
+    width: 36px;
+    vertical-align: middle;
+    font-size: 6pt;
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.bi-fullscreen {
+    margin-left: 2px;
+}
+
 /* notations.html */
 #compositions, #arrangements {
     width: 600px;
-    height: 60px;
+    height: 48px;
 
-    font-size: 20pt;
-    font-weight: 400;
+    font-size: 16pt;
+    font-weight: 120;
     letter-spacing: 0.24em;
     font-variant: small-caps;
     color: rgb(245, 245, 245);
 
     opacity: 0;
     animation-name: fadeIN;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
+    
+    -webkit-animation-name: fadeIN;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+
 }
 
 div.notations {
@@ -294,7 +419,6 @@ div.notations {
     width: 320px;
     height: 213px;
     margin-bottom: 36px;
-    margin-left: 2px;
 
     outline-style: solid;
     outline-color: rgb(245, 245, 245);
@@ -312,31 +436,16 @@ div.description {
     font-size: 9pt;
     line-height: 20px;
     letter-spacing: 0.1em;
-    font-weight: 200;
+    font-weight: 80;
 }
 
-div.visuals {
-    position: relative;
-    vertical-align: top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    width: 320px;
-    height: 213px;
-    margin-bottom: 36px;
-    margin-left: 2px;
-
-    outline-style: solid;
-    outline-color: rgb(245, 245, 245);
-    outline-width: 2px;
-}
 
 /* contact.html */
 input {
     font-size: 9pt;
     line-height: 24px;
     letter-spacing: 0.12em;
-    font-weight: 200;
+    font-weight: 80;
     text-align: left;
     color: rgb(245, 245, 245);
     width: 100%;
@@ -451,6 +560,25 @@ img {
         margin-left: 2px;
     }
 
+    /* visuals.html */
+    div.visuals {
+        width: 256px; /* absval */
+        height: auto;
+    }
+
+    .vplayer {
+        width: 256px; /* absval */
+        height: auto;
+    }
+
+    .vprogressBarContainer {
+        vertical-align: middle;
+        width: 42%; /* Width of the outside container */
+        height: 3pt;
+        border-radius: 1.6pt;
+        display: inline-block;
+    }
+    
     /* notations.html / visuals.html */
     #compositions, #arrangements {
         width: 49.5%;
@@ -471,7 +599,7 @@ img {
         line-height: 20px;
     }
 
-    /* visuals.html */
+
 }
 
 /* iPad Pro vertical / iPad horizontal */
@@ -498,7 +626,7 @@ img {
 
     /* sounds.html */
     #progressBarContainer {
-        width: 72%; /* Width of the outside container */
+        width: 64%; /* Width of the outside container */
         margin-top: 1px;
     }
 
@@ -586,7 +714,7 @@ img {
 
     footer.progressBar {
         width: auto;
-        text-align: center;
+        text-align: left;
 
         line-height: 36px;
     }
@@ -687,11 +815,26 @@ img {
     }
 
     footer.progressBar {
-        width: auto;
         text-align: center;
-
         line-height: 36px;
         margin-top: 0px;
+        margin-right: 0vw;
+    }
+
+    #progressBarContainer {
+        width: 32%;
+        margin-top: 1px;
+    }
+
+    #progress {
+        display: inline-block;
+        width: 36px;
+    }
+
+    #end {
+        display: inline-block;
+        width: 36px;
+        margin-left: 2px;
     }
 
     /* notations.html / visuals.html */

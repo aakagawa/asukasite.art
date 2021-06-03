@@ -1,8 +1,4 @@
 <?php
-    if(!isset($_POST['submit'])) {
-        echo "error; please submit the form!";
-    }
-
     $name = $_POST['name'];
     $visitor_email = $_POST['email'];
     $message = $_POST['inquiry'];
@@ -13,13 +9,14 @@
     }
 
     $email_from = 'info@asukasite.art';
-    $email_subject = 'New inquiry';
+    $email_subject = 'New inquiry!';
     $email_body = '$message';
 
     $to = 'info@asukasite.art';
     $headers = 'from: $email_from';
-    $headers .= "Reply-To: $visitor_email";
+    $headers .= 'Reply-To: $visitor_email';
 
     mail($to,$email_subject,$email_body,$headers);
+
 ?>
 
