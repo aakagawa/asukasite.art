@@ -1,8 +1,7 @@
 node_modules 
 *.DS_Store
 .vscode
-client.js
-index.js
 .mp3
 .mp4
 .wav
+client.js
