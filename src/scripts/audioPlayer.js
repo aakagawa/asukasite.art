@@ -7,10 +7,11 @@ function findAudio() {
 
 var i = 0;
 var playlist = [
-        "ALEX_LUSTIG_tokyo_nature_sounds_park_02.wav",
-        "Untitled nº2.wav",
-        "Untitled nº3.wav"
+        "Untitled_no1.wav",
+        "Untitled_no2.wav",
+        "Untitled_no3.wav"
     ];
+    playlist = "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/" + playlist;
 var elem = document.getElementById('progressBar');
 var playpauseTrack = document.getElementsByClassName('playpauseTrack');
 var biplay = document.getElementsByClassName('bi bi-play-fill');
