@@ -1,7 +1,7 @@
 <?php
-    $name = $_POST['name'];
-    $visitor_email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = $_POST["name"];
+    $visitor_email = $_POST["email"];
+    $message = $_POST["message"];
   
     $to = 'info@asukasite.art';
 
