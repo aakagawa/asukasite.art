@@ -42,8 +42,8 @@ function active() {
     i = this.rowIndex;
     thisthisTrack = this; 
     thisAlbum = this.parentElement.id;
-    // console.log(thisAlbum);
     source.src = albums[thisAlbum][i];
+    console.log(source.src);
     current[0].className = current[0].className.replace('active', '');
     this.className += 'active';
     
@@ -80,6 +80,7 @@ function playpauseOnTrack() {
     i = this.parentElement.parentElement.rowIndex;
     thisAlbum = this.parentElement.parentElement.parentElement.id;
     source.src = albums[thisAlbum][i];
+    console.log(source.src);
     if (player.currentSrc === source.src) {
         if (player.paused === true) {
             player.play();

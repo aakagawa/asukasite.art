@@ -78,13 +78,13 @@
                         <colgroup class="title" span="1"></colgroup>
                         <colgroup class="duration" span="1"></colgroup>
                         <colgroup class="toggle" span="1"></colgroup>
-                        <tbody>
+                        <tbody id="Samayo">
                             <tr>
                                 <td style="border: none;">1</td>
                                 <td style="border: none;">Samayo</td>
                                 <td style="border: none;">10:23</td>
                                 <td style="border: none;">
-                                    <div>
+                                    <div class="playpauseTrack">
                                         <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
                                         </svg>
@@ -337,7 +337,7 @@
         <div>
             <script src="scripts/audioPlayer2.js"></script>
             <audio id="player" ontimeupdate="progressBar()">
-                <source id="source" src="placeholder.wav">
+                <source id="source" src="">
             </audio>
         </div>
         <!-- progressBar -->
