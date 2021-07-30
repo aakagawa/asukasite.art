@@ -218,6 +218,11 @@ colgroup.toggle {
     width: 8%;
 }
 
+
+table tr td:nth-child(3) {
+    text-align: right;
+}
+
 .bi-play-fill {
     position: relative;
     display: inline-block;
@@ -845,20 +850,24 @@ img {
         width: 213px;
         height: 142px;
 
-        margin-bottom: 60%;
+        margin-bottom: 120px;
     }
 
     div.description {
         width: 100%;
         height: auto;
 
-        padding-top: 70%;
+        padding-top: 60%;
         padding-left: 0%;
 
         font-size: 7pt;
         line-height: 15px;
 
         overflow-y: hidden;
+    }
+
+    div.visuals {
+        margin-bottom: 120px;
     }
 
     /* contact.html */

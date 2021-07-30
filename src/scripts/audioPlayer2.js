@@ -1,5 +1,5 @@
 // global variables
-window.onload = function() {findAudio};
+window.onload = function() {findAudio()};
 function findAudio() {
     source = document.getElementById('source');
     player = document.getElementById('player');
@@ -41,12 +41,10 @@ var current = document.getElementsByClassName('active');
 function active() { 
     i = this.rowIndex;
     thisthisTrack = this; 
-    thisAlbum = this.parentElement.id;
+    thisAlbum = this.parentElement.parentElement.parentElement.id;
     source.src = albums[thisAlbum][i];
-    console.log(source.src);
     current[0].className = current[0].className.replace('active', '');
     this.className += 'active';
-    
 }
 
 function loadPlay() {
@@ -78,9 +76,8 @@ function playTrack() {
 
 function playpauseOnTrack() {
     i = this.parentElement.parentElement.rowIndex;
-    thisAlbum = this.parentElement.parentElement.parentElement.id;
+    thisAlbum = this.parentElement.parentElement.parentElement.parentElement.parentElement.id;
     source.src = albums[thisAlbum][i];
-    console.log(source.src);
     if (player.currentSrc === source.src) {
         if (player.paused === true) {
             player.play();
@@ -117,10 +114,10 @@ function playpauseOnTrack() {
 document.getElementById('playpause').onclick = function() {playpause()};
 function playpause() {
     if (player.paused == true) {
-        player.play();
+        loadPlay();
+        thisthisTrack.children[3].children[0].children[0].style.display = "none";
+        thisthisTrack.children[3].children[0].children[1].style.display = "inline-block";
         displayPause();
-        thisthisTrack.getElementsByClassName('bi bi-play-fill')[0].style.display = "none";
-        thisthisTrack.getElementsByClassName('bi bi-pause-fill')[0].style.display = "inline-block";
         var increment = setInterval(_increment, 1000);
         function _increment() {
             elem.style.width = ((player.currentTime / player.duration) * 100) + '%'; 
@@ -128,10 +125,11 @@ function playpause() {
     }
     else {
         player.pause();
+        console.log(thisTrack);
+        thisthisTrack.children[3].children[0].children[0].style.display = "inline-block";
+        thisthisTrack.children[3].children[0].children[1].style.display = "none";
+        
         displayPlay();
-        thisthisTrack.getElementsByClassName('bi bi-play-fill')[0].style.display = "inline-block";
-        thisthisTrack.getElementsByClassName('bi bi-pause-fill')[0].style.display = "none"; 
-        console.log(biplay[i]);
         clearInterval(increment);
     }
 }
@@ -145,7 +143,6 @@ function previous() {
         }
         source.src = albums[thisAlbum][i];
         loadPlay();
-        displayPauseBoth();
         var increment = setInterval(_increment, 1000);
         function _increment() {
             elem.style.width = ((player.currentTime / player.duration) * 100) + '%'; 
@@ -154,13 +151,13 @@ function previous() {
     else {
         source.src = albums[thisAlbum][i];
         loadPlay();
-        displayPlayBoth();
     }
 }
 
 document.getElementById('nextButton').onclick = function() {next()};
 function next() {
-    if (i === album.length - 1) {
+    // console.log(albums[thisAlbum].length)
+    if (i === albums[thisAlbum].length - 1) { 
         i = 0;
     }
     else {
@@ -168,8 +165,7 @@ function next() {
         resetIcons();
     }
     source.src = albums[thisAlbum][i];
-    loadPlay();
-    displayPauseBoth();
+    loadPlay()
     var increment = setInterval(_increment, 1000);
     function _increment() {
         elem.style.width = ((player.currentTime / player.duration) * 100) + '%'; 
@@ -206,7 +202,6 @@ function progressBar() {
         resetIcons();
         source.src = albums[thisAlbum][i];
         loadPlay();
-        displayPauseBoth();
         var increment = setInterval(_increment, 1000);
         function _increment() {
             elem.style.width = ((player.currentTime / player.duration) * 100) + '%'; 

@@ -72,14 +72,14 @@
             <div class="column1">
                 <div class="albumCover" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/IMG_0905.jpg);">    
                 </div>
-                <div class="table">
+                <div class="table" id="Samayo"> 
                     <table>
                         <colgroup class="track" span="1"></colgroup>
                         <colgroup class="title" span="1"></colgroup>
                         <colgroup class="duration" span="1"></colgroup>
                         <colgroup class="toggle" span="1"></colgroup>
-                        <tbody id="Samayo">
-                            <tr>
+                        <tbody>
+                            <tr class="active">
                                 <td style="border: none;">1</td>
                                 <td style="border: none;">Samayo</td>
                                 <td style="border: none;">10:23</td>
@@ -99,14 +99,14 @@
                 </div>
                 <div class="albumCover" style="background-image: url();">    
                 </div>
-                <div class="table">
+                <div class="table" id="Untitled">
                     <table>
                         <colgroup class="track" span="1"></colgroup>
                         <colgroup class="title" span="1"></colgroup>
                         <colgroup class="duration" span="1"></colgroup>
                         <colgroup class="toggle" span="1"></colgroup>
                         <tbody>
-                            <tr class="active">
+                            <tr>
                                 <td style="border: none;">1</td>
                                 <td style="border: none;">Untitled nº1 (Live in Tokyo)</td>
                                 <td style="border: none;">18:02</td>
@@ -337,7 +337,7 @@
         <div>
             <script src="scripts/audioPlayer2.js"></script>
             <audio id="player" ontimeupdate="progressBar()">
-                <source id="source" src="">
+                <source id="source" src="https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Samayo.wav">
             </audio>
         </div>
         <!-- progressBar -->
