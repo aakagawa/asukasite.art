@@ -1,8 +1,12 @@
 // global variables
-window.onload = function() {findAudio()};
+window.onload = function() {findAudio(); init()};
 function findAudio() {
     source = document.getElementById('source');
     player = document.getElementById('player');
+}
+
+function init() {
+    thisthisTrack = tracks[0];
 }
 
 var i = 0;
