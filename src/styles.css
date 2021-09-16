@@ -351,7 +351,7 @@ div.vcontrol {
     position: absolute;
     width: 100%;
 
-    padding-left: 12px;
+    padding-left: 8px;
     bottom: 8px;
 
     z-index: 4;
@@ -579,7 +579,7 @@ img {
 
     .vprogressBarContainer {
         vertical-align: middle;
-        width: 42%; /* Width of the outside container */
+        width: 46%; /* Width of the outside container */
         height: 3pt;
         border-radius: 1.6pt;
         display: inline-block;

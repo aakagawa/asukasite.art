@@ -217,7 +217,7 @@ function calcDuration(_duration) {
     // formatting duration of audio
     var min = Math.floor(_duration / 60);
     var sec_int = _duration - (min * 60);
-    var sec_ = Math.round(sec_int);
+    var sec_ = Math.floor(sec_int);
     var sec_str = sec_.toString();
     if (sec_ < 10 ) {
         sec_str = '0' + sec_str   
