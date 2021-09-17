@@ -553,7 +553,7 @@ img {
     }
 
     #progressBarContainer {
-        width: 75%; /* Width of the outside container */
+        width: 80%; /* Width of the outside container */
     }
 
     #progress {
@@ -631,7 +631,7 @@ img {
 
     /* sounds.html */
     #progressBarContainer {
-        width: 72%; /* Width of the outside container */
+        width: 74%; /* Width of the outside container */
     }
 
     #progressBar {
