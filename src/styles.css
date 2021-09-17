@@ -206,6 +206,10 @@ div.table {
     cursor: default;
 }
 
+td div svg {
+    vertical-align: top;
+}
+
 colgroup.track{
     width: 2%;
 }
@@ -218,7 +222,6 @@ colgroup.duration{
 colgroup.toggle {
     width: 8%;
 }
-
 
 table tr td:nth-child(3) {
     text-align: right;
