@@ -11,7 +11,7 @@
     <body>
         <header>
             <div class="header">
-                Sounds
+                sounds
             </div>
             <!-- https://getbootstrap.com/ -->
             <nav class="global" id="navBar">
@@ -313,12 +313,14 @@
                 <path d="M15.096 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.693-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
             </svg>
         </div>
+        
             <span id="progress">00:00</span>
-            <div id="progressBarContainer">
-                <div id="progressBar">
+                <div id="progressBarContainer">
+                    <div id="progressBar">
+                    </div>
                 </div>
-            </div>
             <span id="end">00:00</span>
+        
         <div>
             <script src="scripts/audioPlayer2.js"></script>
             <audio id="player" ontimeupdate="progressBar()">
