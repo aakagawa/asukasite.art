@@ -362,7 +362,7 @@ div.vcontrol {
 
 .vprogressBarContainer {
     vertical-align: middle;
-    width: 54%; /* Width of the outside container */
+    width: 55%; /* Width of the outside container */
     height: 3pt;
     border-radius: 1.6pt;
     display: inline-block;
