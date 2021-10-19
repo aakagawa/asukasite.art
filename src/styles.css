@@ -334,6 +334,35 @@ div.visuals {
     outline-style: none;
 }
 
+div.winter {
+    position: relative;
+    vertical-align: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    outline-style: solid; 
+    outline-color: rgb(0, 0, 0); 
+    outline-width: 4px;
+
+    width: 320px;
+    height: 232px;
+    margin-bottom: 60px;
+}
+
+div.winterDescription {
+    position: absolute;
+    width: 596px;
+    height: 160px;
+
+    top: 0px;
+    padding-left: 356px;
+
+    font-size: 9pt;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    font-weight: 80;
+}
+
 .vplayer {
     display: inline-block;
     width: 320px;
@@ -354,7 +383,7 @@ div.vcontrol {
     position: absolute;
     width: 100%;
 
-    padding-left: 8px;
+    padding-left: 10px;
     bottom: 8px;
 
     z-index: 4;
@@ -380,7 +409,7 @@ div.vcontrol {
 .vprogress {
     width: 36px;
     vertical-align: middle;
-    font-size: 6pt;
+    font-size: 4pt;
     display: inline-block;
     margin-left: 6px;
 }
@@ -447,6 +476,7 @@ div.description {
     letter-spacing: 0.1em;
     font-weight: 80;
 }
+
 
 
 /* contact.html */
@@ -575,6 +605,23 @@ img {
         height: auto;
     }
 
+    div.winter {
+        width: 256px;
+        height: 192px;
+
+        margin-bottom: 60px;
+        margin-left: 4px;
+    }
+
+    div.winterDescription {
+        width: 190%;
+        height: 100%;
+
+        padding-left: 110%;
+
+        line-height: 20px;
+    }
+
     .vplayer {
         width: 256px; /* absval */
         height: auto;
@@ -607,7 +654,7 @@ img {
 
         line-height: 20px;
     }
-    
+
 }
 
 /* iPad Pro vertical / iPad horizontal */
@@ -703,14 +750,13 @@ img {
         margin-right: 0px; 
     }
 
-
     footer.global {
         bottom: 16vh;
 
         font-size: 7pt;
     }
 
-     /* sounds.html / notations.html*/ 
+    /* sounds.html / notations.html*/ 
 
     /* sounds.html */
     div.table {
@@ -872,6 +918,17 @@ img {
 
     div.visuals {
         margin-bottom: 120px;
+    }
+
+    div.winterDescription {
+        width: 100%;
+        height: 100%;
+
+        padding-top: 78%;
+        padding-left: 0%;
+
+        font-size: 7pt;
+        line-height: 15px;
     }
 
     /* contact.html */
