@@ -192,6 +192,7 @@ div.albumCover {
 }
 
 div.table {
+    
     display: inline-block;
     width: 588px;
     height: auto;
@@ -347,6 +348,7 @@ div.winter {
     width: 320px;
     height: 232px;
     margin-bottom: 60px;
+
 }
 
 div.winterDescription {
