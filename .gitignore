@@ -2,12 +2,6 @@ node_modules
 *.DS_Store
 .vscode
 
-*.jpg
-*.gif
-*.png
-*.svg
-*.ico
-
 *.mp4
 *.mov
 
