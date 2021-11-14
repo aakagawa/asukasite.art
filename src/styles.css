@@ -315,7 +315,7 @@ div.progressBar{
 #end {
     width: 40px;
     vertical-align: middle;
-    font-size: 4pt;
+    font-size: 6pt;
     display: inline-block;
     margin-left: 6px;
 }
@@ -393,7 +393,7 @@ div.vcontrol {
 
 .vprogressBarContainer {
     vertical-align: middle;
-    width: 55%; /* Width of the outside container */
+    width: 63%; /* Width of the outside container */
     height: 3pt;
     border-radius: 1.6pt;
     display: inline-block;
@@ -409,19 +409,20 @@ div.vcontrol {
 }
 
 .vprogress {
-    width: 36px;
+    width: 24px;
+    vertical-align: middle;
+    font-size: 4pt;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.vend {
+    width: 24px;
     vertical-align: middle;
     font-size: 4pt;
     display: inline-block;
     margin-left: 6px;
-}
-
-.vend {
-    width: 36px;
-    vertical-align: middle;
-    font-size: 6pt;
-    display: inline-block;
-    margin-left: 6px;
+    margin-right: 4px;
 }
 
 .bi-fullscreen {
