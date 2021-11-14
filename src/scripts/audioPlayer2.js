@@ -19,6 +19,18 @@ var albums = {
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Untitled_no2.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Untitled_no3.wav"
     ],
+    Conditions: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/210313.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/210425.wav"
+    ],
+    Iluminación: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Illuminacion_Installation_G.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Illuminacion_Installation_A.wav"
+    ],
+    Marco: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Marco_Scarassatti_Foundation_1_mix_4.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/Marco_Scarassatti_Foundation_2_mix_1.wav"
+    ],
 };
 
 var elem = document.getElementById('progressBar');
