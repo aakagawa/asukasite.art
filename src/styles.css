@@ -388,7 +388,7 @@ div.vcontrol {
     position: absolute;
     width: 100%;
 
-    padding-left: 10px;
+    padding-left: 8px;
     bottom: 8px;
 
     z-index: 4;
@@ -396,7 +396,7 @@ div.vcontrol {
 
 .vprogressBarContainer {
     vertical-align: middle;
-    width: 63%; /* Width of the outside container */
+    width: 66%; /* Width of the outside container */
     height: 3pt;
     border-radius: 1.6pt;
     display: inline-block;
@@ -424,8 +424,7 @@ div.vcontrol {
     vertical-align: middle;
     font-size: 4pt;
     display: inline-block;
-    margin-left: 6px;
-    margin-right: 4px;
+    margin-left: 2px;
 }
 
 .bi-fullscreen {
@@ -635,7 +634,7 @@ img {
 
     .vprogressBarContainer {
         vertical-align: middle;
-        width: 46%; /* Width of the outside container */
+        width: 58%; /* Width of the outside container */
         height: 3pt;
         border-radius: 1.6pt;
         display: inline-block;
