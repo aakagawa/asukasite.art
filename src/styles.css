@@ -685,13 +685,6 @@ img {
     }
 
     /* sounds.html */
-    #progressBarContainer {
-        width: 74%; /* Width of the outside container */
-    }
-
-    #progressBar {
-        margin-top: 1px;
-    }
 
     #progress {
         width: 32px;
@@ -875,13 +868,11 @@ img {
     footer.progressBar {
         text-align: center;
         line-height: 36px;
-        margin-top: 0px;
         margin-right: 0vw;
     }
 
     #progressBarContainer {
         width: 32%;
-        margin-top: 1px;
     }
 
     #progress {
