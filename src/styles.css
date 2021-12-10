@@ -483,7 +483,6 @@ div.description {
 }
 
 
-
 /* contact.html */
 input {
     font-size: 9pt;
@@ -522,7 +521,6 @@ input[type=submit] {
 #submit:hover {
     cursor: default;
 }
-
 #emailAddress {
     width: 240px;
 }
@@ -838,6 +836,10 @@ img {
         margin-right: 0px; 
     }
 
+    #notehead {
+        margin-right: 0px;
+    }
+
     .global svg {
         width: 20px;
         height: 20px;
@@ -935,6 +937,9 @@ img {
 
     input {
         font-size: 7pt;
+        width: 120px;
+    }
+    #emailAddress {
         width: 120px;
     }
 }
