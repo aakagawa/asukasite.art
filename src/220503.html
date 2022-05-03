@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Asuka Akagawa</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Asuka Akagawa's website">
+        <link rel="icon" type="image/png" href="FaviconIcon3.3.png">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body style="background-image: url(background.jpg); overflow-x: hidden;">
+        <header >
+            click below to play 
+        </header>
+        <main style="height: 100%; margin-top: 24px;">
+            <div id="video" style="width: 33%; display: inline-block;">
+                <video id="flightBack" width="360" height="640" style="display: inline-block;  border-radius: 2pt;" >
+                    <source src="https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public" type="video/mp4">
+                </video>
+            </div>
+            <div style="display: inline">
+                <audio id="audio">
+                    <source id="source" src="https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public">
+                </audio>
+            </div>
+            <div style="width: 66%; float: right; ">
+                <div style="width: 3%; height: 12px; margin-left: 24px; text-align: center; display: block;">
+                    Vol.
+                </div>
+                <div class="volumeBarContainer" style="width: 3%; height: 600px; margin-top: 12px; margin-left: 24px; background-color: rgb(224, 224, 224); float: left; display: inline; -moz-user-select: none; -webkit-user-select: none; user-select: none; border-radius: 2pt;">
+                    <div class="volumeBar" style="height: 2%; background-color: rgb(127, 127, 127);  border-radius: 2pt; ">
+                    </div>
+                </div>
+                <div id="img" style="opacity: 0; width: 66%; height: auto; float: right;">
+                    <img src="https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/IMG_0584.jpg" width="90%" height="90%" style="-moz-user-select: none; -webkit-user-select: none; user-select: none; border-radius: 2pt;">
+                </div>
+                <script>
+                    window.onload=function(){
+                        var vid = document.getElementById("flightBack");
+                        var audio = document.getElementById("audio");
+                        var div = document.getElementById("video");
+                        var img = document.getElementById("img");
+                        div.addEventListener('click', playBoth);
+            
+                    } 
+                    
+                    var volumeBarContainer = document.querySelector('.volumeBarContainer');
+                    var volumeBar = document.querySelector('.volumeBar');
+                    var vid = document.getElementById("flightBack");
+                    var drag = false;
+
+                    volumeBarContainer.addEventListener('mousedown', function(ev) {
+                        drag = true;
+                        updateBarAndOpacity(ev.clientY);
+                    });
+                    document.addEventListener('mousemove',function(ev) {
+                        if(drag){
+                            updateBarAndOpacity(ev.clientY);
+                        }
+                    });
+                    document.addEventListener('mouseup',function(ev){
+                        drag = false;
+                    });
+
+                    var updateBarAndOpacity = function(y, vol) {
+                        vid = document.getElementById("flightBack");
+                        div = document.getElementById("video");
+                        img = document.getElementById("img");
+                        
+                        var volume = volumeBarContainer; 
+                        var percentage;
+                        if (vol){
+                            percentage = vol * 100; 
+                        }
+                        else {
+                            var position = y - volume.offsetTop;
+                            percentage = 100 * position / volume.clientHeight;
+                        }
+    
+                        if (percentage > 100) {
+                            percentage = 100; 
+                        }
+                        if (percentage < 0) {
+                            percentage = 0;
+                        }
+    
+                        volumeBar.style.height = percentage + '%';
+                        vid.volume = (100 - percentage) / 100;
+
+                        div.style.opacity = vid.volume;
+                        img.style.opacity = 1 - vid.volume;
+                        audio.volume = 1 - vid.volume; 
+
+                    };
+
+                    function playBoth() {
+                        audio.play()
+                        vid.play()
+                    };
+                    
+                </script>
+            </div>
+
+        </main>
+    </body>
+    
+</html>
