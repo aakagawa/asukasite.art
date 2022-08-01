@@ -620,7 +620,10 @@ a {
 @media(max-width: 768px) {
     header {
         height: 120px;
-        
+    }
+
+    .container {
+        height: calc(100vh - 132px);
     }
 
     #navbar {
