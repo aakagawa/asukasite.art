@@ -1,243 +1,281 @@
-/* Animations */
-@keyframes fadeIN{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-@-webkit-keyframes fadeIN{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-.fadeIN{
-    animation-name: fadeIN;
-    -webkit-animation-name: fadeIN;
-}
-
-@keyframes LtoR{
-    from{left:-20px;} 
-    /* initial position of animation from left to right */
-    to{left:0px;}
-}
-
-@-webkit-keyframes LtoR {
-    from{left:-20px;} 
-    /* initial position of animation from left to right */
-    to{left:0px;}
-}
-
-.LtoR{
-    animation-name: LtoR;
-    -webkit-animation-name: LtoR;
-}
-
 html {
     font-family: 'Helvetica Neue', Helvetica, Arial;
+    scroll-behavior: smooth;
+
+    /* image-resolution: 300dpi; */
 }
 
-.notextdecoration:hover{
-    text-decoration: none;
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow-y: hidden;
+
+    background-color: rgb(32, 32, 32);
 }
 
-body { 
-    width: 100vw;
-    padding-left: 12vw;
-    padding-top: 16vh;
-    background-image: url(IMG_0710.jpeg);
-    background-clip: border-box;
-    background-position: top;
-    background-size: 100%, 100%;
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    z-index: 99;
+    background-color: rgb(32, 32, 32);
+    opacity: 1;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 50%;
+    border-top: 1px solid rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(245, 245, 245);
+    width: 36px;
+    height: 36px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+div {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 header {
-    width: 1200px;
-    background-color: transparent;
+    width: 100%;
+    height: 48px;
+    display: inline-block;
+}
 
-    font-size: 24pt;
+#navbar {
+    height: 36px;
+    padding-top: 24px;
+    overflow: hidden;
+    
+    background-color: rgb(32, 32, 32);
+    z-index: 2;
+
+    position: relative;
+}
+
+#name {
+    color: rgb(245,245,245);
+    height: 36px;
+    margin-left: 84px;
+    position: absolute;
+
+    font-size: 16pt;
     font-weight: 120;
     letter-spacing: 0.36em;
     font-variant: small-caps;
-    color: rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-
-    -webkit-animation-name: fadeIN;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
 }
 
-div.header {
-    display: inline-block;
-    margin-right: 64px;
-}
-
-nav.global {
-    float: right;
+#nav {
+    height: 36px;
+    margin-right: 24px;
     position: relative;
-    background-color: transparent;
 
-    animation-name: LtoR;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-
-    -webkit-animation-name: LtoR;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-
-}
-
-div.global {
+    float: right;
     display: inline;
-    margin-right: 32px;
+
 }
 
-a {
+#lang {
+    color: rgb(245,245,245);
+    height: 36px;
+
+    display: inline;
+    float: right;
+    margin-right: 60px;
+
+    font-size: 14pt;
+    font-weight: 120;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+
+    opacity: 0%;
+}
+
+.langSelect {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-top: 7px;
+
+    font-size: 9pt;
+    line-height: 1;
+    font-weight: 80;
+    text-align: left;
+    color:  rgb(245, 245, 245);
+
     cursor: default;
+}
+
+.navicon {
+    float: left;
+    display: inline; 
+
+    margin-right: 60px;
+    margin-top: 7px;
 }
 
 main {
-    width: 1200px;
-    height: 600px;
-    margin-top: 48px;
-    margin-right: 9vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: auto;
+    flex: none;
+    flex-flow: row nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+
+    scroll-snap-align: center;
+    flex: none;
+
+    overflow-y: hidden;
+}
+
+.content {
+    height: inherit;
+    margin-top: 120px;
+    margin-right: 84px;
+    margin-left: 84px;
 
     font-size: 9pt;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.12em;
     font-weight: 80;
     text-align: left;
+    color:  rgb(245, 245, 245);
+}
+
+#biographyPage {
     overflow-y: scroll;
-    color:  rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-
-    -webkit-animation-name: fadeIN;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-
-    cursor: default;
 }
 
-footer.global {
-    position: absolute;
-    bottom: 36vh;
-    width: auto;
-    background-color: transparent;
-    
-    font-size: 8pt;
-    line-height: 24px;
-    font-weight: 80;
-    letter-spacing: 0.12em;
-    color:  rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-
-    -webkit-animation-name: fadeIN;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-
-    cursor: default;
-}
-
-/* bio.html */
-div.bio {
-    width: 1192px;
-    padding-bottom: 33%;
-}
-
-/* sounds.html / notations.html*/ 
-div.window {
-    display: inline-block;
-    width: 1200px;
-    overflow: scroll;
-}
-
-div.column1 {
-    display: inline-block;
-    width: 596px;
-    height: auto;
-    vertical-align: top;
-}
-
-div.column2 {
-    display: inline-block;
-    width: 596px;
-    height: auto;
-    vertical-align: top;
-}
-
-/* sounds.html */
-div.albumCover {
+#biographyEN {
+    position: relative;
     display: block;
+
+    line-height: 2;
+
+}
+
+#biographyJA {
+    position: relative;
+    display: none;
+
+    line-height: 2;   
+}
+
+#soundsPage{ 
+    overflow-y: scroll;
+}
+
+.audioPlayer{
+    vertical-align: top;
+    margin-bottom: 36px;
+}
+
+.albumCover{
+    display: inline-block;
     width: 108px;
     height: 108px;
-    /* background-image: url(3C049FC1-8F1A-44AE-94E9-55B19275ACE2.jpeg); */
-    background-color: rgb(127, 127, 127);
+
+    letter-spacing: 0.12em;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 2px;
 }
 
-div.albumDescription {
-    margin-bottom: 20px;
-}
-
-div.table {
+.albumDescription{
     display: inline-block;
-    width: 588px;
+    height: 108px;
+    margin-left: 24px;
+    overflow-y: scroll;
+    line-height: 1.5;
+}
+
+.tracks {
+    display: inline-block;
+    vertical-align: top;
+    
+    width: 100%;
     height: auto;
     margin-top: 16px;
     margin-bottom: 0px;
-    border-top: rgb(127, 127, 127) 1px solid;
-    border-bottom: rgb(127, 127, 127) 1px solid;
-    font-size: 9pt;
-    line-height: 16px;
-    letter-spacing: 0.1em;
+    font-size: 7pt;
     color: rgb(245, 245, 245);
     cursor: default;
 }
 
-td div svg {
-    vertical-align: top;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 1.5;
+    text-indent: 6px;
+}
+
+td svg {
+    vertical-align: middle;
+}
+
+tr {
+    border-top: rgb(127, 127, 127) 1px solid;
+    border-bottom: rgb(127, 127, 127) 1px solid; 
 }
 
 colgroup.track{
-    width: 2%;
+    width: 1%;
 }
 colgroup.title{
-    width: 84%;
+    width: 93%;
 }
 colgroup.duration{
-    width: 6%;
+    width: 4%;
 }
 colgroup.toggle {
-    width: 8%;
+    width: 2%;
 }
 
-table tr td:nth-child(3) {
-    text-align: right;
+.playpauseTrack {
+    margin-bottom: 1px;
 }
 
 .bi-play-fill {
-    position: relative;
     display: inline-block;
 }
 
 .bi-pause-fill {
-    position: relative;
     display: none;
 }
 
@@ -249,251 +287,266 @@ tr:hover {
     background-color: rgb(127, 127, 127);
 }
 
-footer.progressBar{
-    position: relative;
-    width: 1200px;
-    margin-top: 24px;
-    font-weight: 80;
-    letter-spacing: 0.1em;
-    color: rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-
-    -webkit-animation-name: fadeIN;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-    
-    cursor: default;
+#visualsPage{ 
+    overflow-y: scroll;
 }
 
-div.progressBar{
-    display: inline-block;
-    width: 36px;
-}
-
-#play {
-    position: relative;
-    display: inline-block;
-}
-
-#pause {
-    position: relative;
-    display: none;
-}
-
-#progressBarContainer {
-    width: 972px; /* Width of the outside container */
-    height: 3pt;
-    vertical-align: middle;
-    border-radius: 1.6pt;
-    display: inline-block;
-    background: rgb(127, 127, 127);
-}
-
-#progressBar {
-    width: 0%;
-    height: 3pt;
-    vertical-align: middle;
-    border-radius: 1.6pt;
-    background-color: rgb(245, 245, 245);
-}
-
-#playpause, #previousButton, #nextButton {
-    margin-bottom: 0px;
-}
-
-#progress {
-    width: 40px;
-    vertical-align: middle;
-    font-size: 6pt;
-    display: inline-block;
-    margin-left: 6px;
-}
-
-#end {
-    width: 40px;
-    vertical-align: middle;
-    font-size: 6pt;
-    display: inline-block;
-    margin-left: 6px;
-}
-
-/* visuals.html */
-
-div.visuals {
-    position: relative;
-    vertical-align: top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    width: 320px;
-    height: auto;
-    margin-bottom: 60px;
-
-    outline-style: none;
-}
-
-div.winter {
-    position: relative;
-    vertical-align: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    outline-style: solid; 
-    outline-color: rgb(0, 0, 0); 
-    outline-width: 4px;
-
-    width: 320px;
-    height: 232px;
-    margin-bottom: 60px;
-
-}
-
-div.winterDescription {
+#vplayerBackground {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    width: 596px;
-    height: 160px;
+    top: 0;
+    left: 0; 
 
-    top: 0px;
-    padding-left: 356px;
-
-    font-size: 9pt;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    font-weight: 80;
+    display: none;
+    background-color: rgb(0,0,0);
+    z-index: 2147483643;
 }
 
-.vplayer {
-    display: inline-block;
-    width: 320px;
-    height: auto;
-    margin-left: 2px;
+#exitFullScreen {
+    width: 14px;
+    height: 14px;
 
-    outline-style: solid;
-    outline-color: rgb(245, 245, 245);
-    outline-width: 2px;
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
 
+    z-index: 2147483647;
 }
 
-video::-webkit-media-controls-enclosure {
+#vplayer {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 2147483645;
+}
+
+video::-webkit-media-controls {
     display:none !important;
 }
 
-div.vcontrol {
+.vcontrol {
+    width: 36px;
+    height: 36px;
     position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+
+    background-size: contain; 
+}
+
+#vcontrolFullScreen {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+
+    background-size: contain; 
+
+    z-index: 2147483647;
+}
+
+.vloader {
+    display: none;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-top: 1px solid rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(245, 245, 245);
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+
+    z-index: 99;
+}
+
+.vplaypause {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgb(159, 159, 159);
+
+}
+
+#vplaypauseFullScreen {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgb(159, 159, 159);
+
+    z-index: 2147483647;
+}
+
+#vbi-play-fullscreen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -11px;
+    margin-top: -12px;
+}
+
+#vbi-pause-fullscreen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+
+.vbi.bi-play-fill {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -11px;
+    margin-top: -12px;
+}
+
+.vbi.bi-pause-fill {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+
+.vrow {
     width: 100%;
-
-    padding-left: 8px;
-    bottom: 8px;
-
-    z-index: 4;
-}
-
-.vprogressBarContainer {
-    vertical-align: middle;
-    width: 66%; /* Width of the outside container */
-    height: 3pt;
-    border-radius: 1.6pt;
-    display: inline-block;
-    background: rgb(127, 127, 127);
-}
-
-.vprogressBar {
-    vertical-align: middle;
-    width: 0%;
-    height: 3pt;
-    border-radius: 1.6pt;
-    background-color: rgb(245, 245, 245);
-}
-
-.vprogress {
-    width: 24px;
-    vertical-align: middle;
-    font-size: 4pt;
-    display: inline-block;
-    margin-left: 2px;
-}
-
-.vend {
-    width: 24px;
-    vertical-align: middle;
-    font-size: 4pt;
-    display: inline-block;
-    margin-left: 2px;
-}
-
-.bi-fullscreen {
-    margin-left: 2px;
-}
-
-/* notations.html */
-#compositions, #arrangements {
-    width: 600px;
-    height: 48px;
-
-    font-size: 16pt;
-    font-weight: 120;
-    letter-spacing: 0.24em;
-    font-variant: small-caps;
-    color: rgb(245, 245, 245);
-
-    opacity: 0;
-    animation-name: fadeIN;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    
-    -webkit-animation-name: fadeIN;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-fill-mode: forwards;
-
-}
-
-div.notations {
     position: relative;
-    vertical-align: top;
+}
+
+.video {
+    width: 66%;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    width: 320px;
-    height: 213px;
-    margin-bottom: 36px;
-
-    outline-style: solid;
-    outline-color: rgb(245, 245, 245);
-    outline-width: 2px;
+    
+    display: inline-block;
 }
 
-div.description {
+.image {
+    width: 66%;
+    position: relative;
+    display: inline-block;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.emptyspace {
+    width: 100%;
+    height: 240px;
+
+    display: block;
+}
+
+.label {
+    width: 33%;
     position: absolute;
-    width: 596px;
-    height: 160px;
+    display: inline-block;
+    top: 50%;
 
-    top: 0px;
-    padding-left: 356px;
-
-    font-size: 9pt;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    font-weight: 80;
+    padding-left: 6%;
+    transform: translateY(-50%);
 }
 
+#notationsPage{ 
+    overflow-y: scroll;
+}
 
-/* contact.html */
+#compositions {
+    width: 50%;
+    float: left;
+    margin-right: 0px;
+}
+
+#arrangements {
+    width: 50%;
+    float: right;
+    margin-right: 0px;
+}
+
+.scorerow {
+    width: 100%;
+    position: relative;
+}
+
+.score {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    filter: blur(1px);
+}
+
+.scoreinfo {
+    width: 50%;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+
+    padding-left: 6%;
+    transform: translateY(-50%);
+}
+
+.emptyspace2 {
+    width: 100%;
+    height: 60px;
+}
+
+#contactPage {
+    overflow-y: hidden;
+}
+
+.emailAddress {
+    width: 100%;
+    height: 24px;
+
+    margin-bottom: 120px;
+}
+
+#emailAddress {
+    width: 75%;
+
+    display: inline-block;
+}
+
 input {
-    font-size: 9pt;
-    line-height: 24px;
-    letter-spacing: 0.12em;
-    font-weight: 80;
-    text-align: left;
-    color: rgb(245, 245, 245);
     width: 100%;
     border: none;
     background: none;
+
+    margin-bottom: 24px;
+}
+
+::placeholder {
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-size: 9pt;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    font-weight: 80;
 }
 
 input:focus {
@@ -506,452 +559,159 @@ input:hover {
     cursor: default;
 }
 
-input[type=submit] {
-    border:2px rgb(245, 245, 245);
-    border-radius: 2px;
+input[type=text] {
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-size: 9pt;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    font-weight: 80;
+    color: rgb(245, 245, 245);
 
-}
-
-#submit {
-    width: 60px;
-    cursor: default;
     padding: 0px;
 }
 
-#submit:hover {
-    cursor: default;
-}
-#emailAddress {
-    width: 240px;
+textarea {
+    width: 100%;
+    height: 25vh;
+    resize: none;
+    border: none;
+    background: none;
+
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-size: 9pt;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    font-weight: 80;
+    color: rgb(245, 245, 245);
+
+    padding: 0;
 }
 
+textarea:focus {
+    border: none;
+    background: none;
+    outline: none; 
+
+}
 
 #sns {
-    position: relative;
-    top: 12vh;
+    width: 100%;
+    height: auto;    
 }
 
-img {
-    vertical-align: bottom;
-    margin-right: 16px;
+a {
+    text-decoration: none;
 }
 
-/* iPad Pro horizontal */
-@media(max-width: 1366px) {
-    body { 
-        width: auto;
-        background-size: 125%, 125%;
-    }
+.snsIcons {
+    width: 36px;
+    height: 36px;
 
-    header {
-        width: auto;
-    }
-
-    div.header {
-        display: inline-block;
-        margin-right: 32px;
-    }
-
-    nav.global {
-        margin-right: 9vw;
-    }
-
-    main {
-        width: auto;
-    }
-
-    /* bio.html */
-    div.bio {
-        width: 99%;
-    }
-
-    /* sounds.html / notations.html*/ 
-    div.window {
-        width: 100%;
-    }
-
-    div.column1 {
-        width: 49.5%;
-    }
-
-    div.column2 {
-        width: 49.5%;
-    }
-
-    /* sounds.html */
-    div.table {
-        width: 99%;
-    }
-
-    footer.progressBar {
-        width: auto;
-        margin-right: 9vw;
-    }
-
-    #progressBarContainer {
-        width: 80%; /* Width of the outside container */
-    }
-
-    #progress {
-        width: 36px;
-        margin-left: 2px;
-    }
-
-    #end {
-        width: 36px;
-        margin-left: 2px;
-    }
-
-    /* visuals.html */
-    div.visuals {
-        width: 256px; /* absval */
-        height: auto;
-    }
-
-    div.winter {
-        width: 256px;
-        height: 192px;
-
-        margin-bottom: 60px;
-        margin-left: 4px;
-    }
-
-    div.winterDescription {
-        width: 190%;
-        height: 100%;
-
-        padding-left: 110%;
-
-        line-height: 20px;
-    }
-
-    .vplayer {
-        width: 256px; /* absval */
-        height: auto;
-    }
-
-    .vprogressBarContainer {
-        vertical-align: middle;
-        width: 58%; /* Width of the outside container */
-        height: 3pt;
-        border-radius: 1.6pt;
-        display: inline-block;
-    }
-    
-    /* notations.html / visuals.html */
-    #compositions, #arrangements {
-        width: 49.5%;
-    }
-
-    div.notations {
-        width: 256px; /* absval */
-        height: 170px;
-    }
-
-    div.description {
-        width: 190%;
-        height: 100%;
-        overflow-y: scroll;
-
-        padding-left: 110%;
-
-        line-height: 20px;
-    }
-
+    margin-right: 12px;
+    cursor: default;
 }
 
-/* iPad Pro vertical / iPad horizontal */
-/* left off work on font size! */
-@media(max-width: 1024px) { 
-    main {
-        font-size: 7pt;
-        line-height: 18px;
-    }
 
-    body { 
-        width: auto;
-        background-size: 120%, 120%;
-    }
 
-    /* sounds.html / notations.html */
-    div.column1 {
-        width: 49%;
-    }
-
-    div.column2 {
-        width: 49%;
-    }
-
-    /* sounds.html */
-
-    #progress {
-        width: 32px;
-        margin-left: 2px;
-    }
-
-    #end {
-        width: 32px;
-        margin-left: 2px;
-    }
-
-    /* notations.html / visuals.html */
-    #compositions, #arrangements {
-        width: 49%;
-    }
-
-    div.notations {
-        width: 200px; /* absval */
-        height: 133px;
-    }
-
-    div.description { 
-        line-height: 20px;
-        font-size: 7pt;
-    }
-    
-    /* visuals.html */
-}
-
-/* iPad vertical */
 @media(max-width: 768px) {
-    main {
-        height: 66vh;
-        font-size: 7pt;
-        line-height: 18px;
-    }
-
-    body {
-        padding-left: 10vw;
-        padding-top: 7.5vh;
-        background-size: 225%, 225%;
-        background-position: top;
-    }
-
-    div.header {
-        display: block;
-        width: auto;
-        line-height: 48px;
-    }
-
-    nav.global {
-        float: left;
-        width: 45px;
-        line-height: 60px;
-
-        margin-top: 36px;
-        margin-right: 12px;
-    }
-
-    div.global { 
-        margin-right: 0px; 
-    }
-
-    footer.global {
-        bottom: 16vh;
-
-        font-size: 7pt;
-    }
-
-    /* sounds.html / notations.html*/ 
-
-    /* sounds.html */
-    div.table {
-        width: 95%;
-
-        font-size: 6pt;
-    }
-
-    footer.progressBar {
-        width: auto;
-        text-align: left;
-
-        line-height: 36px;
-    }
-
-    /* notations.html */
-    #compositions, #arrangements {
-        width: 99%;
-        margin-top: 10px;
-    }
-
-    div.notations {
-        width: 213px;
-        height: 142px;
-
-        margin-bottom: 144px;
-    }
-
-    div.description {
-        width: 100%;
-        height: auto;
-
-        padding-top: 70%;
-        padding-left: 0%;
-
-        font-size: 7pt;
-        line-height: 16px;
-
-        overflow-y: hidden;
-    }
-}
-
-/* iPhone / mobile devices */
-@media(max-width: 425px) {
-    main {
-        width: 275px;
-        height: 66vh;
-        margin-top: 12px;
-        font-size: 7pt;
-        line-height: 16px;
+    header {
+        height: 120px;
         
     }
 
-    body {
-        padding-left: 10vw;
-        padding-top: 7.5vh;
-        background-size: 330%, 330%;
-        background-position: top;
-    }
-
-    header {
-        font-size: 20pt;
-    }
-
-    div.header {
-        display: block;
-        width: auto;
-        line-height: 48px;
-    }
-
-    nav.global {
-        float: left;
-        width: 45px;
-        line-height: 54px;
-
-        margin-top: 0px;
-        margin-right: 0px;
-    }
-
-    div.global { 
-        margin-right: 0px; 
-    }
-
-    #notehead {
-        margin-right: 0px;
-    }
-
-    .global svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    footer.global {
-        bottom: 16vh;
-
-        font-size: 7pt;
-    }
-
-    /* sounds.html / notations.html*/ 
-    div.column1 { 
-        width: 99%;
-    }
-
-    div.column2 {
-        width: 99%;
-    }
-
-    /* sounds.html */
-    div.table {
-        width: 95%;
-
-        font-size: 6pt;
-    }
-
-    footer.progressBar {
-        text-align: center;
-        line-height: 36px;
-        margin-right: 0vw;
-    }
-
-    #progressBarContainer {
-        width: 32%;
-    }
-
-    #progress {
-        display: inline-block;
-        width: 36px;
-    }
-
-    #end {
-        display: inline-block;
-        width: 36px;
-        margin-left: 2px;
-    }
-
-    /* notations.html / visuals.html */
-    #compositions, #arrangements {
-        width: 99%;
-        margin-top: 10px;
-    }
-
-    div.notations {
-        width: 213px;
-        height: 142px;
-
-        margin-bottom: 120px;
-    }
-
-    div.description {
+    #navbar {
         width: 100%;
-        height: auto;
-
-        padding-top: 60%;
-        padding-left: 0%;
-
-        font-size: 7pt;
-        line-height: 12px;
-
-        overflow-y: hidden;
-    }
-
-    div.visuals {
-        margin-bottom: 120px;
-    }
-
-    div.winterDescription {
-        width: 100%;
-        height: 100%;
-
-        padding-top: 78%;
-        padding-left: 0%;
-
-        font-size: 7pt;
-        line-height: 15px;
-    }
-
-    /* contact.html */
-    #sns {
+        height: 120px;
         position: absolute;
-        top: 48vh;
+
+        padding-top: 36px;
+
     }
 
-    input {
-        font-size: 7pt;
-        width: 120px;
+    #name {
+        width: 100%;
+        margin-left: 0px;
+
+        text-align: center;
     }
-    #emailAddress {
-        width: 120px;
+
+    #nav {
+        width: 100%;
+        margin-top: 48px;
+        position: absolute;
+        
+        text-align: center;
+        float: none;
+    }
+
+    #lang {
+        width: 100%;
+        height: 36px;
+        margin-top: 84px;
+        position: absolute;
+
+        float: none;
+
+        text-align: center;
+    }
+    
+    .langSelect {
+        vertical-align: middle;
+
+        text-align: center;
+    
+        cursor: default;
+    }
+
+    .navicon {
+        margin-right: 6%;
+        margin-left: 6%;
+
+        float: none;
+    }
+
+    .content{
+        margin-top: 60px;
+        margin-right: 24px;
+        margin-left: 24px;
+
+
+        font-size: 7pt;
+    }
+
+    .emptyspace {
+        width: 100%;
+        height: 120px;
+    
+        display: block;
+    }
+
+    .emptyspace2 {
+        width: 100%;
+        height: 30px;
+    }
+
+    #compositions {
+        width: 100%;
+        float: left;
+        margin-right: 0px;
+    }
+    
+    #arrangements {
+        width: 100%;
+        float: left;
+        margin-right: 0px;
+    }
+
+    ::placeholder {
+        
+        font-size: 7pt;
+
+    }
+
+    input[type=text] {
+        
+        font-size: 7pt;
+
     }
 }
-
-@media(max-height: 768px) {
-    main {
-        height: 480px;
-    }
-
-    div.description { 
-        line-height: 16px;
-    }
-
-
-} 

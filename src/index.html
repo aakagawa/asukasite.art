@@ -1,50 +1,787 @@
-<!-- Copyright 2020 Asuka Akagawa. All rights reserved. -->
+<!-- Copyright 2022 Asuka Akagawa. All rights reserved. -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Asuka Akagawa</title>
+        <title>asuka akagawa</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Asuka Akagawa's website">
-        <link rel="icon" type="image/png" href="FaviconIcon3.3.png">
+        <link rel="icon" type="image/png" href=""> <!-- create new faviconicon -->
         <link href="styles.css" rel="stylesheet">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="header">
-                Asuka Akagawa &nbsp; 
+        <div id="preloader">
+            <div id="loader">
             </div>
-            <!-- https://getbootstrap.com/ -->
-            <nav class="global" id="navBar">
-                <div class="global">
-                    <a href="bio.html" class="notextdecoration">
-                        <img src="icons/ai/biography-01.svg" width="20px" height="20px">
-                    </a>
+        </div>
+        <header>
+            <div id="navbar">
+                <div id="name">
+                    asuka akagawa
                 </div>
-                <div class="global">
-                    <a href="sounds.html" class="notextdecoration">
-                        <img src="icons/ai/sounds-01.svg" width="20px" height="20px">
-                    </a>
+                <div id="nav">
+                    <div class="navicon" id="biography">
+                        <img src="icons/ai/biography-01.svg" width="14px" height="14px">
+                    </div>
+                    <div class="navicon" id="sounds">
+                        <img src="icons/ai/sounds-01.svg" width="14px" height="14px">
+                    </div>
+                    <div class="navicon" id="visuals">
+                        <img src="icons/ai/visuals-01.svg" width="14px" height="14px">
+                    </div>
+                    <div class="navicon" id="notations">
+                        <img src="icons/ai/notations-01.svg" width="8px" height="8px" style="padding-bottom: 2px;">
+                    </div>
+                    <div class="navicon" id="contact">
+                        <img src="icons/ai/contact2-01.svg" width="14px" height="14px">
+                    </div>
                 </div>
-                <div class="global">    
-                    <a href="visuals.html" class="notextdecoration">
-                        <img src="icons/ai/visuals-01.svg" width="20px" height="20px">
-                    </a>
+                <div id="lang">
+                    <div class="langSelect" id="English">en |</div> <div class="langSelect" id="Japanese">&nbsp;ja |</div> 
+                    <!-- <div class="langSelect" id="German">&nbsp;de |</div> <div class="langSelect" id="French">&nbsp;fr |</div>
+                    <div class="langSelect" id="Italian">&nbsp;it |</div> <div class="langSelect" id="Korean">&nbsp;ko |</div>
+                    <div class="langSelect" id="Russian">&nbsp;ru |</div> <div class="langSelect" id="Swedish">&nbsp;sw |</div> 
+                    <div class="langSelect" id="Chinese">&nbsp;zh |</div>  -->
                 </div>
-                <div class="global">
-                    <a href="notations.html" class="notextdecoration">
-                        <img id="notehead" src="icons/ai/notations-01.svg" width="16px" height="16px">
-                    </a>
-                </div>
-                <div class="global">    
-                    <a href="contact.html" class="notextdecoration">
-                        <img src="icons/ai/contact2-01.svg" width="20px" height="20px">
-                    </a>
-                </div>
-            </nav>
+            </div>
         </header>
-        <footer class="global">
-            &#169;2020 Asuka Akagawa. All rights reserved.
+        
+        <main id="pages">
+            <div class="container" id="container">
+                <div class="page" id="home">
+                </div>
+                <div class="page" id="biographyPage">
+                    <div class="content">
+                        <div id="biographyEN">
+                            Asuka Akagawa is a Japanese interdisciplinary artist, composer, and guitarist pursuing sophistication primarily in auditory expression.
+                            <br>
+                            <p></p>
+                            When Akagawa picked up the guitar at age 15, he immediately became addicted to the complex structure of the instrument as he was raised in a family of mathematicians (architect/interior designer).
+                            Unlike the piano or the Koto (a traditional Japanese stringed instrument), both which he briefly studied at an early age, the guitar had five places to play the same note. This complexity of the 
+                            instrument allowed him to approach guitar the same way he solved a puzzle. Accordingly, he began studying music theory at an early stage, soon immersing in its utilization in composition and improvisation. 
+                            As he found equal interest in all genres of music, he never sought to specialize in a specific style. Instead, he prefers to blend elements from various cultures seeking to develop a unique and personal sound. 
+                            Akagawa also always enjoyed visiting museums as much as he did listening to live music. Consequently, in addition to profound excogitation in auditory expression, he explores the potentiality in 
+                            interdisciplinary art, incorporating visual expression as well as digital signal processing and computer programming as extensions of his practice.
+                            <br>
+                            <br>
+                            <p></p>
+                            <i>Artist's Statement:<br>
+                            There are only three steps that I follow to achieve sophistication in my expression. First, I question as many whys and hows of the materials and concepts surrounding me as possible. Second, I gather the necessary 
+                            information on the subject through research and analysis. Third, I output my interpretation and response through methodological training on the expressive means. 
+                            <br>
+                            <p></p>
+                            My primary means of expression is sound because I cannot sufficiently communicate the identity of a lemon only with auditory information. Sure pronouncing "lemon" works but what does it look like? It would be simpler and much 
+                            more accurate to present a lemon if I intend to communicate the exact identity. The incapability of sound communicating precise information, in other words the abstract and subliminal 
+                            nature of sound is the reason why I pursue the field. With that said, I consider myself an interdisciplinary artist as I work with various mediums. I draw inspirations eclectically and apply 
+                            knowledge from a variety of fields when creating an artwork whether it be a big band composition or an audio visual installation.
+                            <br>
+                            <p></p>
+                            My influences include virtuosos from a range of fields. First and foremost are my mentors at Berklee including Mick Goodrick, Jon Damian, and Greg Hopkins to name a few. Mick Goodrick, who I spent the longest time 
+                            studying with enlightened me the significance of pursuing perfection in intended expression. In other words, the knowledge and skill on the expressive means. On top of that and more importantly, he guided me to 
+                            understand the preciousness of emotion, the other essential element that must not be absent in any artistic performance. Other major influences include composers such as Claude Debussy, Béla Bartók, Arnold Schönberg, 
+                            painters such as Claude Monet, Edvard Munch, Jackson Pollock, filmmakers such as Hayao Miyazaki, Martin Scorsese, architects such as Renzo Piano, Ando Tadao, physicists such as Albert Einstein, 
+                            and entrepreneurs such as Steve Jobs."</i>
+                        </div>
+                        <div id="biographyJA">
+                            赤川朝日（あかがわ　あすか）は主に聴覚表現の洗練を追求する日本の、日本の学際アーティスト、作曲家、編曲家、ギタリスト。
+                            <br>
+                            <p></p>
+                            15歳でギターを手にした赤川は理系の家で育ったこともあり、すぐにその複雑な構造にのめり込んでいった。幼い頃に習っていたピアノやお箏と違い、ギターは同じ音高を出す方法が5つある。この複雑さ故に、パズルを解くようにギターと向き合えたと言う。そのため、早い段階で音楽理論を学び、
+                            作曲や即興演奏に生かすことに没頭した。 
+                            さらに、赤川はあらゆるジャンルの音楽に等しく興味を持った為、特定のスタイルに特化しようとすることはなかった。その代わり、様々な文化的要素を融合させ、自分だけのサウンドを追求することを好んだ。また、赤川は生演奏を聴くのと同程度、美術館に足を運ぶことを好む。そのため、
+                            聴覚表現における考究に加え、視覚表現、デジタル信号処理、プログラミングなどを取り入れた、学際的アートの可能性を探求している。
+                            <br>
+                            <br>
+                            <p></p>
+                            <i>アーティスト・ステートメント：<br>
+                            洗練された表現を実現するためには、主に3つのステップを踏みます。まず、私を取り巻く物体や概念に対して、できるだけ多くの「どうして」と「どうやって」を問いかけます。そして、調査、分析によって必要な情報を収集します。最後に、表現手段の方法論的トレーニングを経たのちに、
+                            自分の解釈や反応をアウトプットします。
+                            <br>
+                            <p></p>
+                            私の主な表現手段が音である理由は、聴覚情報だけではレモンの正体を十分に伝えることができないからです。確かに「レモン」という発音は有効ですが、どんな形をしているのか、などレモンの正体を正確に伝えるのであれば、レモンを提示する方がはるかに単純で正確です。音は比較的、
+                            的確な情報を伝えることのできない、抽象的で潜在意識的な媒体であり、これが私が聴覚表現に重きを置いている理由そのものです。とはいえ、私は様々な媒体を扱うので、自分自身を学際アーティストだと考えています。ビッグバンドの作曲でにせよ、オーディオビジュアル・インスタレーションでにせよ、
+                            作品を制作する際は、多岐に渡る分野からインスピレーションを得て、様々な知識を応用することを心がかています。
+                            <br>
+                            <p></p>
+                            私は様々な分野の巨匠から影響を受けました。まず特筆すべきは、バークリー音楽大学での恩師であるミック・グドリック氏、ジョン・ダミアン氏、グレッグ・ホプキンス氏などです。最も長い時間師事したミック・グッドリック氏は、意図した表現において、完璧を追求することの意義を私に教えてくれました。
+                            つまり、表現手段に関する知識と技術です。さらに、その上で芸術的な演奏に欠かすことのできない、もうひとつの要素である「感情」の尊さを理解するよう、導いてくれました。その他、深く影響を受けた人物は、ドビュッシー、バルトーク、シェーンベルクといった作曲家、
+                            モネ、ムンク、ポロックといった画家、宮崎駿、マーティン・スコセッシといった映画監督、レンゾ・ピアノ、安藤忠雄といった建築家、アルバート・アインシュタインといった物理学者、スティーブ・ジョブズといった企業家などです。</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" id="soundsPage">
+                    <div class="content">
+                        <audio id="player">
+                            <source id="source" src="">
+                        </audio>
+                        <div class="audioPlayer">
+                            <div class="albumCover" style=>
+                            </div>
+                            <div class="albumDescription"> 
+                                Solo Guitar Improvised Sound Art recorded live at Azabujuban, Tokyo, Japan<br>
+                                Guitar, Electronics, Mixing Engineer: Asuka Akagawa
+                            </div>
+                            <div class="tracks" id="Azabu_Improvs">
+                                <table>
+                                    <colgroup class="track" span="1">
+                                    </colgroup>
+                                    <colgroup class="title" span="1">
+                                    </colgroup>
+                                    <colgroup class="duration" span="1">
+                                    </colgroup>
+                                    <colgroup class="toggle" span="1">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="border: none;">1.</td>
+                                            <td style="border: none;">Azabu Improv. nº1</td>
+                                            <td style="border: none;">02:56</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">2.</td>
+                                            <td style="border: none;">Azabu Improv. nº2</td>
+                                            <td style="border: none;">01:36</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">3.</td>
+                                            <td style="border: none;">Azabu Improv. nº3</td>
+                                            <td style="border: none;">01:39</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">4.</td>
+                                            <td style="border: none;">Azabu Improv. nº4</td>
+                                            <td style="border: none;">04:17</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="audioPlayer">
+                            <div class="albumCover" style="background-image: url();">
+                            </div>
+                            <div class="albumDescription"> 
+                                Performed virtually by the Berklee Concert Jazz Orchestra directed by Greg Hopkins. <br>
+                                Composition: Asuka Akagawa<br>
+                                Woodwinds: Sheila Del Bosque, Sen Yoshimura, Ori Menache, Max Roark, Aaron Hayashi<br>
+                                Trumpets: Carlos Ramos Gomez, Miles Thompson (soloist), Greg Hopkins<br>
+                                Trombones: Auden Durant (soloist), Danny Thornburg<br>
+                                Guitar: Asuka Akagawa (soloist) &nbsp; &nbsp; Piano: Yoko Suzuki (soloist)<br>
+                                Double Bass: Eduardo Diez Vieira &nbsp; &nbsp; Drums: Gen Yoshimura<br>
+                                Mixing Engineer: Asuka Akagawa
+                            </div>
+                            <div class="tracks" id="Samayo">
+                                <table>
+                                    <colgroup class="track" span="1">
+                                    </colgroup>
+                                    <colgroup class="title" span="1">
+                                    </colgroup>
+                                    <colgroup class="duration" span="1">
+                                    </colgroup>
+                                    <colgroup class="toggle" span="1">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="active">
+                                            <td style="border: none;">1.</td>
+                                            <td style="border: none;">彷徨う (Samayo)</td>
+                                            <td style="border: none;">10:23</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="audioPlayer">
+                            <div class="albumCover">
+                            </div>
+                            <div class="albumDescription"> 
+                                Collaborative work with the Berklee Interdisciplanary Arts Institute directed by Neil Leonard,
+                                and students from UFMG directed by Marco Scarassatti.<br>
+                                Electric Guitar: Asuka Akagawa<br> 
+                                Nylon String Guitar: Felipe Pinheiro <br>
+                                Percussion: Marcos Alves<br> 
+                                Mixing Engineer: Asuka Akagawa
+                            </div>
+                            <div class="tracks" id="Marco">
+                                <table>
+                                    <colgroup class="track" span="1">
+                                    </colgroup>
+                                    <colgroup class="title" span="1">
+                                    </colgroup>
+                                    <colgroup class="duration" span="1">
+                                    </colgroup>
+                                    <colgroup class="toggle" span="1">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="border: none;">1.</td>
+                                            <td style="border: none;">Foundation 1</td>
+                                            <td style="border: none;">06:36</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">2.</td>
+                                            <td style="border: none;">Foundation 2</td>
+                                            <td style="border: none;">06:35</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="audioPlayer">
+                            <div class="albumCover" style=>
+                            </div>
+                            <div class="albumDescription"> 
+                                Solo Guitar Improvised Sound Art recorded live at Seijo, Tokyo, Japan<br>
+                                Guitar, Electronics, Mixing Engineer: Asuka Akagawa
+                            </div>
+                            <div class="tracks" id="Untitled">
+                                <table>
+                                    <colgroup class="track" span="1">
+                                    </colgroup>
+                                    <colgroup class="title" span="1">
+                                    </colgroup>
+                                    <colgroup class="duration" span="1">
+                                    </colgroup>
+                                    <colgroup class="toggle" span="1">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="border: none;">1.</td>
+                                            <td style="border: none;">Untitled nº1</td>
+                                            <td style="border: none;">18:02</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">2.</td>
+                                            <td style="border: none;">Untitled nº2</td>
+                                            <td style="border: none;">02:18</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;">3.</td>
+                                            <td style="border: none;">Untitled nº3</td>
+                                            <td style="border: none;">17:57</td>
+                                            <td style="border: none;">
+                                                <div class="playpauseTrack">
+                                                    <svg class="bi bi-play-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                                    </svg>
+                                                    <svg class="bi bi-pause-fill" width="16px" height="16px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                                    </svg>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="emptyspace">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="scripts/audioPlayer3.js"></script>
+                </div>
+                <div class="page" id="visualsPage">
+                    <div class="content">
+                        <div id="vcontrolFullScreen" >
+                            <div id="vplaypauseFullScreen" style="display: none;">
+                                <svg id="vbi-play-fullscreen" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                </svg>
+                                <svg id="vbi-pause-fullscreen" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="exitFullScreen">
+                            <img src="icons/ai/close-01.svg" width="14px" height="14px">
+                        </div>
+                        <div id=vplayerBackground>
+                        </div>
+                        <video id="vplayer" >
+                            <source id="vsource" src="" type="video/mp4">
+                        </video>
+
+                        <div class="vrow">
+                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584.jpg);">
+                            </div>
+                            <div class="label">
+                                <i>IMG_0584,</i> 2022 <br>
+                                JPEG image <br> 
+                                2723 x 3630 px <br> 
+                                Camera: iPhone 12 Pro <br>
+                                Color Space: RGB <br>
+                                Color Profile: Display P3 <br>
+                                Focal Length: 4.2 mm <br>
+                                F number: f/1.6 <br>
+                                Exposure time: 1/60 
+                            </div>
+                        </div> 
+                        <div class="emptyspace">
+
+                        </div>
+                        <div class="vrow">
+                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Minami_Aoyama/Minami_Aoyama_Highlights_thumbnail.jpg);">
+                                <div class="vcontrol">
+                                    <div class="vloader">
+                                    </div>
+                                    <div class="vplaypause">
+                                        <svg class="vbi bi-play-fill" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                        </svg>
+                                        <svg class="vbi bi-pause-fill" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label" id="Minami_Aoyama">
+                                <i>Solo Guitar Sound Art (at Stump Base 1F Tokyo) Highlights,</i> July 2020<br>
+                                Video (with sound)<br>
+                                Duration: 15:46<br>
+                                Recorded live at Stump Base 1F, Minami Aoyama, Minato, Tokyo,<br>
+                            </div>
+                        </div>
+                        <div class="emptyspace">
+
+                        </div>
+                        <div class="vrow">
+                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Early_Summer_Air/Early_Summer_Air_2_2_thumbnail.png);">
+                                <div class="vcontrol">
+                                    <div class="vloader">
+                                    </div>
+                                    <div class="vplaypause">
+                                        <svg class="vbi bi-play-fill" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"/>
+                                        </svg>
+                                        <svg class="vbi bi-pause-fill" width="24px" height="24px" viewBox="0 0 16 16" fill="Whitesmoke" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label" id="Early_Summer_Air">
+                                <i>Early Summer Air</i> May 2020<br>
+                                Video (with Sound<br>
+                                Duration: 01:30<br>
+                                Recorded live at Seijo, Tokyo, Japan<br>                                
+                            </div>
+                        </div>
+                        <div class="emptyspace">
+
+                        </div>
+                        <div class="vrow">
+                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Spring.jpg);">
+                            </div>
+                            <div class="label">
+                                <i>Spring,</i> 2019 <br>
+                                Watercolor and pastel on paper<br>
+                                15 x 11 inches
+                            </div>
+                        </div>
+                        <div class="emptyspace">
+
+                        </div>
+                        <div class="vrow">
+                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Winter.jpg);">
+                            </div>
+                            <div class="label">
+                                <i>Winter,</i> 2019 <br>
+                                Watercolor and pastel on paper<br>
+                                15 x 11 inches
+                            </div>
+                        </div>
+                        <div class="emptyspace">
+
+                        </div>
+                    
+                    </div>
+                    <script src="scripts/videoPlayer2.js">
+                    </script>
+                    <script>
+                        var images = document.getElementsByClassName('image');
+                        window.addEventListener('load', imageDimension);
+                        window.addEventListener('resize', imageDimension);
+                        function imageDimension() { 
+                            for (var i = 0; i < images.length; i++) {
+                                var imagesrc = images[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
+                                var image = new Image(); 
+                                var imageWidth, imageHeight, imageAspectRatio; 
+
+                                image.src = imagesrc; 
+                                
+                                imageWidth = image.width;
+                                imageHeight = image.height;
+                                imageAspectRatio = imageWidth / imageHeight;
+
+                                var divWidth, divHeight; 
+                                divWidth = images[i].clientWidth - images[i].style.paddingLeft - images[i].style.paddingRight;
+
+                                images[i].style.height = divWidth / imageAspectRatio + "px"; 
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="page" id="notationsPage">
+                    <div class="content">
+                        <div id="compositions">
+                            <div class="scorerow">
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/compositions/201003_Samayo_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>Samayo</i>
+                                    <br>
+                                    Big Band (8 5 4)<br>
+                                    2020 <br>
+                                    Duration: approx. 12:00
+                                </div>
+                            </div>
+                            <div class="emptyspace2">
+
+                            </div>
+                            <div class="scorerow">     
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/compositions/200903_Mobius_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>Möbius</i>
+                                    <br>
+                                    Big Band (8 6or5 4)<br>
+                                    2020 <br>
+                                    Duration: 
+                                </div>
+                            </div>
+                            <div class="emptyspace2">
+
+                            </div>
+                        </div>
+                        <div id="arrangements">
+                            <div class="scorerow">
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/210203_You_Must_Believe_In_Spring_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>You Must Believe In Spring</i>
+                                    <br>
+                                    Big Band (8 6or5 4)<br>
+                                    Composer: Michel Legrand <br>
+                                    2019<br>
+                                    Duration: approx. 4:00
+                                </div>
+                            </div>
+                            <div class="emptyspace2">
+
+                            </div>
+                            <div class="scorerow">
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/210523_My_Favorite_Things_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>My Favorite Things</i>
+                                    <br>
+                                    Big Band (8 6or5 4)<br>
+                                    Composer: Richard Rogers<br>
+                                    2018<br>
+                                    Duration: approx.
+                                </div>
+                            </div>
+                            <div class="emptyspace2">
+
+                            </div>
+                            <div class="scorerow">
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/200430_Schoenberg_-_Sechs_kleine_Klavierstucke_Op.19_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>Sechs kleine Klavierstücke Op.19</i>
+                                    <br>
+                                    Orchestra<br>
+                                    Composer: Arnold Schönberg<br>
+                                    2020<br>
+                                    Duration: approx. 4:30
+                                </div>
+                            </div>
+                            <div class="emptyspace2">
+
+                            </div>
+                            <div class="scorerow">
+                                <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/201208_Claude_Debussy_-_La_cathedrale_engloutie_Preview.jpg);">
+                                </div>
+                                <div class="scoreinfo">
+                                    <i>La cathédrale engloutie from Preludes Book I</i>
+                                    <br>
+                                    Orchestra<br>
+                                    Composer: Claude Debussy<br>
+                                    2020<br>
+                                    Duration: 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        var scores = document.getElementsByClassName('score');
+                        window.addEventListener('load', scoreDimension);
+                        window.addEventListener('resize', scoreDimension);
+                        function scoreDimension() { 
+                            for (var i = 0; i < scores.length; i++) {
+                                var scoresrc = scores[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
+                                var score = new Image(); 
+                                var scoreWidth, scoreHeight, scoreAspectRatio; 
+                    
+                                score.src = scoresrc; 
+                                scoreWidth = score.width;
+                                scoreHeight = score.height;
+                                scoreAspectRatio = scoreWidth / scoreHeight;
+                                
+                                var divWidth, divHeight; 
+                                divWidth = scores[i].clientWidth - scores[i].style.paddingLeft - scores[i].style.paddingRight;
+                    
+                                scores[i].style.height = divWidth / scoreAspectRatio + "px"; 
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="page" id="contactPage">
+                    <div class="content">
+                        <div class="emailAddress">
+                            Reach me at: 
+                            <input type="text" id="emailAddress" value="info@asukasite.art" readonly>
+                        </div>
+                        <script>
+                            document.getElementById('emailAddress').addEventListener('click', copyText);
+                            function copyText() {
+                            /* Get the text field */
+                            var copyText = document.getElementById("emailAddress");
+            
+                            /* Select the text field */
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+            
+                            /* Copy the text inside the text field */
+                            document.execCommand("copy");
+                            /* Alert the copied text */
+                            alert("Email adddress copied to clipboard");
+                            }
+                        </script>
+                        <!-- <div>
+                            <form id="" action="contact.php" method="POST">
+                                <div id="formName">
+                                    Name:
+                                </div>
+                                <input type="text" name="name" placeholder="Your Name">
+                                <div id="formEmail">
+                                    Email: 
+                                </div>
+                                <input type="text" name="email" placeholder="your@email.com">
+                                <div id="formMessage">
+                                    Message: 
+                                </div>
+                                <textarea name="message" form="form" placeholder="Your message..."></textarea>
+                            </form>
+                        </div> -->
+                        <div id="sns">
+                            <a href="https://www.facebook.com/asukamusic-102771417974152/" target="_blank">
+                                <img src="icons/iconFacebook.svg" class="snsIcons">
+                            </a>
+                            <a href="https://www.instagram.com/asukaakagawa/" target="_blank">
+                                <img src="icons/iconInstagram.svg" class="snsIcons">
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCcEbuthMDXkjLE6utc5CDYw" target="_blank" >
+                                <img src="icons/iconYouTube.svg" class="snsIcons">
+                            </a>
+                            <a href="https://twitter.com/dawnmusicjp?lang=en" target="_blank" >
+                                <img src="icons/iconTwitter.svg" class="snsIcons">
+                            </a>
+                            <a href="https://www.linkedin.com/in/asuka-akagawa-96723419a/" target="_blank">
+                                <img src="icons/iconLinkedIn.svg" class="snsIcons">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
         </footer>
+        <script>
+            var page0 = 0; 
+            var page1, page2, page3, page4, page5;
+            var windowWidth, windowHeight; 
+            window.addEventListener('load', windowSize);
+            window.addEventListener('resize', windowSize);
+            function windowSize() {
+                windowWidth = window.innerWidth;
+                windowHeight = window.innerHeight;
+
+                page1 = windowWidth;
+                page2 = windowWidth * 2;
+                page3 = windowWidth * 3; 
+                page4 = windowWidth * 4;
+                page5 = windowWidth * 5;
+            }
+
+            var container = document.getElementById('container');
+            var Xoffset, Yoffset; 
+            container.addEventListener('scroll', scrollPosition);
+            container.addEventListener('scroll', displayLang);
+
+            function scrollPosition() {
+                Xoffset = container.scrollLeft;
+            }
+
+            var biography = document.getElementById('biography');
+            var sounds = document.getElementById('sounds');
+            var visuals = document.getElementById('visuals');
+            var notations = document.getElementById('notations');
+            var contact = document.getElementById('contact');
+            biography.addEventListener('click', scrollToBiography);
+            sounds.addEventListener('click', scrollToSounds);
+            visuals.addEventListener('click', scrollToVisuals);
+            notations.addEventListener('click', scrollToNotations);
+            contact.addEventListener('click', scrollToContacts);
+
+            function scrollToBiography() {
+                container.scrollTo(page1, Yoffset);
+            }
+
+            function scrollToSounds() {
+                container.scrollTo(page2, Yoffset);
+            }
+
+            function scrollToVisuals() {
+                container.scrollTo(page3, Yoffset);
+            }
+
+            function scrollToNotations() {
+                container.scrollTo(page4, Yoffset);
+            }
+
+            function scrollToContacts() {
+                container.scrollTo(page5, Yoffset);
+            }
+
+            var lang = document.getElementById('lang');
+            var EN = document.getElementById('English'), JA = document.getElementById('Japanese');
+            // var DE = document.getElementById('German'), FR = document.getElementById('French'), 
+            // IT = document.getElementById('Italian'), KO = document.getElementById('Korean'), 
+            // RU = document.getElementById('Russian'), SW = document.getElementById('Swedish'),
+            // ZH = document.getElementById('Chinese');
+
+            var English = document.getElementById('biographyEN');
+            var Japanese = document.getElementById('biographyJA');
+            EN.addEventListener('click', english); 
+            JA.addEventListener('click', japanese);
+
+            function displayLang() {
+                var distanceToBiography = Math.abs(Xoffset - page1);
+                if (distanceToBiography >= windowWidth) {
+                    lang.style.opacity = 0;
+                }
+                else if (distanceToBiography < windowWidth) {
+                    var langOpacity = 1 - (distanceToBiography / windowWidth);
+                    lang.style.opacity = Math.round(langOpacity * 100) / 100;
+                }
+            }
+
+            function english() {
+                English.style.display = 'block';
+                Japanese.style.display = 'none';
+            }
+
+            function japanese() {
+                English.style.display = 'none';
+                Japanese.style.display = 'block';
+            }
+
+            window.addEventListener('load', pageLoaded);
+            function pageLoaded() {
+                var preloader = document.getElementById('preloader');
+                var loader = document.getElementById('loader');
+                preloader.style.display = "none";
+                loader.style.display = "none";
+            }
+
+        </script>
     </body>
 </html>
