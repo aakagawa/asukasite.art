@@ -624,7 +624,7 @@ a {
     }
 
     .container {
-        height: calc(100vh - 156px);
+        height: calc(100vh - 120px);
     }
 
     #navbar {
