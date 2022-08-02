@@ -19,9 +19,9 @@ body {
     height: 100%;
     position: fixed;
 
-    z-index: 99;
     background-color: rgb(32, 32, 32);
     opacity: 1;
+    z-index: 99;
 }
 
 #loader {
@@ -67,12 +67,12 @@ header {
 #navbar {
     height: 36px;
     padding-top: 24px;
+    position: relative;
     overflow: hidden;
     
     background-color: rgb(32, 32, 32);
-    z-index: 2;
 
-    position: relative;
+    z-index: 2;
 }
 
 #name {
@@ -296,7 +296,7 @@ tr:hover {
     overflow-y: scroll;
 }
 
-#vplayerBackground {
+#fullScreenBackground {
     width: 100%;
     height: 100%;
     position: absolute;

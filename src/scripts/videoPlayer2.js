@@ -13,7 +13,7 @@ var vplayer = document.getElementById('vplayer');
 
 var vplaypause = document.getElementsByClassName('vplaypause');
 var vplaypauseFullScreen = document.getElementById('vplaypauseFullScreen');
-var vplayerBackground = document.getElementById('vplayerBackground');
+var fullScreenBackground = document.getElementById('fullScreenBackground');
 var exitFullScreen = document.getElementById('exitFullScreen');
 var vloader = document.getElementsByClassName('vloader');
 var vbiplay = document.getElementsByClassName('vbi bi-play-fill');
@@ -25,9 +25,7 @@ for (var j = 0; j < vplaypause.length; j++) {
 }
 
 vplaypauseFullScreen.addEventListener('click', playpauseFullScreen);
-
 function playpauseFullScreen() {
-    console.log('playpauseFullScreen clicked!');
     if (vplayer.paused === true) {
         resetvIcons();
         vplaypauseFullScreen.children[0].style.display = "none";
@@ -35,7 +33,6 @@ function playpauseFullScreen() {
         vplayer.play();
     }
     else {
-        console.log('video paused on fullscreen');
         resetvIcons();
         vplaypauseFullScreen.children[0].style.display = "inline-block";
         vplaypauseFullScreen.children[1].style.display = "none";
@@ -53,21 +50,20 @@ function playpause() {
     vsource.src = videos[thisVideo][0];
     if (vplayer.currentSrc === vsource.src) {
         if (vplayer.paused === true) {
-            console.log('source is same, player was paused');
+
             resetvIcons();
             this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
             this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
             this.parentElement.children[0].style.display = 'block'; //loader
-            vplayerBackground.style.display = "block";//black video background
+            fullScreenBackground.style.display = "block"
+            vplayer.style.display = "block";
+            vplaypauseFullScreen.style.display = "block";
             exitFullScreen.style.display = "block";
-            vplayer.style.display = "block"; //the video
-            playpauseControlFullScreen();
             vplaypauseFullScreen.children[0].style.display = "none";
             vplaypauseFullScreen.children[1].style.display = "inline-block";
-            vloadPlay();
+            vplayer.play();
         }
-        else {
-            console.log('source is same, player was playing');
+        else { //this should not occur but just in case
             resetvIcons();
             this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "inline-block";
             this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "none";
@@ -76,59 +72,42 @@ function playpause() {
         }
     }
     else { 
-        if (vplayer.paused === true) {
-            console.log('source is different, player was paused');
-            resetvIcons();
-            this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
-            this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
-            this.parentElement.children[0].style.display = 'block'; //loader
-            vplayerBackground.style.display = "block"; //black video background
-            exitFullScreen.style.display = "block";
-            vplayer.style.display = "block"; //the video
-            playpauseControlFullScreen();
-            vplaypauseFullScreen.children[0].style.display = "none";
-            vplaypauseFullScreen.children[1].style.display = "inline-block";
-            vloadPlay();
-        }
-        else {
-            console.log('source is different, player was playing');
-            resetvIcons();
-            this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
-            this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
-            this.parentElement.children[0].style.display = 'block'; //loader
-            vplayerBackground.style.display = "block"; //black video background
-            exitFullScreen.style.display = "block";
-            vplayer.style.display = "block"; //the video 
-            playpauseControlFullScreen(); 
-            vplaypauseFullScreen.children[0].style.display = "none";
-            vplaypauseFullScreen.children[1].style.display = "inline-block";
-            vloadPlay();
-        }
+        resetvIcons();
+        this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
+        this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
+        this.parentElement.children[0].style.display = 'block'; //loader
+        videoLoaded();
+        vplaypauseFullScreen.children[0].style.display = "none";
+        vplaypauseFullScreen.children[1].style.display = "inline-block";
+        vloadPlay();
     }
 }
 
-function playpauseControlFullScreen() { 
+function videoLoaded() { 
     vplayer.addEventListener('loadeddata', function() {
         resetvIcons(); 
+        fullScreenBackground.style.display = "block"
+        vplayer.style.display = "block";
         vplaypauseFullScreen.style.display = "block";
         exitFullScreen.style.display = "block";
         setTimeout(function() {
             vplaypauseFullScreen.style.display = "none";
             exitFullScreen.style.display = "none";
         }, 2000);
-        vplayer.addEventListener('mousemove', playpauseControlFullScreenIO);
+        vplayer.addEventListener('mousemove', playpauseFullScreenIO);
         exitFullScreen.addEventListener('click', function() {
+            resetvIcons(0);
             vplayer.pause(); 
-            vplayerBackground.style.display = "none"; //black video background
+            fullScreenBackground.style.display = "none"; //black video background
             vplayer.style.display = "none"; //the video 
             vplaypauseFullScreen.style.display = "none";
             exitFullScreen.style.display = "none";
         });
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                console.log('escape pressed!');
+                resetvIcons(0);
                 vplayer.pause(); 
-                vplayerBackground.style.display = "none"; //black video background
+                fullScreenBackground.style.display = "none"; //black video background
                 vplayer.style.display = "none"; //the video 
                 vplaypauseFullScreen.style.display = "none";
                 exitFullScreen.style.display = "none";
@@ -137,16 +116,14 @@ function playpauseControlFullScreen() {
     });
 }
 
-function playpauseControlFullScreenIO() {
+function playpauseFullScreenIO() {
     vplaypauseFullScreen.style.display = "block";
     exitFullScreen.style.display = "block";
-    vplayer.removeEventListener('mousemove', playpauseControlFullScreenIO);
-    
-    console.log('mousemove');
+    vplayer.removeEventListener('mousemove', playpauseFullScreenIO);
     setTimeout(function () {
         vplaypauseFullScreen.style.display = "none";
         exitFullScreen.style.display = "none";
-        vplayer.addEventListener('mousemove', playpauseControlFullScreenIO); 
+        vplayer.addEventListener('mousemove', playpauseFullScreenIO); 
     }, 2000);
 
 }
