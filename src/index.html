@@ -384,16 +384,20 @@
                         <div id="exitFullScreen">
                             <img src="icons/ai/close-01.svg" width="14px" height="14px">
                         </div>
-                        <div id="fullScreenBackground">
-                        </div>
+                        <img id="fullScreenPicture">
+                        </img>
                         <video id="vplayer">
                             <source id="vsource" src="" type="video/mp4">
                         </video>
+                        <div id="fullScreenBackground">
 
+                        </div>
                         <div class="vrow">
-                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584_thumbnail.jpg);">
+                            <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584_thumbnail.jpg);">
+                                <div class="vloader">
+                                </div>
                             </div>
-                            <div class="label">
+                            <div class="label" id="IMG_0584">
                                 <i>IMG_0584,</i> 2022 <br>
                                 JPEG image <br> 
                                 2723 x 3630 px <br> 
@@ -459,9 +463,9 @@
 
                         </div>
                         <div class="vrow">
-                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Spring_thumbnail.jpg);">
+                            <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Spring_thumbnail.jpg);">
                             </div>
-                            <div class="label">
+                            <div class="label" id="Spring">
                                 <i>Spring,</i> 2019 <br>
                                 Watercolor and pastel on paper<br>
                                 15 x 11 inches
@@ -471,9 +475,9 @@
 
                         </div>
                         <div class="vrow">
-                            <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Winter_thumbnail.jpg);">
+                            <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Winter_thumbnail.jpg);">
                             </div>
-                            <div class="label">
+                            <div class="label" id="Winter">
                                 <i>Winter,</i> 2019 <br>
                                 Watercolor and pastel on paper<br>
                                 15 x 11 inches
@@ -484,10 +488,13 @@
                         </div>
                     
                     </div>
+                    <script src="scripts/pictureFullScreen.js">
+                    </script>
                     <script src="scripts/videoPlayer2.js">
                     </script>
                     <script>
                         var images = document.getElementsByClassName('image');
+                        
                         window.addEventListener('load', imageDimension);
                         window.addEventListener('resize', imageDimension);
                         function imageDimension() { 
@@ -501,7 +508,7 @@
                                 imageAspectRatio = imageWidth / imageHeight;
                                 var divWidth, divHeight; 
                                 divWidth = images[i].clientWidth - images[i].style.paddingLeft - images[i].style.paddingRight;
-                                images[i].style.height = divWidth / imageAspectRatio + "px"; 
+                                images[i].style.height = divWidth / imageAspectRatio + "px";
                             }
                         }
 
