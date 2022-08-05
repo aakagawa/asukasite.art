@@ -42,6 +42,7 @@ function pictureLoaded() {
         }, 2000);
         fullScreenPicture.addEventListener('mousemove', pictureFullScreenIO);
         exitFullScreen.addEventListener('click', function() {
+            console.log('exitfullscreen clicked picture');
             fullScreenBackground.style.display = "none"; //black background
             fullScreenPicture.style.display = "none"; //the picture 
             exitFullScreen.style.display = "none";

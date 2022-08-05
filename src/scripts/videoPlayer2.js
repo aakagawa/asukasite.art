@@ -50,7 +50,6 @@ function playpause() {
     vsource.src = videos[thisVideo][0];
     if (vplayer.currentSrc === vsource.src) {
         if (vplayer.paused === true) {
-
             resetvIcons();
             this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
             this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
@@ -96,7 +95,7 @@ function videoLoaded() {
         }, 2000);
         vplayer.addEventListener('mousemove', playpauseFullScreenIO);
         exitFullScreen.addEventListener('click', function() {
-            resetvIcons(0);
+            resetvIcons();
             vplayer.pause(); 
             fullScreenBackground.style.display = "none"; //black video background
             vplayer.style.display = "none"; //the video 
@@ -105,7 +104,7 @@ function videoLoaded() {
         });
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                resetvIcons(0);
+                resetvIcons();
                 vplayer.pause(); 
                 fullScreenBackground.style.display = "none"; //black video background
                 vplayer.style.display = "none"; //the video 
@@ -132,7 +131,8 @@ function resetvIcons() {
     for (var m = 0; m < vplaypause.length; m++) {
         vbiplay[m].style.display = "inline-block";
         vbipause[m].style.display = "none";
-
-        vloader[m].style.display = "none";
+    }
+    for (var n = 0; n < vloader.length; n++) {
+        vloader[n].style.display = "none";
     }
 }
