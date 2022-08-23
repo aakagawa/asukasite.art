@@ -8,5 +8,7 @@ node_modules
 *.wav
 *.mp3
 
+*.png
 *.jpg
+
 *.ai
