@@ -1,7 +1,6 @@
-<!-- Copyright 2022 Asuka Akagawa. All rights reserved. -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
         <title>Asuka Akagawa</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Asuka Akagawa's website">
@@ -71,7 +70,7 @@
                             <p></p>
                             My primary means of expression is sound because I cannot sufficiently communicate the identity of a lemon only with auditory information. Sure pronouncing "lemon" works but what does it look like? It would be simpler and much 
                             more accurate to present a lemon if I intend to communicate the exact identity. The incapability of sound communicating precise information, in other words the abstract and subliminal 
-                            nature of sound is the reason why I pursue the field. With that said, I consider myself an interdisciplinary artist as I work with various mediums. I draw inspirations eclectically and apply 
+                            nature of sound is the main reason why I pursue the field. With that said, I consider myself an interdisciplinary artist as I work with various mediums. I draw inspirations eclectically and apply 
                             knowledge from a variety of fields when creating an artwork whether it be a big band composition or an audio visual installation.
                             <br>
                             <p></p>
@@ -453,7 +452,7 @@
                                 </div>
                             </div>
                             <div class="label" id="Early_Summer_Air">
-                                <i>Early Summer Air</i> May 2020<br>
+                                <i>Early Summer Air,</i> May 2020<br>
                                 Video (with Sound<br>
                                 Duration: 01:30<br>
                                 Recorded live at Seijo, Tokyo, Japan<br>                                
@@ -640,8 +639,8 @@
                         var scores = document.getElementsByClassName('score');
                         window.addEventListener('load', scoreDimension);
                         window.addEventListener('resize', scoreDimension);
-                        function scoreDimension() { 
-                            for (var i = 0; i < scores.length; i++) {
+                        function scoreDimension(){ 
+                            for (var i = 0; i < scores.length; i++){
                                 var scoresrc = scores[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
                                 var score = new Image(); 
                                 var scoreWidth, scoreHeight, scoreAspectRatio; 
@@ -659,23 +658,70 @@
                 <div class="page" id="contactPage">
                     <div class="content">
                         <div class="emailAddress">
-                            Reach me at: 
+                            Email:
                             <input type="text" id="emailAddress" value="info@asukasite.art" readonly>
+                        </div>
+                        <div id="menuEN">
+                            Online Lesson <br>
+                            Courses: <br>
+                            — Techniques of Guitar (all genres except classical) <br>
+                            — Music Theory, Composing, and Arranging <br>
+                            — Instrumentation and Orchestration <br>
+                            — Music Notation and Score Preparation Using Finale <br>
+                            — DAW Writing and Production <br>
+                            — Programming in Max/MSP/Jitter <br>
+                            *Or any combination of above courses. <br> 
+                            Prices: <br>
+                            — $30/h <br>
+                            — $55/2h <br>
+                            — $180/whole day (10:00-18:00)<br>
+                            <br>
+                            Music <br>
+                            Styles and Prices: <br>
+                            — Big Band/Orchestra/Chamber composition score/parts: starting at $200 (additional $100 for a mockup) <br>
+                            — Jazz combo composition score/parts: starting at $100 (lead sheet: $50, additional $50 for a mockup) <br>
+                            — Popular music composition score/parts (no lyrics): starting at $100 (additional $50 for a mockup) <br> 
+                            — Popular music composition score/parts (with lyrics): starting at $200 (additional $100 for a mockup) <br>
+                            *20% off for arrangements. <br>
+                            *$200 for mockup session files. <br>  
+                            *$50 for guitar/bass TABs.
+
+                        </div>
+                        <div id="menuJA">
+                            オンラインレッスン<br>
+                            科目： <br>
+                            —　ギターテクニック (クラシックを除く) <br>
+                            —　音楽理論、作曲、編曲 <br>
+                            —　楽器法、管弦楽法 <br>
+                            —　DAW 作曲、プロダクション <br>
+                            —　Max/MSP/Jitter <br>
+                            * 上記科目の組み合わせ <br>
+                            ¥3,600/1時間、¥6,600/2時間、21,600/1日 <br>
+                            <br>
+                            制作 <br>
+                            スタイルと価格： <br>
+                            —　ビッグバンド/オーケストラ/室内楽 作曲 スコア/パート譜： ￥24,000から (デモ：別途￥12,000) <br>
+                            —　ジャズコンボ　作曲　スコア/パート譜： ￥12,000から (リードシート：￥6,000、デモ：別途￥6,000) <br>
+                            —　ポップス 作曲 スコア/パート譜 (歌詞なし)： ￥12,000から (デモ：別途￥6,000) <br>
+                            —　ポップス 作曲 スコア/パート譜 (歌詞あり)： ￥24,000から (デモ：別途￥12,000)<br>
+                            *編曲は20%引き <br>
+                            *デモ音源セッションファイル： ￥20,000 <br>
+                            *ギター/ベース TAB譜： ￥6,000 <br>
                         </div>
                         <script>
                             document.getElementById('emailAddress').addEventListener('click', copyText);
-                            function copyText() {
+                            function copyText(){
                             /* Get the text field */
-                            var copyText = document.getElementById("emailAddress");
-            
-                            /* Select the text field */
-                            copyText.select();
-                            copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-            
-                            /* Copy the text inside the text field */
-                            document.execCommand("copy");
-                            /* Alert the copied text */
-                            alert("Email adddress copied to clipboard");
+                                var copyText = document.getElementById("emailAddress");
+                
+                                /* Select the text field */
+                                copyText.select();
+                                copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+                
+                                /* Copy the text inside the text field */
+                                document.execCommand("copy");
+                                /* Alert the copied text */
+                                alert("Email adddress copied to clipboard");
                             }
                         </script>
                         <!-- <div>
@@ -723,7 +769,7 @@
             var windowWidth, windowHeight; 
             window.addEventListener('load', windowSize);
             window.addEventListener('resize', windowSize);
-            function windowSize() {
+            function windowSize(){
                 windowWidth = window.innerWidth;
                 windowHeight = window.innerHeight;
 
@@ -739,7 +785,7 @@
             container.addEventListener('scroll', scrollPosition);
             container.addEventListener('scroll', displayLang);
 
-            function scrollPosition() {
+            function scrollPosition(){
                 Xoffset = container.scrollLeft;
             }
 
@@ -754,23 +800,23 @@
             notations.addEventListener('click', scrollToNotations);
             contact.addEventListener('click', scrollToContacts);
 
-            function scrollToBiography() {
+            function scrollToBiography(){
                 container.scrollTo(page1, Yoffset);
             }
 
-            function scrollToSounds() {
+            function scrollToSounds(){
                 container.scrollTo(page2, Yoffset);
             }
 
-            function scrollToVisuals() {
+            function scrollToVisuals(){
                 container.scrollTo(page3, Yoffset);
             }
 
-            function scrollToNotations() {
+            function scrollToNotations(){
                 container.scrollTo(page4, Yoffset);
             }
 
-            function scrollToContacts() {
+            function scrollToContacts(){
                 container.scrollTo(page5, Yoffset);
             }
 
@@ -781,34 +827,47 @@
             // RU = document.getElementById('Russian'), SW = document.getElementById('Swedish'),
             // ZH = document.getElementById('Chinese');
 
-            var English = document.getElementById('biographyEN');
-            var Japanese = document.getElementById('biographyJA');
+            var biographyEnglish = document.getElementById('biographyEN');
+            var biographyJapanese = document.getElementById('biographyJA');
+            var menuEnglish = document.getElementById('menuEN');
+            var menuJapanese = document.getElementById('menuJA');
             EN.addEventListener('click', english); 
             JA.addEventListener('click', japanese);
 
-            function displayLang() {
+            function displayLang(){
                 var distanceToBiography = Math.abs(Xoffset - page1);
-                if (distanceToBiography >= windowWidth) {
-                    lang.style.opacity = 0;
+                var distanceToContact = Math.abs(Xoffset - page5);
+                if(distanceToBiography >= windowWidth){
+                    if(distanceToContact >= windowWidth){
+                        lang.style.opacity = 0;
+                    }
+                    else if(distanceToContact < windowWidth){
+                        var langOpacity = 1 - (distanceToContact / windowWidth);
+                        lang.style.opacity = Math.round(langOpacity * 100) / 100;
+                    }
                 }
-                else if (distanceToBiography < windowWidth) {
+                else if(distanceToBiography < windowWidth){
                     var langOpacity = 1 - (distanceToBiography / windowWidth);
                     lang.style.opacity = Math.round(langOpacity * 100) / 100;
                 }
             }
 
-            function english() {
-                English.style.display = 'block';
-                Japanese.style.display = 'none';
+            function english(){
+                biographyEnglish.style.display = 'block';
+                biographyJapanese.style.display = 'none';
+                menuEnglish.style.display = 'block';
+                menuJapanese.style.display = 'none'; 
             }
 
-            function japanese() {
-                English.style.display = 'none';
-                Japanese.style.display = 'block';
+            function japanese(){
+                biographyEnglish.style.display = 'none';
+                biographyJapanese.style.display = 'block';
+                menuEnglish.style.display = 'none';
+                menuJapanese.style.display = 'block';
             }
 
             window.addEventListener('load', pageLoaded);
-            function pageLoaded() {
+            function pageLoaded(){
                 var preloader = document.getElementById('preloader');
                 var loader = document.getElementById('loader');
                 preloader.style.display = "none";
