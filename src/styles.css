@@ -1,8 +1,8 @@
 html {
-    font-family: 'Helvetica Neue', Helvetica, Arial;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     scroll-behavior: smooth;
-/* font-family: 'Courier New', monospace; */
-    /* image-resolution: 300dpi; */
+    font-family: 'Courier New', monospace;
+    image-resolution: 300dpi;
 }
 
 body {
@@ -81,9 +81,9 @@ header {
     margin-left: 84px;
     position: absolute;
 
-    font-size: 16pt;
+    font-size: 23.44px;
     font-weight: 120;
-    letter-spacing: 0.36em;
+    letter-spacing: 0.24em;
     font-variant: small-caps;
 }
 
@@ -105,7 +105,6 @@ header {
     float: right;
     margin-right: 60px;
 
-    font-size: 14pt;
     font-weight: 120;
     letter-spacing: 0.12em;
     font-variant: small-caps;
@@ -119,7 +118,6 @@ header {
 
     margin-top: 7px;
 
-    font-size: 9pt;
     line-height: 1;
     font-weight: 80;
     text-align: left;
@@ -172,9 +170,9 @@ main {
     margin-right: 84px;
     margin-left: 84px;
 
-    font-size: 9pt;
+    font-size: 12px;
     line-height: 1.5;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.03em;
     font-weight: 80;
     text-align: left;
     color:  rgb(245, 245, 245);
@@ -238,7 +236,7 @@ main {
     height: auto;
     margin-top: 16px;
     margin-bottom: 0px;
-    font-size: 7pt;
+    font-size: 9.60px;
     color: rgb(245, 245, 245);
     cursor: default;
 }
@@ -477,7 +475,6 @@ video::-webkit-media-controls {
 }
 
 .label {
-    width: 33%;
     position: absolute;
     display: inline-block;
     top: 50%;
@@ -520,7 +517,6 @@ video::-webkit-media-controls {
 }
 
 .scoreinfo {
-    width: 50%;
     position: absolute;
     display: inline-block;
     top: 50%;
@@ -575,10 +571,11 @@ input {
 }
 
 ::placeholder {
-    font-family: 'Helvetica Neue', Helvetica, Arial;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial; */
+    font-family: 'Courier New', monospace;
     font-size: 9pt;
     line-height: 1.5;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.03em;
     font-weight: 80;
 }
 
@@ -593,10 +590,11 @@ input:hover {
 }
 
 input[type=text] {
-    font-family: 'Helvetica Neue', Helvetica, Arial;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial; */
+    font-family: 'Courier New', monospace;
     font-size: 9pt;
     line-height: 1.5;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.03em;
     font-weight: 80;
     color: rgb(245, 245, 245);
 
@@ -610,10 +608,11 @@ textarea {
     border: none;
     background: none;
 
-    font-family: 'Helvetica Neue', Helvetica, Arial;
+    /* font-family: 'Helvetica Neue', Helvetica, Arial; */
+    font-family: 'Courier New', monospace;
     font-size: 9pt;
     line-height: 1.5;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.03em;
     font-weight: 80;
     color: rgb(245, 245, 245);
 
@@ -646,7 +645,7 @@ a {
 
 
 
-@media(max-width: 768px) {
+@media(max-width: 960px) {
     header {
         height: 120px;
     }
@@ -711,7 +710,7 @@ a {
         margin-right: 24px;
         margin-left: 24px;
 
-        font-size: 7pt;
+        font-size: 12px;
     }
 
     .emptyspace {
@@ -733,7 +732,7 @@ a {
     }
 
     .tracks {
-        font-size: 6pt;
+        font-size: 9.60px;
     }
 
     #compositions {
@@ -750,13 +749,13 @@ a {
 
     ::placeholder {
         
-        font-size: 7pt;
+        font-size: 12px;
 
     }
 
     input[type=text] {
         
-        font-size: 7pt;
+        font-size: 12px;
 
     }
 }
