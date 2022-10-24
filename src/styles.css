@@ -707,15 +707,15 @@ a {
 
     .content{
         margin-top: 60px;
-        margin-right: 24px;
-        margin-left: 24px;
+        margin-right: 12px;
+        margin-left: 12px;
 
-        font-size: 12px;
+        font-size: 9.60px;
     }
 
     .emptyspace {
         width: 100%;
-        height: 96px;
+        height: 120px;
     
         display: block;
     }
@@ -729,10 +729,23 @@ a {
         width: 100%;
         height: auto;
         margin-left: 0;
+        font-size: 9.60px;
     }
 
     .tracks {
         font-size: 9.60px;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .label {
+        position: relative;
+        display: block;
+        padding-top: 3%;
+        padding-left: 0%;
+        transform: translateY(0%);
     }
 
     #compositions {
