@@ -762,13 +762,13 @@ a {
 
     ::placeholder {
         
-        font-size: 12px;
+        font-size: 9.60pxpx;
 
     }
 
     input[type=text] {
         
-        font-size: 12px;
+        font-size: 9.60px;
 
     }
 }
