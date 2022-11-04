@@ -62,7 +62,7 @@ function playpause() {
             vplaypauseFullScreen.children[1].style.display = "inline-block";
             vplayer.play();
         }
-        else { //this should not occur but just in case
+        else { //this should not happen but just in case
             resetvIcons();
             this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "inline-block";
             this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "none";
@@ -83,7 +83,7 @@ function playpause() {
 }
 
 function videoLoaded() { 
-    vplayer.addEventListener('loadeddata', function() {
+    vplayer.addEventListener('canplaythrough', function() {
         resetvIcons(); 
         fullScreenBackground.style.display = "block"
         vplayer.style.display = "block";

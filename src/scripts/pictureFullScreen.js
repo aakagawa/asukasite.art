@@ -1,4 +1,9 @@
 var pictures = {
+    Stairs_Installation: [
+        "",
+        "",
+        "",
+    ],
     IMG_0584: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584.jpg"
     ],
@@ -49,7 +54,7 @@ function pictureLoaded() {
         });
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                fullScreenBackground.style.display = "none"; //black video background
+                fullScreenBackground.style.display = "none"; //black background
                 fullScreenPicture.style.display = "none"
                 exitFullScreen.style.display = "none";
             }
