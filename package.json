@@ -10,10 +10,11 @@
   "author": "Asuka Akagawa",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
     "stripe": "^8.92.0"
   },
   "engines": {
-    "node": "14.17.0" 
+    "node": "14.17.0"
   }
 }
