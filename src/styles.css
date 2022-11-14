@@ -465,7 +465,6 @@ video::-webkit-media-controls {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-
 }
 
 .multiImg {
@@ -479,7 +478,6 @@ video::-webkit-media-controls {
 }
 
 .img {
-    width: 66%;
     scroll-snap-align: center;
     flex: none;
 

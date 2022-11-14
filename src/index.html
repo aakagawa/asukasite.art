@@ -497,8 +497,13 @@
                     </script>
                     <script>
                         var images = document.getElementsByClassName('image');
+                        var imgs = document.getElementsByClassName('img');
                         window.addEventListener('load', imageDimension);
+                        window.addEventListener('load', imgDimension);
                         window.addEventListener('resize', imageDimension);
+                        window.addEventListener('resize', imgDimension);
+                        windowHeight = window.innerHeight;
+                        windowWidth = window.innerWidth; 
                         function imageDimension() { 
                             for (var i = 0; i < images.length; i++) {
                                 var imagesrc = images[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
@@ -508,13 +513,30 @@
                                 imageWidth = image.width;
                                 imageHeight = image.height;
                                 imageAspectRatio = imageWidth / imageHeight;
-                                windowHeight = window.innerHeight;
                                 var divWidth, divHeight; 
                                 divWidth = images[i].clientWidth - images[i].style.paddingLeft - images[i].style.paddingRight;
                                 images[i].style.height = divWidth / imageAspectRatio + "px";
-                                if(imageHeight > windowHeight){
-                                    images[i].style.height = windowHeight - 240 + "px";
-                                    
+                                if (imageHeight > windowHeight){
+                                    images[i].style.height = windowHeight - 120 + "px";
+                                }
+                            }
+                        }
+                        function imgDimension() {
+                            for (var j = 0; j < imgs.length; j++) {
+                                var imgsrc = imgs[j].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
+                                var img = new Image();
+                                var imgWidth, imgHeight, imgAspectRatio;
+                                img.src = imgsrc;
+                                imgWidth = img.width;
+                                imgHeight = img.height;
+                                imgAspectRatio = imgWidth / imgHeight;
+                                var innerDivWidth, innerDivHeight;  
+                                innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight; 
+                                innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
+                                imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";
+                                imgs[j].style.width = innerDivHeight * imgAspectRatio + "px";
+                                if (imgHeight > windowHeight){
+                                    imgs[j].style.height = windowHeight - 180 + "px";
                                 }
                             }
                         }
