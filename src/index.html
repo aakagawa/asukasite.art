@@ -551,19 +551,20 @@
                                     }
                                     innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
                                     imgs[j].style.width = (innerDivHeight * imgAspectRatio) + "px";
-
+                                    // innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
+                                    // imgs[j].style.height = (innerDivWidth / imgAspectRatio) + "px";
                                 }
                                 else {
-                                    innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
-                                    imgs[j].style.width = (innerDivHeight * imgAspectRatio) + "px";
-                                    console.log(imgWidth, windowWidth);
-                                    if (windowWidth > 960) {
-                                        if (imgWidth > (windowWidth *0.66)) {
-                                            imgs[j].style.width = (windowWidth *0.66) - 120 + "px";
-                                        }
-                                    }
+                                    if (windowWidth < 960) {
+                                        imgs[j].style.height = (windowHeight * 0.66)+ "px";
+                                        imgs[j].style.width = (windowHeight * 0.66) * imgAspectRatio + "px";
+                                    } 
+                                    else {
                                     innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
-                                    imgs[j].style.height = (innerDivWidth / imgAspectRatio) + "px";
+                                    imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";
+                                    innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
+                                    imgs[j].style.width = innerDivHeight * imgAspectRatio + "px";
+                                    }
                                 }
                             }
                         }

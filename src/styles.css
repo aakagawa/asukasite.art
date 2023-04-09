@@ -185,6 +185,10 @@ main {
     color:  rgb(245, 245, 245);
 }
 
+#home {
+    overflow-y: hidden;
+}
+
 #biographyPage {
     overflow-y: scroll;
 }
