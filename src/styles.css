@@ -494,7 +494,6 @@ video::-webkit-media-controls {
 
 .img {
     width: 100%;
-    scroll-snap-align: center;
     flex: none;
 
     overflow-y: hidden;
