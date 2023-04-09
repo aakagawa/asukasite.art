@@ -66,7 +66,7 @@ header {
 
 #navbar {
     height: 36px;
-    padding-top: 24px;
+    padding-top: 4px;
     position: relative;
     overflow: hidden;
     
@@ -78,7 +78,7 @@ header {
 #name {
     color: rgb(245,245,245);
     height: 36px;
-    margin-left: 84px;
+    margin-left: 12px;
     position: absolute;
 
     font-size: 23.44px;
@@ -89,7 +89,7 @@ header {
 
 #nav {
     height: 36px;
-    margin-right: 24px;
+    margin-right: 0px;
     position: relative;
 
     float: right;
@@ -173,9 +173,9 @@ main {
 
 .content {
     height: inherit;
-    margin-top: 60px;
-    margin-right: 84px;
-    margin-left: 84px;
+    margin-top: 4px;
+    margin-right: 12px;
+    margin-left: 12px;
 
     font-size: 12px;
     line-height: 1.5;
@@ -468,17 +468,19 @@ video::-webkit-media-controls {
 
 .image {
     width: 66%;
+    
     position: relative;
     display: inline-block;
 
     background-size: contain;
-    background-position: center center;
+    background-position: left center;
     background-repeat: no-repeat;
 }
 
 .multiImg {
     width: 100%;
     display: flex;
+    align-items: center;
     overflow: auto;
     overflow-y: hidden;
     flex: none;
@@ -491,6 +493,7 @@ video::-webkit-media-controls {
 }
 
 .img {
+    width: 100%;
     scroll-snap-align: center;
     flex: none;
 
@@ -500,12 +503,12 @@ video::-webkit-media-controls {
     background-position: center center;
     background-repeat: no-repeat;
 
-    margin: 12px;
+    margin-right: 60px;
 }
 
 .emptyspace {
     width: 100%;
-    height: 120px;
+    height: 240px;
 
     display: block;
 }
@@ -524,14 +527,14 @@ video::-webkit-media-controls {
 }
 
 #compositions {
-    width: 50%;
+    width: 66%;
     float: left;
     margin-right: 0px;
 }
 
 #arrangements {
-    width: 50%;
-    float: right;
+    width: 66%;
+    float: left;
     margin-right: 0px;
 }
 
@@ -563,7 +566,7 @@ video::-webkit-media-controls {
 
 .emptyspace2 {
     width: 100%;
-    height: 60px;
+    height: 144px;
 }
 
 #contactPage {
@@ -664,6 +667,7 @@ textarea:focus {
 }
 
 #sns {
+    vertical-align: bottom;
     width: 100%;
     height: auto;    
 }
@@ -681,6 +685,18 @@ a {
     cursor: default;
 }
 
+#footer {
+    bottom: 126px;
+    right: -120px;
+    transform: rotate(270deg);
+    position: absolute;
+    font-size: 9.6px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    font-weight: 80;
+    text-align: left;
+    color: rgb(245, 245, 245);
+}
 
 
 @media(max-width: 960px) {
@@ -697,8 +713,7 @@ a {
         height: 120px;
         position: absolute;
 
-        padding-top: 36px;
-
+        padding-top: 4px;
     }
 
     #name {
@@ -720,7 +735,7 @@ a {
     #lang {
         width: 100%;
         height: 36px;
-        margin-top: 84px;
+        margin-top: 80px;
         position: absolute;
 
         float: none;
@@ -743,10 +758,14 @@ a {
         float: none;
     }
 
+    #contact {
+        margin-right: 6% !important; 
+    }
+
     .content{
-        margin-top: 60px;
-        margin-right: 12px;
-        margin-left: 12px;
+        margin-top: 0px;
+        margin-right: 4px;
+        margin-left: 4px;
 
         font-size: 9.60px;
     }
@@ -808,5 +827,18 @@ a {
         
         font-size: 9.60px;
 
+    }
+
+    #footer {
+        bottom: 96px;
+        right: -74px;
+        transform: rotate(270deg);
+        position: absolute;
+        font-size: 6.14px;
+        line-height: 0;
+        letter-spacing: 0.03em;
+        font-weight: 80;
+        text-align: left;
+        color: rgb(245, 245, 245);
     }
 }
