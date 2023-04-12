@@ -524,7 +524,6 @@
                                 imageWidth = image.width;
                                 imageHeight = image.height;
                                 imageAspectRatio = imageWidth / imageHeight;
-                                console.log(imageAspectRatio);
                                 var divWidth, divHeight;
                                 divWidth = images[i].clientWidth - images[i].style.paddingLeft - images[i].style.paddingRight;
                                 images[i].style.height = (divWidth / imageAspectRatio) + "px";
@@ -551,12 +550,10 @@
                                     }
                                     innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
                                     imgs[j].style.width = (innerDivHeight * imgAspectRatio) + "px";
-                                    // innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
-                                    // imgs[j].style.height = (innerDivWidth / imgAspectRatio) + "px";
                                 }
                                 else {
                                     if (windowWidth < 960) {
-                                        imgs[j].style.height = (windowHeight * 0.66)+ "px";
+                                        imgs[j].style.height = (windowHeight * 0.66) + "px";
                                         imgs[j].style.width = (windowHeight * 0.66) * imgAspectRatio + "px";
                                     } 
                                     else {
