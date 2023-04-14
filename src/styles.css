@@ -494,6 +494,7 @@ video::-webkit-media-controls {
     flex: none;
     flex-flow: row nowrap;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .multiImg::-webkit-scrollbar {
