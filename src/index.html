@@ -357,7 +357,7 @@
                             </div>
                         </div>
                         <div id="exitFullScreen">
-                            <img src="icons/ai/close-01.svg" width="15px" height="15px">
+                            <img src="icons/ai/close-01.svg" width="24px" height="24px">
                         </div>
                         <img id="fullScreenPicture">
                         <video id="vplayer">
@@ -367,6 +367,8 @@
                         </div>
                         <div class="vrow">
                             <div class="image pictureThumbnail">
+                                <img src="icons/ai/left.svg" class="left"> 
+                                <img src="icons/ai/right.svg" class="right">
                                 <div class="multiImg">
                                     <div class="img" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/documentations/Li_estas_kiu/230224_FABRICA_AsukaAkagawa_004_1260_gerdastudio.jpg);"></div>
                                     <div class="img" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/documentations/Li_estas_kiu/230224_FABRICA_AsukaAkagawa_011_1281_gerdastudio.jpg);"></div>
@@ -399,6 +401,8 @@
                         </div>
                         <div class="vrow">
                             <div class="image pictureThumbnail">
+                                <img src="icons/ai/left.svg" width="36px" height="36px" class="left">
+                                <img src="icons/ai/right.svg" width="36px" height="36px" class="right">
                                 <div class="multiImg">
                                     <div class="img" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/documentations/stairs_installation/_O9A2502_thumbnail.jpg);"></div>
                                     <div class="img" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/documentations/stairs_installation/_O9A2555_thumbnail.jpg);"></div>
@@ -423,7 +427,6 @@
                                 Photography: Josef Paul and Asuka Akagawa
                                 <br>
                                 cv.jit in Max/MSP/Jitter: Jean-Marc Pelletier
-
                             </div>
                         </div> 
                         <div class="emptyspace">
@@ -542,28 +545,47 @@
                                 imgHeight = img.height;
                                 imgAspectRatio = imgWidth / imgHeight;
                                 var innerDivWidth, innerDivHeight;  
-                                if (imgAspectRatio <= 1 ) {
-                                    innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
-                                    imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";
+                                if (windowWidth < 960) {
+                                    console.log('window width is less than 960!');
+                                    imgs[j].style.height = (windowHeight * 0.5) + "px";
+                                    imgs[j].style.width = (windowHeight * 0.5) * imgAspectRatio + "px";
+                                } 
+                                else if (imgAspectRatio <= 1 ) {
                                     if (imgHeight > windowHeight) {
                                         imgs[j].style.height = windowHeight - 120 + "px";
                                     }
                                     innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
                                     imgs[j].style.width = (innerDivHeight * imgAspectRatio) + "px";
                                 }
-                                else {
-                                    if (windowWidth < 960) {
-                                        imgs[j].style.height = (windowHeight * 0.66) + "px";
-                                        imgs[j].style.width = (windowHeight * 0.66) * imgAspectRatio + "px";
-                                    } 
-                                    else {
+                                else {       
+                                    if (imgWidth > (windowWidth * 0.66)) {
+                                        imgs[j].style.width = (windowWidth * 0.66) - 120 + "px";
+                                    }                         
                                     innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
-                                    imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";
-                                    innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
-                                    imgs[j].style.width = innerDivHeight * imgAspectRatio + "px";
-                                    }
+                                    imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";                             
                                 }
                             }
+                        }
+                        var left = document.getElementsByClassName('left');
+                        var right = document.getElementsByClassName('right');
+                        var multiImg = document.getElementsByClassName('multiImg');
+                        for (var l = 0; l < left.length; l++) {
+                            thisLeft = left[l];
+                            thisLeft.addEventListener('click', scrollLeft);
+                        }
+                        for (var r = 0; r < right.length; r++) {
+                            thisRight = right[r];
+                            thisRight.addEventListener('click', scrollRight);
+                        }         
+                        function scrollLeft() {
+                            var thisMultiImg = this.parentElement.children[2];
+                            widthOfThisMultiImg = thisMultiImg.clientWidth;
+                            thisMultiImg.scrollBy(-widthOfThisMultiImg / 6, 0);
+                        }
+                        function scrollRight() { 
+                            var thisMultiImg = this.parentElement.children[2];
+                            widthOfThisMultiImg = thisMultiImg.clientWidth;
+                            thisMultiImg.scrollBy(widthOfThisMultiImg / 6, 0);
                         }
                     </script>
                 </div>
@@ -897,16 +919,16 @@
             function displayLang(){
                 var distanceToBiography = Math.abs(Xoffset - page1);
                 var distanceToContact = Math.abs(Xoffset - page5);
-                if(distanceToBiography >= windowWidth){
-                    if(distanceToContact >= windowWidth){
+                if (distanceToBiography >= windowWidth){
+                    if (distanceToContact >= windowWidth){
                         lang.style.opacity = 0;
                     }
-                    else if(distanceToContact < windowWidth){
+                    else if (distanceToContact < windowWidth){
                         var langOpacity = 1 - (distanceToContact / windowWidth);
                         lang.style.opacity = Math.round(langOpacity * 100) / 100;
                     }
                 }
-                else if(distanceToBiography < windowWidth){
+                else if (distanceToBiography < windowWidth){
                     var langOpacity = 1 - (distanceToBiography / windowWidth);
                     lang.style.opacity = Math.round(langOpacity * 100) / 100;
                 }
