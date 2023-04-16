@@ -506,7 +506,7 @@ video::-webkit-media-controls {
     height: 24px;
     position: absolute;
     top: 50%;
-    left: 0%;
+    left: 0px;
     z-index: 2;
 }
 
@@ -515,7 +515,7 @@ video::-webkit-media-controls {
     height: 24px;
     position: absolute;
     top: 50%;
-    right: 0%;
+    right: 0px;
     z-index: 2;
 }
 
@@ -826,11 +826,13 @@ a {
     .left {
         width: 15px;
         height: 15px;
+        left: 2px;
     }
 
     .right {
         width: 15px;
         height: 15px;
+        right: 2px;
     }
 
 
