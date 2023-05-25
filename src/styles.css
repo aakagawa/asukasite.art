@@ -211,19 +211,21 @@ main {
 }
 
 #cvrésumé {
-    display: inline-block;
+    width: fit-content;
+    margin-right: 0px;
+    display: block;
     position: relative;
 }
 
 #cvrésuméhide {
-    display: inline-block;
+    width: fit-content;
+    
     position: relative;
 }
 
 #cvResume {
     display: none;
     position: relative;
-    display: block;
     line-height: 1;
 }
 
