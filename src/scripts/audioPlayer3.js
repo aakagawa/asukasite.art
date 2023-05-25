@@ -51,7 +51,7 @@ function active() {
     
     source.src = albums[thisAlbum][i];
     current[0].className = current[0].className.replace('active', '');
-    this.className += 'active';
+    this.className += ' active';
 }
 
 function loadPlay() {
@@ -113,4 +113,3 @@ function resetIcons() {
         bipause[l].style.display = "none";
     }
 }
-

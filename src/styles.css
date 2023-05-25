@@ -11,7 +11,7 @@ body {
     margin: 0px;
     overflow-y: hidden;
 
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(24, 24, 24);
 }
 
 #preloader {
@@ -19,7 +19,7 @@ body {
     height: 100%;
     position: fixed;
 
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(24, 24, 24);
     opacity: 1;
     z-index: 2147483647;
 }
@@ -31,10 +31,10 @@ body {
     
     margin-left: -18px;
     margin-top: -18px;
-    border: 1px solid rgb(32, 32, 32);
+    border: 1px solid rgb(24, 24, 24);
     border-radius: 50%;
-    border-top: 1px solid rgb(245, 245, 245);
-    border-bottom: 1px solid rgb(245, 245, 245);
+    border-top: 1px solid rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(240, 240, 240);
     width: 36px;
     height: 36px;
     -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -70,13 +70,13 @@ header {
     position: relative;
     overflow: hidden;
     
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(24, 24, 24);
 
     z-index: 2;
 }
 
 #name {
-    color: rgb(245,245,245);
+    color: rgb(240, 240, 240);
     height: 36px;
     margin-left: 12px;
     position: absolute;
@@ -98,7 +98,7 @@ header {
 }
 
 #lang {
-    color: rgb(245,245,245);
+    color: rgb(240, 240, 240);
     height: 36px;
 
     display: inline;
@@ -115,12 +115,12 @@ header {
     display: inline-block;
     vertical-align: middle;
 
-    margin-top: 7px;
+    margin-top: 5.25px;
 
     line-height: 1;
     font-weight: 80;
     text-align: left;
-    color:  rgb(245, 245, 245);
+    color:  rgb(240, 240, 240);
 
     cursor: default;
 }
@@ -182,7 +182,7 @@ main {
     letter-spacing: 0.03em;
     font-weight: 80;
     text-align: left;
-    color:  rgb(245, 245, 245);
+    color:  rgb(240, 240, 240);
 }
 
 #home {
@@ -210,6 +210,70 @@ main {
     line-height: 2;   
 }
 
+#cvrésumé {
+    display: inline-block;
+    position: relative;
+}
+
+#cvrésuméhide {
+    display: inline-block;
+    position: relative;
+}
+
+#cvResume {
+    display: none;
+    position: relative;
+    display: block;
+    line-height: 1;
+}
+
+.cvResumeHeader {
+    margin-left: 11%;
+    font-size: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+colgroup.when {
+    width: 11%;
+}
+
+colgroup.what {
+    width: 89%;
+}
+
+table.cvResume {
+    width: 100%;
+    text-indent: 0px;
+    line-height: 1;
+
+    border-spacing: 0px;
+}
+
+tr.cvResume {
+    border: 0;
+}
+
+td.cvResumeWhen {
+    text-align: right;
+    float: right;
+    vertical-align: text-top;
+    padding: 0px 6px 0px 0px; 
+}
+
+td.cvResumeWhat {
+    text-align: left;
+    padding: 0px;
+}
+
+#cvResumeSkills {
+    margin-left: 11%;
+}
+
+#cvResumeEducation {
+    margin-left: 11%;
+}
+
 #soundsPage{ 
     overflow-y: scroll;
 }
@@ -223,20 +287,16 @@ main {
     display: inline-block;
     width: 108px;
     height: 108px;
-
-    letter-spacing: 0.12em;
     background-color: rgb(127, 127, 127);
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 2px;
 }
 
 .albumDescription{
     display: inline-block;
     width: calc(100% - 144px);
     height: 108px;
-    margin-left: 24px;
+    margin-left: 3px;
     overflow-y: scroll;
     line-height: 1.5;
 }
@@ -254,41 +314,41 @@ main {
     margin-top: 16px;
     margin-bottom: 0px;
     font-size: 9.60px;
-    color: rgb(245, 245, 245);
+    color: rgb(240, 240, 240);
     cursor: default;
 }
 
-table {
+table.sounds {
     width: 100%;
     border-collapse: collapse;
     line-height: 1.5;
     text-indent: 6px;
 }
 
-td svg {
+td.sounds {
     vertical-align: middle;
 }
 
-tr {
-    border-top: rgb(127, 127, 127) 1px solid;
-    border-bottom: rgb(127, 127, 127) 1px solid; 
+svg {
+    vertical-align: middle;
 }
 
 colgroup.track{
     width: 1%;
 }
 colgroup.title{
-    width: 93%;
+    width: 96%;
 }
 colgroup.duration{
-    width: 4%;
+    width: 2%;
 }
 colgroup.toggle {
-    width: 2%;
+    width: 1%;
 }
 
 .playpauseTrack {
     margin-bottom: 1px;
+    margin-right: 6px;
 }
 
 .bi-play-fill {
@@ -299,11 +359,11 @@ colgroup.toggle {
     display: none;
 }
 
-tr:hover { 
+tr.sounds:hover { 
     background-color: rgb(159, 159, 159)
 }
 
-.active {
+tr.active {
     background-color: rgb(127, 127, 127);
 }
 
@@ -404,8 +464,8 @@ video::-webkit-media-controls {
     height: 34px;
     border-radius: 50%;
     border: 1px solid transparent;
-    border-top: 1px solid rgb(245, 245, 245);
-    border-bottom: 1px solid rgb(245, 245, 245);
+    border-top: 1px solid rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(240, 240, 240);
     -webkit-animation: spin 1s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
 
@@ -592,17 +652,17 @@ video::-webkit-media-controls {
 
 .emptyspace2 {
     width: 100%;
-    height: 144px;
+    height: 120px;
 }
 
 #contactPage {
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .emailAddress {
     width: 100%;
     height: 24px;
-    margin-bottom: 3%;
+    margin-bottom: 36px;
 }
 
 #emailAddress {
@@ -616,7 +676,7 @@ video::-webkit-media-controls {
     display: block;
 
     line-height: 1.5;
-    margin-bottom: 3%;
+    margin-bottom: 36px;
 }
 
 #menuJA {
@@ -625,7 +685,7 @@ video::-webkit-media-controls {
     display: none;
 
     line-height: 1.5;
-    margin-bottom: 3%;
+    margin-bottom: 36px;
 }
 
 input {
@@ -662,7 +722,7 @@ input[type=text] {
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-weight: 80;
-    color: rgb(245, 245, 245);
+    color: rgb(240, 240, 240);
 
     padding: 0px;
 }
@@ -680,7 +740,7 @@ textarea {
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-weight: 80;
-    color: rgb(245, 245, 245);
+    color: rgb(240, 240, 240);
 
     padding: 0;
 }
@@ -695,12 +755,13 @@ textarea:focus {
 #sns {
     vertical-align: bottom;
     width: 100%;
-    height: auto;    
+    height: auto;
+    margin-bottom: 36px;    
 }
 
 a {
     text-decoration: none;
-    color: rgb(245, 245, 245);
+    color: rgb(240, 240, 240);
 }
 
 .snsIcons {
@@ -721,7 +782,7 @@ a {
     letter-spacing: 0.03em;
     font-weight: 80;
     text-align: left;
-    color: rgb(245, 245, 245);
+    color: rgb(240, 240, 240);
 }
 
 
@@ -790,7 +851,7 @@ a {
 
     .content{
         margin-top: 0px;
-        margin-right: 4px;
+        margin-right: 6px;
         margin-left: 4px;
 
         font-size: 9.60px;
@@ -806,6 +867,37 @@ a {
     .emptyspace2 {
         width: 100%;
         height: 36px;
+    }
+    
+    .cvResumeHeader {
+        margin-left: 33%;
+        font-size: 15px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    colgroup.when {
+        width: 33%;
+    }
+
+    colgroup.what {
+        width: calc(100% - 33%);
+    }
+
+    table.cvResume {
+        width: 100%;
+        text-indent: 0px;
+        line-height: 1;
+        border-spacing: 0px;
+    }
+
+
+    #cvResumeSkills {
+        margin-left: 33%;
+    }
+
+    #cvResumeEducation {
+        margin-left: 33%;
     }
 
     .albumDescription{
@@ -834,7 +926,6 @@ a {
         height: 15px;
         right: 2px;
     }
-
 
     .label {
         position: relative;
@@ -878,6 +969,6 @@ a {
         letter-spacing: 0.03em;
         font-weight: 80;
         text-align: left;
-        color: rgb(245, 245, 245);
+        color: rgb(240, 240, 240);
     }
 }
