@@ -774,10 +774,19 @@ a {
     cursor: default;
 }
 
+#mylogo {
+    position: relative;
+    width: 39.69px; 
+    height: 39.69px; 
+    display: block; 
+    float: right; 
+    filter: invert(1);
+}
+
 #footer {
     bottom: 38.2vh;
-    right: -120px;
-    transform: rotate(270deg);
+    right: -118px;
+    transform: rotate(270deg); 
     position: absolute;
     font-size: 9.6px;
     line-height: 1.5;
@@ -786,6 +795,13 @@ a {
     text-align: left;
     color: rgb(240, 240, 240);
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+    #footer {
+        right: -126px;
+    }
+}
+    
 
 
 @media(max-width: 960px) {
@@ -853,7 +869,7 @@ a {
 
     .content{
         margin-top: 0px;
-        margin-right: 6px;
+        margin-right: 6.47px;
         margin-left: 4px;
 
         font-size: 9.6px;
@@ -962,15 +978,21 @@ a {
     }
 
     #footer {
-        bottom: 38.2vh;
-        right: -74px;
-        transform: rotate(270deg);
         position: absolute;
+        bottom: 38.2vh;
+        right: -76px;
+        transform: rotate(270deg);
         font-size: 6.14px;
         line-height: 0;
         letter-spacing: 0.03em;
         font-weight: 80;
         text-align: left;
         color: rgb(240, 240, 240);
+    }
+
+    @media not all and (min-resolution: 0.001dpcm) {
+        #footer {
+            right: -78px;
+        }
     }
 }
