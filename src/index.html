@@ -657,7 +657,7 @@
                             </div>
                         </div>
                         <div id="exitFullScreen">
-                            <img src="icons/ai/close-01.svg" width="24px" height="24px">
+                            <img src="icons/ai/close-01.svg" width="12px" height="12px">
                         </div>
                         <img id="fullScreenPicture">
                         <video id="vplayer">
@@ -741,7 +741,7 @@
 
                         </div>
                         <div class="vrow">
-                            <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584_thumbnail.jpg);">
+                            <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584/IMG_0584_thumbnail.jpg);">
                                 <div class="vloader">
                                 </div>
                             </div>
@@ -840,11 +840,12 @@
                                 imageHeight = image.height;
                                 imageAspectRatio = imageWidth / imageHeight;
                                 var divWidth, divHeight;
+                                // if (imageHeight > windowHeight) {
+                                //     images[i].style.height = windowHeight - 120 + "px";
+                                // }
                                 divWidth = images[i].clientWidth - images[i].style.paddingLeft - images[i].style.paddingRight;
                                 images[i].style.height = (divWidth / imageAspectRatio) + "px";
-                                if (imageHeight > windowHeight) {
-                                    images[i].style.height = windowHeight - 120 + "px";
-                                }
+                                console.log()
                             }
                         }
                         function imgDimension() {
