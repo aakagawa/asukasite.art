@@ -12,3 +12,5 @@ node_modules
 *.jpg
 
 *.ai
+
+package-lock.json
