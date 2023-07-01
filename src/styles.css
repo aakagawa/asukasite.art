@@ -4,26 +4,21 @@ html {
     font-family: 'Courier New', monospace;
     /* image-resolution: 300dpi; */
 }
-
 body {
     width: 100%;
     height: 100%;
     margin: 0px;
     overflow-y: hidden;
-
     background-color: rgb(24, 24, 24);
 }
-
 #preloader {
     width: 100%;
     height: 100%;
     position: fixed;
-
     background-color: rgb(24, 24, 24);
     opacity: 1;
     z-index: 2147483647;
 }
-
 #loader {
     position: absolute;
     left: 50%;
@@ -45,25 +40,21 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 /* Safari */
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
 }
-
 div {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-
 header {
     width: 100%;
     height: 48px;
     display: inline-block;
 }
-
 #navbar {
     height: 36px;
     padding-top: 6px;
@@ -71,68 +62,51 @@ header {
     overflow: hidden;
     
     background-color: rgb(24, 24, 24);
-
     z-index: 2;
 }
-
 #name {
     color: rgb(240, 240, 240);
     height: 36px;
     margin-left: 12px;
     position: absolute;
-
     font-size: 23.44px;
     font-weight: 120;
     letter-spacing: 0.24em;
     font-variant: small-caps;
 }
-
 #nav {
     height: 36px;
     margin-right: 0px;
     position: relative;
-
     float: right;
     display: inline;
-
 }
-
 #lang {
     color: rgb(240, 240, 240);
     height: 36px;
-
     display: inline;
     float: right;
     margin-right: 60px;
-
     letter-spacing: 0.12em;
     font-variant: small-caps;
-
     opacity: 0%;
 }
-
 .langSelect {
     display: inline-block;
     vertical-align: middle;
-
     margin-top: 5.25px;
-
     line-height: 1;
     font-weight: 80;
     text-align: left;
     color:  rgb(240, 240, 240);
-
     cursor: default;
 }
-
 .navicon {
     float: left;
     display: inline; 
-
     margin-right: 60px;
     margin-top: 6px;
 }
-
 main {
     height: 100vh;
     display: flex;
@@ -140,7 +114,6 @@ main {
     justify-content: space-between;
     scroll-behavior: smooth;
 }
-
 .container {
     width: 100%;
     height: 100vh;
@@ -152,31 +125,24 @@ main {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-
 .container::-webkit-scrollbar {
     display: none;
 }
-
 .page {
     width: 100%;
     height: 100%;
-
     scroll-snap-align: center;
     flex: none;
-
     overflow-y: hidden;
 }
-
 .page::-webkit-scrollbar {
     display: none;
 }
-
 .content {
     height: inherit;
     margin-top: 4px;
     margin-right: 12px;
     margin-left: 12px;
-
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.03em;
@@ -184,107 +150,84 @@ main {
     text-align: left;
     color:  rgb(240, 240, 240);
 }
-
 #home {
     overflow-y: hidden;
 }
-
 #biographyPage {
     overflow-y: scroll;
 }
-
 #biographyEN {
     position: relative;
     display: block;
-
     line-height: 2;
-
 }
-
 #biographyJA {
     font-family: 'Zen Kaku Gothic New', monospace;
     font-weight: 100;
     position: relative;
     display: none;
-
     line-height: 2;   
 }
-
 #cvrésumé {
     width: fit-content;
     margin-right: 0px;
     display: block;
     position: relative;
 }
-
 #cvrésuméhide {
     width: fit-content;
     
     position: relative;
 }
-
 #cvResume {
     display: none;
     position: relative;
     line-height: 1;
 }
-
 .cvResumeHeader {
     margin-left: 11%;
     font-size: 15px;
     margin-top: 12px;
     margin-bottom: 12px;
 }
-
 colgroup.when {
     width: 11%;
 }
-
 colgroup.what {
     width: 89%;
 }
-
 table.cvResume {
     width: 100%;
     text-indent: 0px;
     line-height: 1;
-
     border-spacing: 0px;
 }
-
 tr.cvResume {
     border: 0;
 }
-
 td.cvResumeWhen {
     text-align: right;
     float: right;
     vertical-align: text-top;
     padding: 0px 6px 0px 0px; 
 }
-
 td.cvResumeWhat {
     text-align: left;
     padding: 0px;
 }
-
 #cvResumeSkills {
     margin-left: 11%;
 }
-
 #cvResumeEducation {
     margin-left: 11%;
 }
-
 #soundsPage{ 
     overflow-y: scroll;
 }
-
 .audioPlayer{
     vertical-align: top;
     margin-bottom: 36px;
 }
-
 .albumCover{
     display: inline-block;
     width: 108px;
@@ -293,7 +236,6 @@ td.cvResumeWhat {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .albumDescription{
     display: inline-block;
     width: calc(100% - 144px);
@@ -302,11 +244,9 @@ td.cvResumeWhat {
     overflow-y: scroll;
     line-height: 1.5;
 }
-
 .albumDescription::-webkit-scrollbar {
     display: none;       
 }
-
 .tracks {
     display: inline-block;
     vertical-align: top;
@@ -319,22 +259,18 @@ td.cvResumeWhat {
     color: rgb(240, 240, 240);
     cursor: default;
 }
-
 table.sounds {
     width: 100%;
     border-collapse: collapse;
     line-height: 1.5;
     text-indent: 6px;
 }
-
 td.sounds {
     vertical-align: middle;
 }
-
 svg {
     vertical-align: middle;
 }
-
 colgroup.track{
     width: 1%;
 }
@@ -347,90 +283,70 @@ colgroup.duration{
 colgroup.toggle {
     width: 1%;
 }
-
 .playpauseTrack {
     margin-bottom: 1px;
     margin-right: 6px;
 }
-
 .bi-play-fill {
     display: inline-block;
 }
-
 .bi-pause-fill {
     display: none;
 }
-
 tr.sounds:hover { 
     background-color: rgb(159, 159, 159)
 }
-
 tr.active {
     background-color: rgb(127, 127, 127);
 }
-
 #visualsPage{ 
     overflow-y: scroll;
 }
-
 #exitFullScreen {
     width: 24px;
     height: 24px;
-
     display: none;
     position: absolute;
     top: 24px;
     right: 24px;
-
     z-index: 2147483647;
 }
-
 #fullScreenPicture {
     width: 100%;
     height: 100%;
-
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: contain;
-
     z-index: 2147483645;
 }
-
 #vplayer {
     width: 100%;
     height: 100%;
-
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-
     z-index: 2147483645;
 }
-
 video::-webkit-media-controls {
     display:none !important;
 }
-
 #fullScreenBackground {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0; 
-
     display: none;
     background-color: rgb(0,0,0);
     z-index: 2147483643;
 }
-
 .vrow {
     width: 100%;
     position: relative;
 }
-
 .vcontrol {
     width: 12px;
     height: 12px;
@@ -440,10 +356,8 @@ video::-webkit-media-controls {
     left: 50%;
     margin-top: -18px;
     margin-left: -18px;
-
     background-size: contain; 
 }
-
 #vcontrolFullScreen {
     width: 12px;
     height: 12px;
@@ -453,12 +367,9 @@ video::-webkit-media-controls {
     left: 50%;
     margin-top: -18px;
     margin-left: -18px;
-
     background-size: contain; 
-
     z-index: 2147483647;
 }
-
 .vloader {
     display: none;
     position: absolute;
@@ -470,10 +381,8 @@ video::-webkit-media-controls {
     border-bottom: 1px solid rgb(240, 240, 240);
     -webkit-animation: spin 1s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
-
     z-index: 99;
 }
-
 .vplaypause {
     position: absolute;
     width: 34px;
@@ -481,19 +390,15 @@ video::-webkit-media-controls {
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgb(159, 159, 159);
-
 }
-
 #vplaypauseFullScreen {
     width: 34px;
     height: 34px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgb(159, 159, 159);
-
     z-index: 2147483647;
 }
-
 #vbi-play-fullscreen {
     position: absolute;
     left: 50%;
@@ -501,7 +406,6 @@ video::-webkit-media-controls {
     margin-left: -11px;
     margin-top: -12px;
 }
-
 #vbi-pause-fullscreen {
     position: absolute;
     left: 50%;
@@ -509,7 +413,6 @@ video::-webkit-media-controls {
     margin-left: -12px;
     margin-top: -12px;
 }
-
 .vbi.bi-play-fill {
     position: absolute;
     left: 50%;
@@ -517,7 +420,6 @@ video::-webkit-media-controls {
     margin-left: -11px;
     margin-top: -12px;
 }
-
 .vbi.bi-pause-fill {
     position: absolute;
     left: 50%;
@@ -525,7 +427,6 @@ video::-webkit-media-controls {
     margin-left: -12px;
     margin-top: -12px;
 }
-
 .video {
     width: 66%;
     position: relative;
@@ -535,18 +436,15 @@ video::-webkit-media-controls {
     
     display: inline-block;
 }
-
 .image {
     width: 66%;
     
     position: relative;
     display: inline-block;
-
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat;
 }
-
 .multiImg {
     width: 100%;
     display: flex;
@@ -558,11 +456,9 @@ video::-webkit-media-controls {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-
 .multiImg::-webkit-scrollbar {
     display: none;
 }
-
 .left {
     width: 24px; 
     height: 24px;
@@ -571,7 +467,6 @@ video::-webkit-media-controls {
     left: 0px;
     z-index: 2;
 }
-
 .right {
     width: 24px; 
     height: 24px;
@@ -580,27 +475,20 @@ video::-webkit-media-controls {
     right: 0px;
     z-index: 2;
 }
-
 .img {
     width: 100%;
     flex: none;
-
     overflow-y: hidden;
-
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-
     margin-right: 60px;
 }
-
 .emptyspace {
     width: 100%;
     height: 61.8vh;
-
     display: block;
 }
-
 .label {
     position: absolute;
     display: inline-block;
@@ -608,95 +496,74 @@ video::-webkit-media-controls {
     padding-left: 6%;
     /* transform: translateY(-50%); */
 }
-
 #notationsPage{ 
     overflow-y: scroll;
 }
-
 #compositions {
     width: 66%;
     float: left;
     margin-right: 0px;
 }
-
 #arrangements {
     width: 66%;
     float: left;
     margin-right: 0px;
 }
-
 .scorerow {
     width: 100%;
     position: relative;
 }
-
 .score {
     width: 50%;
     position: relative;
     display: inline-block;
-
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-
     filter: blur(1px);
 }
-
 .scoreinfo {
     position: absolute;
     display: inline-block;
     /* top: 50%; */
-
     padding-left: 6%;
     /* transform: translateY(-50%); */
 }
-
 .emptyspace2 {
     width: 100%;
     height: 38.2vh;
 }
-
 #contactPage {
     overflow-y: scroll;
 }
-
 .emailAddress {
     width: 100%;
     height: 24px;
     margin-bottom: 36px;
 }
-
 #emailAddress {
     width: 75%;
-
     display: inline-block;
 }
-
 #menuEN {
     position: relative;
     display: block;
-
     line-height: 1.5;
     margin-bottom: 36px;
 }
-
 #menuJA {
     font-family: 'Zen Kaku Gothic New', Noto Sans JP;
     position: relative;
     display: none;
-
     line-height: 1.5;
     margin-bottom: 36px;
 }
-
 input {
     width: 100%;
     border: none;
     background: none;
-
     margin-bottom: 24px;
 }
-
 ::placeholder {
     /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     font-family: 'Courier New', monospace;
@@ -705,17 +572,14 @@ input {
     letter-spacing: 0.03em;
     font-weight: 80;
 }
-
 input:focus {
     border: none;
     background: none;
     outline: none; 
 }
-
 input:hover {
     cursor: default;
 }
-
 input[type=text] {
     /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     font-family: 'Courier New', monospace;
@@ -724,17 +588,14 @@ input[type=text] {
     letter-spacing: 0.03em;
     font-weight: 80;
     color: rgb(240, 240, 240);
-
     padding: 0px;
 }
-
 textarea {
     width: 100%;
     height: 25vh;
     resize: none;
     border: none;
     background: none;
-
     /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     font-family: 'Courier New', monospace;
     font-size: 9pt;
@@ -742,37 +603,29 @@ textarea {
     letter-spacing: 0.03em;
     font-weight: 80;
     color: rgb(240, 240, 240);
-
     padding: 0;
 }
-
 textarea:focus {
     border: none;
     background: none;
     outline: none; 
-
 }
-
 #sns {
     vertical-align: bottom;
     width: 100%;
     height: auto;
     margin-bottom: 36px;    
 }
-
 a {
     text-decoration: none;
     color: rgb(240, 240, 240);
 }
-
 .snsIcons {
     width: 36px;
     height: 36px;
-
     margin-right: 12px;
     cursor: default;
 }
-
 #mylogo {
     position: relative;
     width: 39.69px; 
@@ -781,7 +634,6 @@ a {
     float: right; 
     filter: invert(1);
 }
-
 footer {
     bottom: 38.2vh;
     right: -118px;
@@ -794,31 +646,24 @@ footer {
     text-align: left;
     color: rgb(240, 240, 240);
 }
-
 @media(max-width: 960px) {
     header {
         height: 120px;
     }
-
     .container {
         height: calc(100vh - 120px);
     }
-
     #navbar {
         width: 100%;
         height: 120px;
         position: absolute;
-
         padding-top: 4px;
     }
-
     #name {
         width: 100%;
         margin-left: 0px;
-
         text-align: center;
     }
-
     #nav {
         width: 100%;
         margin-top: 48px;
@@ -827,52 +672,41 @@ footer {
         text-align: center;
         float: none;
     }
-
     #lang {
         width: 100%;
         height: 36px;
         margin-top: 80px;
         position: absolute;
-
         float: none;
-
         text-align: center;
     }
     
     .langSelect {
         vertical-align: middle;
-
         text-align: center;
     
         cursor: default;
     }
-
     .navicon {
         margin-right: 6%;
         margin-left: 6%;
-
         float: none;
     }
-
     #contact {
         margin-right: 6% !important; 
     }
-
     .content{
         margin-top: 0px;
         margin-right: 6.47px;
         margin-left: 4px;
-
         font-size: 9.6px;
     }
-
     .emptyspace {
         width: 100%;
         height: 120px;
     
         display: block;
     }
-
     .emptyspace2 {
         width: 100%;
         height: 36px;
@@ -884,15 +718,12 @@ footer {
         margin-top: 12px;
         margin-bottom: 12px;
     }
-
     colgroup.when {
         width: 33%;
     }
-
     colgroup.what {
         width: calc(100% - 33%);
     }
-
     table.cvResume {
         width: 100%;
         text-indent: 0px;
@@ -900,42 +731,34 @@ footer {
         border-spacing: 0px;
     }
 
-
     #cvResumeSkills {
         margin-left: 33%;
     }
-
     #cvResumeEducation {
         margin-left: 33%;
     }
-
     .albumDescription{
         width: 100%;
         height: auto;
         margin-left: 0;
         font-size: 9.60px;
     }
-
     .tracks {
         font-size: 9.60px;
     }
-
     .image {
         width: 100%;
     }
-
     .left {
         width: 15px;
         height: 15px;
         left: 2px;
     }
-
     .right {
         width: 15px;
         height: 15px;
         right: 2px;
     }
-
     .label {
         position: relative;
         display: block;
@@ -943,7 +766,6 @@ footer {
         padding-left: 0%;
         transform: translateY(0%);
     }
-
     #compositions {
         width: 100%;
         float: left;
@@ -955,19 +777,14 @@ footer {
         float: left;
         margin-right: 0px;
     }
-
     ::placeholder {
         
         font-size: 9.60pxpx;
-
     }
-
     input[type=text] {
         
         font-size: 9.60px;
-
     }
-
     #footer {
         position: absolute;
         bottom: 38.2vh;

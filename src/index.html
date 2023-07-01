@@ -512,7 +512,6 @@
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
                         <div class="audioPlayer">
                             <div class="albumCover">
@@ -701,7 +700,6 @@
                             </div>
                         </div> 
                         <div class="emptyspace">
-
                         </div>
                         <div class="vrow">
                             <div class="image pictureThumbnail">
@@ -738,7 +736,6 @@
                             </div>
                         </div> 
                         <div class="emptyspace">
-
                         </div>
                         <div class="vrow">
                             <div class="image pictureThumbnail" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584/IMG_0584_thumbnail.jpg);">
@@ -758,7 +755,6 @@
                             </div>
                         </div> 
                         <div class="emptyspace">
-
                         </div>
                         <div class="vrow">
                             <div class="image" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Minami_Aoyama/Minami_Aoyama_Highlights_final_thumbnail.jpeg);">
@@ -918,7 +914,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">     
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/compositions/220201_Preconception_Preview.jpg);">
@@ -933,7 +928,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">     
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/compositions/210114_Later_Subliminal_Disorder_Preview.jpg);">
@@ -948,7 +942,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">     
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/compositions/200903_Mobius_Preview.jpg);">
@@ -963,7 +956,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                         </div>
                         <div id="arrangements">
@@ -980,7 +972,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/210523_My_Favorite_Things_Preview.jpg);">
@@ -995,7 +986,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/200430_Schoenberg_-_Sechs_kleine_Klavierstucke_Op.19_Preview.jpg);">
@@ -1010,7 +1000,6 @@
                                 </div>
                             </div>
                             <div class="emptyspace2">
-
                             </div>
                             <div class="scorerow">
                                 <div class="score" style="background-image: url(https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/notations/arrangements/201208_Claude_Debussy_-_La_cathedrale_engloutie_Preview.jpg);">
@@ -1024,7 +1013,6 @@
                                     Duration: 
                                 </div>
                                 <div class="emptyspace2">
-
                                 </div>
                             </div>
                         </div>
@@ -1079,7 +1067,6 @@
                             *20% off for arrangements. <br>
                             *$200 for mockup session files. <br>  
                             *$50 for guitar/bass TABs.
-
                         </div>
                         <div id="menuJA">
                             オンラインレッスン<br>
@@ -1164,23 +1151,19 @@
             function windowSize() {
                 windowWidth = window.innerWidth;
                 windowHeight = window.innerHeight;
-
                 page1 = windowWidth;
                 page2 = windowWidth * 2;
                 page3 = windowWidth * 3; 
                 page4 = windowWidth * 4;
                 page5 = windowWidth * 5;
             }
-
             var container = document.getElementById('container');
             var Xoffset, Yoffset; 
             container.addEventListener('scroll', scrollPosition);
             container.addEventListener('scroll', displayLang);
-
             function scrollPosition() {
                 Xoffset = container.scrollLeft;
             }
-
             var biography = document.getElementById('biography');
             var sounds = document.getElementById('sounds');
             var visuals = document.getElementById('visuals');
@@ -1191,41 +1174,33 @@
             visuals.addEventListener('click', scrollToVisuals);
             notations.addEventListener('click', scrollToNotations);
             contact.addEventListener('click', scrollToContacts);
-
             function scrollToBiography() {
                 container.scrollTo(page1, Yoffset);
             }
-
             function scrollToSounds() {
                 container.scrollTo(page2, Yoffset);
             }
-
             function scrollToVisuals() {
                 container.scrollTo(page3, Yoffset);
             }
-
             function scrollToNotations() {
                 container.scrollTo(page4, Yoffset);
             }
-
             function scrollToContacts() {
                 container.scrollTo(page5, Yoffset);
             }
-
             var lang = document.getElementById('lang');
             var EN = document.getElementById('English'), JA = document.getElementById('Japanese');
             // var DE = document.getElementById('German'), FR = document.getElementById('French'), 
             // IT = document.getElementById('Italian'), KO = document.getElementById('Korean'), 
             // RU = document.getElementById('Russian'), SW = document.getElementById('Swedish'),
             // ZH = document.getElementById('Chinese');
-
             var biographyEnglish = document.getElementById('biographyEN');
             var biographyJapanese = document.getElementById('biographyJA');
             var menuEnglish = document.getElementById('menuEN');
             var menuJapanese = document.getElementById('menuJA');
             EN.addEventListener('click', english); 
             JA.addEventListener('click', japanese);
-
             function displayLang() {
                 var distanceToBiography = Math.abs(Xoffset - page1);
                 var distanceToContact = Math.abs(Xoffset - page5);
@@ -1243,22 +1218,18 @@
                     lang.style.opacity = Math.round(langOpacity * 100) / 100;
                 }
             }
-
             function english() {
                 biographyEnglish.style.display = 'block';
                 biographyJapanese.style.display = 'none';
                 menuEnglish.style.display = 'block';
                 menuJapanese.style.display = 'none'; 
             }
-
             function japanese() {
                 biographyEnglish.style.display = 'none';
                 biographyJapanese.style.display = 'block';
                 menuEnglish.style.display = 'none';
                 menuJapanese.style.display = 'block';
-
             }
-
             var cvrésumé = document.getElementById('cvrésumé');
             var cvResume = document.getElementById('cvResume');
             var cvrésuméhide = document.getElementById('cvrésuméhide');
@@ -1268,12 +1239,10 @@
                 cvResume.style.display = 'block';  
                 cvrésuméhide.style.display = 'block';
             }
-
             function hideCvResume() {
                 cvResume.style.display = 'none';
                 cvrésuméhide.style.display = 'none';
             }
-
             window.addEventListener('load', pageLoaded);
             function pageLoaded() {
                 var preloader = document.getElementById('preloader');
@@ -1281,7 +1250,6 @@
                 preloader.style.display = "none";
                 loader.style.display = "none";
             }
-
         </script>
     </body>
 </html>
