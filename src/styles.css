@@ -303,12 +303,12 @@ tr.active {
     overflow-y: scroll;
 }
 #exitFullScreen {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
     display: none;
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 12px;
+    right: 12px;
     z-index: 2147483647;
 }
 #fullScreenPicture {
@@ -348,33 +348,31 @@ video::-webkit-media-controls {
     position: relative;
 }
 .vcontrol {
-    width: 12px;
-    height: 12px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     display: block;
     top: 50%;
     left: 50%;
-    margin-top: -18px;
-    margin-left: -18px;
+    transform: translate(-50%, -50%);
     background-size: contain; 
 }
 #vcontrolFullScreen {
-    width: 12px;
-    height: 12px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     display: block;
     top: 50%;
     left: 50%;
-    margin-top: -18px;
-    margin-left: -18px;
+    transform: translate(-50%, -50%);
     background-size: contain; 
     z-index: 2147483647;
 }
 .vloader {
     display: none;
     position: absolute;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid transparent;
     border-top: 1px solid rgb(240, 240, 240);
@@ -385,47 +383,52 @@ video::-webkit-media-controls {
 }
 .vplaypause {
     position: absolute;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgb(159, 159, 159);
 }
 #vplaypauseFullScreen {
-    width: 34px;
-    height: 34px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid rgb(159, 159, 159);
     z-index: 2147483647;
 }
 #vbi-play-fullscreen {
+    width: 15px;
+    height: 15px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -11px;
-    margin-top: -12px;
+    transform: translate(-47%, -50%);
 }
 #vbi-pause-fullscreen {
+    width: 15px;
+    height: 15px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
+    transform: translate(-50%, -50%);
 }
 .vbi.bi-play-fill {
     position: absolute;
+    width: 15px;
+    height: 15px;
     left: 50%;
     top: 50%;
-    margin-left: -11px;
-    margin-top: -12px;
+    transform: translate(-47%, -50%);
 }
 .vbi.bi-pause-fill {
     position: absolute;
+    width: 15px;
+    height: 15px;
     left: 50%;
     top: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
+    transform: translate(-50%, -50%);
 }
 .video {
     width: 66%;
@@ -460,16 +463,16 @@ video::-webkit-media-controls {
     display: none;
 }
 .left {
-    width: 24px; 
-    height: 24px;
+    width: 15px; 
+    height: 15px;
     position: absolute;
     top: 50%;
     left: 0px;
     z-index: 2;
 }
 .right {
-    width: 24px; 
-    height: 24px;
+    width: 15px; 
+    height: 15px;
     position: absolute;
     top: 50%;
     right: 0px;
@@ -619,6 +622,9 @@ textarea:focus {
 a {
     text-decoration: none;
     color: rgb(240, 240, 240);
+}
+u {
+    cursor: default;
 }
 .snsIcons {
     width: 36px;

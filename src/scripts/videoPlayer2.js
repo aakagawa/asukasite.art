@@ -73,22 +73,23 @@ function playpause() {
     else { 
         resetvIcons();
         this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
-        this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
+        this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "none";
         this.parentElement.children[0].style.display = 'block'; //loader
-        videoLoaded();
         vplaypauseFullScreen.children[0].style.display = "none";
         vplaypauseFullScreen.children[1].style.display = "inline-block";
-        vloadPlay();
+        vplayer.load();
+        videoLoaded();
     }
 }
 
 function videoLoaded() { 
-    vplayer.addEventListener('canplaythrough', function() {
+    vplayer.addEventListener('canplaythrough', function () {
         resetvIcons(); 
         fullScreenBackground.style.display = "block"
         vplayer.style.display = "block";
         vplaypauseFullScreen.style.display = "block";
         exitFullScreen.style.display = "block";
+        vplayer.play();
         setTimeout(function() {
             vplaypauseFullScreen.style.display = "none";
             exitFullScreen.style.display = "none";
@@ -124,7 +125,6 @@ function playpauseFullScreenIO() {
         exitFullScreen.style.display = "none";
         vplayer.addEventListener('mousemove', playpauseFullScreenIO); 
     }, 2000);
-
 }
 
 function resetvIcons() {
