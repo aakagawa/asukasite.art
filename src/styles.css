@@ -717,7 +717,6 @@ footer {
         width: 100%;
         height: 36px;
     }
-    
     .cvResumeHeader {
         margin-left: 33%;
         font-size: 15px;
@@ -736,7 +735,6 @@ footer {
         line-height: 1;
         border-spacing: 0px;
     }
-
     #cvResumeSkills {
         margin-left: 33%;
     }
@@ -784,7 +782,6 @@ footer {
         margin-right: 0px;
     }
     ::placeholder {
-        
         font-size: 9.60pxpx;
     }
     input[type=text] {
@@ -802,6 +799,5 @@ footer {
         font-weight: 80;
         text-align: left;
         color: rgb(240, 240, 240);
-    }
-    
+    }   
 }
