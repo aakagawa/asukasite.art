@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #f5f5f5;
-        stroke: #f5f5f5;
-        stroke-linecap: round;
-        stroke-miterlimit: 10;
-        stroke-width: .74px;
-      }
-    </style>
-  </defs>
-  <path class="cls-1" d="m.6,11.48h6.4c1.66,0,3.76,0,6.4,0"/>
-  <path class="cls-1" d="m.6,7.5h5.75c1.49,0,3.38,0,5.75,0"/>
-  <path class="cls-1" d="m.6,5.51h5.3c1.38,0,3.11,0,5.3,0"/>
-  <path class="cls-1" d="m.6,3.52h5.85c1.52,0,3.44,0,5.85,0"/>
-  <path class="cls-1" d="m.6,1.54h6.48c1.68,0,3.81,0,6.48,0"/>
-  <path class="cls-1" d="m.6,13.46h4.35c1.13,0,2.56,0,4.35,0"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:0.74;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M0.6,11.5H7c1.7,0,3.8,0,6.4,0"/>
+<path class="st0" d="M0.6,7.5h5.8c1.5,0,3.4,0,5.8,0"/>
+<path class="st0" d="M0.6,5.5h5.3c1.4,0,3.1,0,5.3,0"/>
+<path class="st0" d="M0.6,3.5h5.8c1.5,0,3.4,0,5.8,0"/>
+<path class="st0" d="M0.6,1.5h6.5c1.7,0,3.8,0,6.5,0"/>
+<path class="st0" d="M0.6,13.5h4.3c1.1,0,2.6,0,4.3,0"/>
 </svg>

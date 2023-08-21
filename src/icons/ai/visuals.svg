@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path d="M3.16,3.16H.47" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M14.53,5.84v-1.34c0-.35,0-.79,0-1.34" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M14.53,3.16h-2.68" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M14.53,11.84v-1.34c0-.35,0-.79,0-1.34" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M3.16,11.84H.47" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M14.53,11.84h-2.68" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M.47,5.84v-1.34c0-.35,0-.79,0-1.34" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/><path d="M.47,11.84v-1.34c0-.35,0-.79,0-1.34" fill="#f5f5f5" stroke="#f5f5f5" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".74"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:0.74;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M3.2,3.2H0.5"/>
+<path class="st0" d="M14.5,5.8V4.5c0-0.3,0-0.8,0-1.3"/>
+<path class="st0" d="M14.5,3.2h-2.7"/>
+<path class="st0" d="M14.5,11.8v-1.3c0-0.4,0-0.8,0-1.3"/>
+<path class="st0" d="M3.2,11.8H0.5"/>
+<path class="st0" d="M14.5,11.8h-2.7"/>
+<path class="st0" d="M0.5,5.8V4.5c0-0.3,0-0.8,0-1.3"/>
+<path class="st0" d="M0.5,11.8v-1.3c0-0.4,0-0.8,0-1.3"/>
+</svg>
