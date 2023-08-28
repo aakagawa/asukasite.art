@@ -641,7 +641,6 @@ u {
     height: 39.69px; 
     display: block; 
     float: right; 
-    filter: invert(1);
 }
 footer {
     bottom: 38.2vh;
