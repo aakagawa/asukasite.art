@@ -1,6 +1,7 @@
 node_modules 
 *.DS_Store
 
+
 *.mp4
 *.mov
 
@@ -11,5 +12,8 @@ node_modules
 *.jpg
 
 *.ai
+
+*.ttf
+
 
 package-lock.json

@@ -161,8 +161,8 @@ main {
     line-height: 2;
 }
 #biographyJA {
-    font-family: 'Zen Kaku Gothic New', monospace;
-    font-weight: 100;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
     position: relative;
     display: none;
     line-height: 2;   
