@@ -249,12 +249,9 @@ td.cvResumeWhat {
 .tracks {
     display: inline-block;
     vertical-align: top;
-    
     width: 100%;
     height: auto;
-    margin-top: 16px;
     margin-bottom: 0px;
-    font-size: 9.60px;
     color: rgb(0, 0, 0,);
     cursor: default;
 }
