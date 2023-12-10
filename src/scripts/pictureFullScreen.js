@@ -2,23 +2,15 @@ var pictures = {
     IMG_0584: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/photos/IMG_0584/IMG_0584.jpg"
     ],
-    Spring:
-    [
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Spring.jpg"
-    ],
-    Winter:
-    [
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/paintings/Winter.jpg"
-    ],
 }
 
-var pictureThumbnail = document.getElementsByClassName('pictureThumbnail');
+var imgThumbnail = document.getElementsByClassName('imgThumbnail');
 var fullScreenPicture = document.getElementById('fullScreenPicture');
 var preloader = document.getElementById('preloader');
 var loader = document.getElementById('loader');
 
-for (var o = 0; o < pictureThumbnail.length; o++) {
-    thisPicture = pictureThumbnail[o];
+for (var o = 0; o < imgThumbnail.length; o++) {
+    thisPicture = imgThumbnail[o];
     thisPicture.addEventListener('click', pictureFullScreen); 
 }
 
