@@ -963,13 +963,11 @@
                                         imgs[j].style.height = (windowHeight * 0.5) + "px";
                                         innerDivHeight = imgs[j].clientHeight - imgs[j].style.paddingTop - imgs[j].style.paddingBottom;
                                         imgs[j].style.width = (innerDivHeight * imgAspectRatio) + "px";
-                                        console.log('image is taller than window height!');
                                     }
                                     else if (imgWidth > (windowWidth * 0.66)) {
                                         imgs[j].style.width = (windowWidth * 0.66) + "px";
                                         innerDivWidth = imgs[j].clientWidth - imgs[j].style.paddingLeft - imgs[j].style.paddingRight;
                                         imgs[j].style.height = innerDivWidth / imgAspectRatio + "px";   
-                                        console.log('image is wider than 2/3 of window width!');
                                     }
                                 }
                             }

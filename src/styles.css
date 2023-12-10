@@ -288,8 +288,8 @@ tr.active {
     overflow-y: scroll;
 }
 #exitFullScreen {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     display: none;
     position: absolute;
     top: 12px;
@@ -388,16 +388,16 @@ a:link {
     z-index: 2147483647;
 }
 #vbi-play-fullscreen {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-47%, -50%);
 }
 #vbi-pause-fullscreen {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -405,16 +405,16 @@ a:link {
 }
 .vbi.bi-play-fill {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     left: 50%;
     top: 50%;
     transform: translate(-47%, -50%);
 }
 .vbi.bi-pause-fill {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -687,7 +687,7 @@ footer {
     .content{
         margin-top: 0px;
         margin-left: 4px;
-        font-size: 12px;
+        font-size: 10.67px;
     }
     .emptyspace {
         width: 100%;
@@ -701,9 +701,6 @@ footer {
     }
     .cvResumeHeader {
         margin-left: 33%;
-        font-size: 15px;
-        margin-top: 12px;
-        margin-bottom: 12px;
     }
     colgroup.when {
         width: 33%;
@@ -732,13 +729,13 @@ footer {
         width: 100%;
     }
     .left {
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         left: 2px;
     }
     .right {
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         right: 2px;
     }
     .img{
@@ -755,28 +752,21 @@ footer {
         float: left;
         margin-right: 0px;
     }
-    
     #arrangements {
         width: 100%;
         float: left;
         margin-right: 0px;
     }
     ::placeholder {
-        font-size: 12px;
+        font-size: 10.67px;
     }
     input[type=text] {
         
-        font-size: 12px;
+        font-size: 10.67px;
     }
-    #footer {
-        position: absolute;
-        bottom: 38.2vh;
-        right: -76px;
-        transform: rotate(270deg);
-        font-size: 6.14px;
-        line-height: 0;
-        letter-spacing: 0.03em;
-        text-align: left;
+    footer {
+        font-size: 9.48px;
+        right: -116.48px;
 
     }   
 }
