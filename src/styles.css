@@ -455,6 +455,7 @@ a:link {
     height: 30px;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     left: 0px;
     z-index: 2;
 }
@@ -463,6 +464,7 @@ a:link {
     height: 30px;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     right: 0px;
     z-index: 2;
 }
@@ -473,7 +475,7 @@ a:link {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-right: 36px;
+    margin-right: 24px;
 }
 .emptyspace {
     width: 100%;
@@ -513,9 +515,7 @@ a:link {
 .scoreinfo {
     position: absolute;
     display: inline-block;
-    /* top: 50%; */
-    padding-left: 6%;
-    /* transform: translateY(-50%); */
+    padding-left: 12px;
 }
 .emptyspace2 {
     width: 100%;
