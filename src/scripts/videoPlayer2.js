@@ -1,7 +1,7 @@
 var i = 0;
 var videos = {
     Minami_Aoyama: [
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Minami_Aoyama/Minami_Aoyama_Highlights_final.mp4"
+        ""
     ],
     li_estas_kiu: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Li_estas_kiu/230224_Li_estas_kiu_1887x740.mp4"

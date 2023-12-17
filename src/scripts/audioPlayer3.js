@@ -13,14 +13,19 @@ var albums = {
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Marco/Marco_Scarassatti_Foundation_1.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Marco/Marco_Scarassatti_Foundation_2.wav"
     ],
-    Conditions: [
+    Condition: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Conditions/Condition_1.wav",
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Conditions/Condition_2.wav"
     ],
     Untitled: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_1.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_2.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_3.wav"
+    ],
+    Intuition: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/SummerBandCamp.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/MinorSong.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/OneDaySong.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/Stella.wav",
     ],
 };
 
