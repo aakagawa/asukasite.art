@@ -15,6 +15,6 @@ node_modules
 
 *.ttf
 
-assets
+assets/
 
 package-lock.json

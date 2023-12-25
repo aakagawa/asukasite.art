@@ -1,8 +1,9 @@
 html {
-    /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     scroll-behavior: smooth;
     font-family: 'Courier New', monospace;
-    /* image-resolution: 300dpi; */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 body {
     width: 100%;
@@ -10,6 +11,7 @@ body {
     margin: 0px;
     overflow-y: hidden;
 }
+
 #preloader {
     width: 100%;
     height: 100%;
@@ -34,7 +36,7 @@ body {
     -webkit-animation: spin 1s linear infinite; /* Safari */
     animation: spin 1s linear infinite;
 }
-  
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -44,25 +46,20 @@ body {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
 }
-div {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-}
 header {
     width: 100%;
     display: inline-block;
 }
 #navbar {
+    height: 26.5px;
     position: relative;
     overflow: hidden;
     z-index: 2;
-    margin-bottom: 6px;
 }
 #name {
+    font-size: 23.44px;
     margin-left: 12px;
     position: absolute;
-    font-size: 23.44px;
     letter-spacing: 6px;
     font-variant: small-caps;
 }
@@ -72,38 +69,45 @@ header {
     float: right;
     display: inline;
 }
-#lang {
-    margin-top: 4px;
-    display: inline;
-    float: right;
-    margin-right: 60px;
-    letter-spacing: 0.12em;
-    font-variant: small-caps;
-    opacity: 0%;
-}
-.langSelect {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    font-weight: 80;
-    text-align: left;
-    color:  rgb(0, 0, 0,);
-    cursor: default;
-}
 .navicon {
+    font-size: 12px;
     float: left;
     display: inline; 
     margin-right: 60px;
-    margin-top: 6px;
+    margin-top: 9.6px;
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: transparent;
+    outline-offset: 0px;
+}
+.navicon:hover {
+    outline-color: rgb(0, 0, 0);
+}
+.navicon.activeNavicon {
+    outline-color: rgb(0, 0, 0);
+}
+#nav2 {
+    display: none;
+}
+#lang {
+    margin-right: 60px;
+    position: relative;
+    float: right;
+    display: inline;
+    opacity: 0%;
+}
+.langSelect {
+    font-size: 12px;
+    float: left;
+    display: inline;
+    margin-top: 9.6px;
 }
 main {
     height: 100vh;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     scroll-behavior: smooth;
 }
-.container {
+#container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -114,7 +118,7 @@ main {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
-.container::-webkit-scrollbar {
+#container::-webkit-scrollbar {
     display: none;
 }
 .page {
@@ -122,28 +126,37 @@ main {
     height: 100%;
     scroll-snap-align: center;
     flex: none;
-    overflow-y: hidden;
+    
 }
 .page::-webkit-scrollbar {
     display: none;
 }
+#home {
+    overflow-y: hidden;
+}
+#aboutPage,
+#soundsPage,
+#visualsPage,
+#integrationsPage,
+#notationsPage,
+#contactPage {
+    overflow-y: scroll;
+}
 .content {
-    height: inherit;
     margin-top: 4px;
     margin-right: 12px;
+    margin-bottom: 42.5px;
     margin-left: 12px;
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-weight: 80;
     text-align: left;
-    color:  rgb(0, 0, 0,);
-}
-#home {
-    overflow-y: hidden;
-}
-#biographyPage {
-    overflow-y: scroll;
+    height: max-content;
+
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: rgb(0, 0, 0);
 }
 #biographyEN {
     position: relative;
@@ -156,6 +169,17 @@ main {
     position: relative;
     display: none;
     line-height: 2;   
+}
+#logo {
+    display: block; 
+    width: 100%;
+    height: 39.69px; 
+}
+#mylogo {
+    position: relative;
+    width: 39.69px; 
+    height: 39.69px; 
+    float: right; 
 }
 #cvrésumé {
     width: fit-content;
@@ -175,9 +199,6 @@ main {
 }
 .cvResumeHeader {
     margin-left: 11%;
-    font-size: 15px;
-    margin-top: 12px;
-    margin-bottom: 12px;
 }
 colgroup.when {
     width: 11%;
@@ -236,6 +257,10 @@ td.cvResumeWhat {
 .albumDescription::-webkit-scrollbar {
     display: none;       
 }
+table {
+    box-sizing: content-box;
+    border: none;
+}
 .tracks {
     display: inline-block;
     vertical-align: top;
@@ -248,11 +273,9 @@ td.cvResumeWhat {
 table.sounds {
     width: 100%;
     border-collapse: collapse;
-    line-height: 1.5;
-    text-indent: 6px;
 }
 td.sounds {
-    vertical-align: middle;
+    padding: 0;
 }
 svg {
     vertical-align: middle;
@@ -269,23 +292,23 @@ colgroup.duration{
 colgroup.toggle {
     width: 1%;
 }
-.playpauseTrack {
-    margin-bottom: 1px;
-}
 .bi-play-fill {
     display: inline-block;
 }
 .bi-pause-fill {
     display: none;
 }
+tr.sounds {
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: transparent;
+    outline-offset: 0px;
+}
 tr.sounds:hover { 
-    background-color: rgb(159, 159, 159)
+    outline-color: rgb(0, 0, 0);
 }
-tr.active {
-    background-color: rgb(127, 127, 127);
-}
-#visualsPage{ 
-    overflow-y: scroll;
+tr.activeTrack {
+    outline-color: rgb(0, 0, 0);
 }
 #exitFullScreen {
     width: 16px;
@@ -330,8 +353,7 @@ video::-webkit-media-controls {
 }
 .vrow {
     width: 100%;
-    position: relative;
-    display: block;
+    height: fit-content;
 }
 a:link { 
     color: rgb(0,0,0);
@@ -485,26 +507,27 @@ a:link {
 .label {
     position: relative;
     display: block;
-}
-#notationsPage{ 
-    overflow-y: scroll;
+
 }
 #compositions {
     width: 66%;
-    float: left;
     margin-right: 0px;
+    display: contents;
 }
 #arrangements {
     width: 66%;
-    float: left;
     margin-right: 0px;
+    display: contents;
 }
 .scorerow {
     width: 100%;
     position: relative;
+    margin-bottom: 12px;
 }
 .score {
-    width: 50%;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 33%;
     position: relative;
     display: inline-block;
     background-size: contain;
@@ -521,13 +544,8 @@ a:link {
     width: 100%;
     height: 23.6vh;
 }
-#contactPage {
-    overflow-y: scroll;
-}
 .emailAddress {
     width: 100%;
-    height: 24px;
-    margin-bottom: 36px;
 }
 #emailAddress {
     width: 75%;
@@ -550,7 +568,6 @@ input {
     width: 100%;
     border: none;
     background: none;
-    margin-bottom: 24px;
 }
 ::placeholder {
     /* font-family: 'Helvetica Neue', Helvetica, Arial; */
@@ -617,36 +634,27 @@ u {
     margin-right: 12px;
     cursor: default;
 }
-#mylogo {
-    position: relative;
-    width: 39.69px; 
-    height: 39.69px; 
-    display: block; 
-    float: right; 
-}
 footer {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    right: 0px;
     bottom: 38.2vh;
-    right: -118px;
-    transform: rotate(270deg); 
     position: absolute;
     font-size: 9.6px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    font-weight: 80;
-    text-align: left;
 }
 @media(max-width: 960px) {
     header {
-        height: 120px;
+        height: 74.26px;
     }
-    .container {
+    #container {
         height: calc(100vh - 120px);
     }
     #navbar {
         width: 100%;
-        height: 120px;
+        height: 70.26px;
         position: absolute;
-        padding-top: 4px;
+        margin-top: 4px;
+        margin-bottom: 4px;
     }
     #name {
         width: 100%;
@@ -654,38 +662,63 @@ footer {
         text-align: center;
     }
     #nav {
+        display: none;
+    }
+    .navicon {
+        display: none;
+    }
+    #nav2 {
+        height: 26.5px;
+        position: relative;
+        top: 26.5px;
+        align-items: center;
         width: 100%;
-        margin-top: 48px;
-        position: absolute;
-        
+        display: flex;
+        overflow: auto;
+        overflow-y: hidden;
+        flex-flow: row nowrap;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+    }
+    #nav2::-webkit-scrollbar {
+        display: none;
+    }
+    .navicon2 {
+        font-size: 10.67px;
+        width: 33%;
+        scroll-snap-align: center;
+        flex: none;
         text-align: center;
-        float: none;
+    }
+    .navicon2::-webkit-scrollbar {
+        display: none;
+    }
+    .navicon2text {
+        display: inline;
+        text-align: center;
+        outline-style: solid;
+        outline-width: 0.5px;
+        outline-color: transparent;
+        outline-offset: 0px;
+    }
+    .navicon2text.activeNavicon2 {
+        outline-color: rgb(0, 0, 0);
     }
     #lang {
         width: 100%;
-        height: 36px;
-        margin-top: 80px;
+        margin-top: 26.5px;
         position: absolute;
-        float: none;
+
         text-align: center;
+        float: none;
     }
-    
     .langSelect {
-        vertical-align: middle;
-        text-align: center;
-    
-        cursor: default;
-    }
-    .navicon {
-        margin-right: 6%;
-        margin-left: 6%;
+        font-size: 10.67px;
         float: none;
-    }
-    #contact {
-        margin-right: 6% !important; 
     }
     .content{
-        margin-top: 0px;
+        margin-top: 4px;
         margin-left: 4px;
         font-size: 10.67px;
     }
@@ -766,7 +799,5 @@ footer {
     }
     footer {
         font-size: 9.48px;
-        right: -110.48px;
-
     }   
 }
