@@ -165,7 +165,7 @@ main {
     line-height: 2;
 }
 #biographyJA {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 300;
     position: relative;
     display: none;
@@ -559,10 +559,10 @@ a:link {
     margin-bottom: 36px;
 }
 #menuJA {
-    font-family: 'Zen Kaku Gothic New', Noto Sans JP;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     position: relative;
     display: none;
-    line-height: 1.5;
+    line-height: 2;
     margin-bottom: 36px;
 }
 input {
