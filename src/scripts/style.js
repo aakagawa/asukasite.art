@@ -22,7 +22,7 @@ for (var i = 0; i < thenavicons.length; i++) {
 function activateNavicon() {
     activateRespectiveNaviconIO = false;
     activeNavicon[0].className = activeNavicon[0].className.replace('activeNavicon', '');
-    this.className += ' activeNavicon';
+    this.className += 'activeNavicon';
     setTimeout(() => {
         activateRespectiveNaviconIO = true;
     }, 1000);
@@ -33,7 +33,7 @@ function activateRespectiveNavicon() {
         for (let i = 0; i < pages.length; i++) {
             if (Math.abs(Xoffset - pages[i]) < (windowWidth / 6)) {
                 activeNavicon[0].className = activeNavicon[0].className.replace('activeNavicon', '');
-                thenavicons[i].className += ' activeNavicon';
+                thenavicons[i].className += 'activeNavicon';
                 break;
             }
         }
@@ -103,7 +103,7 @@ let elements = [
     document.getElementById('sounds'),
     document.getElementById('visuals'),
     document.getElementById('integrations'),
-    document.getElementById('notations'),
+    // document.getElementById('notations'),
     document.getElementById('contact')
 ];
 
@@ -121,7 +121,7 @@ window.addEventListener('load', navicon2Size);
 window.addEventListener('resize', navicon2Size);
 
 function navicon2Size() {
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 5; i++) {
         let naviconWidth = navElements[0].getBoundingClientRect().width;
         navicons[i] = naviconWidth * i;
     }
@@ -141,7 +141,7 @@ let navElements = [
     document.getElementById('sounds2'),
     document.getElementById('visuals2'),
     document.getElementById('integrations2'),
-    document.getElementById('notations2'),
+    // document.getElementById('notations2'),
     document.getElementById('contact2')
 ];
 
@@ -173,12 +173,12 @@ function scrollToIntegrations() {
     container.scrollTo(pages[4], Yoffset);
 }
 
-function scrollToNotations() {
-    container.scrollTo(pages[5], Yoffset);
-}
+// function scrollToNotations() {
+//     container.scrollTo(pages[5], Yoffset);
+// }
 
 function scrollToContact() {
-    container.scrollTo(pages[6], Yoffset);
+    container.scrollTo(pages[5], Yoffset);
 }
 
 // Create an array of scrollTo functions
@@ -188,7 +188,7 @@ let scrollToFunctions = [
     scrollToSounds,
     scrollToVisuals,
     scrollToIntegrations,
-    scrollToNotations,
+    // scrollToNotations,
     scrollToContact
 ];
 
@@ -217,7 +217,7 @@ JA.addEventListener('click', japanese);
 
 function displayLang() {
     let distancetoAbout = Math.abs(Xoffset - pages[1]);
-    let distanceToContact = Math.abs(Xoffset - pages[6]);
+    let distanceToContact = Math.abs(Xoffset - pages[5]);
 
     if (distancetoAbout >= windowWidth) {
         if (distanceToContact >= windowWidth) {
