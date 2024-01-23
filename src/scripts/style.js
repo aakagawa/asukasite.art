@@ -102,7 +102,7 @@ let elements = [
     document.getElementById('about'),
     document.getElementById('sounds'),
     document.getElementById('visuals'),
-    document.getElementById('integrations'),
+    document.getElementById('interdisciplinary'),
     // document.getElementById('notations'),
     document.getElementById('contact')
 ];
@@ -140,7 +140,7 @@ let navElements = [
     document.getElementById('about2'),
     document.getElementById('sounds2'),
     document.getElementById('visuals2'),
-    document.getElementById('integrations2'),
+    document.getElementById('interdisciplinary2'),
     // document.getElementById('notations2'),
     document.getElementById('contact2')
 ];
@@ -169,7 +169,7 @@ function scrollToVisuals() {
     container.scrollTo(pages[3], Yoffset);
 }
 
-function scrollToIntegrations() {
+function scrollToInterdisciplinary() {
     container.scrollTo(pages[4], Yoffset);
 }
 
@@ -187,7 +187,7 @@ let scrollToFunctions = [
     scrollToAbout,
     scrollToSounds,
     scrollToVisuals,
-    scrollToIntegrations,
+    scrollToInterdisciplinary,
     // scrollToNotations,
     scrollToContact
 ];
