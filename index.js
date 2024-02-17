@@ -1,10 +1,10 @@
-const compression = require('compression');
+const http = require('http');
 const express = require('express');
+const compression = require('compression');
+const { resolve } = require('path');
 
-const { resolve } = require("path");
 const app = express();
 const port = process.env.PORT || 8000;
-const http = require('http');
 
 app.use(compression());
 
