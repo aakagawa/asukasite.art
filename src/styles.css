@@ -232,14 +232,14 @@ td.cvResumeWhat {
 #cvResumeEducation {
     margin-left: 11%;
 }
-#soundsPage{ 
+#soundsPage { 
     overflow-y: scroll;
 }
-.audioPlayer{
+.audioPlayer {
     vertical-align: top;
     margin-bottom: 36px;
 }
-.albumCover{
+.albumCover {
     display: inline-block;
     width: 108px;
     height: 108px;
@@ -247,7 +247,7 @@ td.cvResumeWhat {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.albumDescription{
+.albumDescription {
     display: inline-block;
     width: calc(100% - 144px);
     height: 108px;
@@ -643,7 +643,7 @@ footer {
     position: absolute;
     font-size: 9.6px;
 }
-@media(max-width: 960px) {
+@media(max-width: 1080px) {
     header {
         height: 74.26px;
     }
