@@ -1,11 +1,11 @@
 var i = 0;
 var videos = {
     Minami_Aoyama: [
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Minami_Aoyama/Minami_Aoyama_Highlights_final.mp4"
+        ""
     ],
-    Early_Summer_Air: [
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Early_Summer_Air/Early_Summer_Air_2_2.mp4"
-    ],
+    li_estas_kiu: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/visuals/videos/Li_estas_kiu/230224_Li_estas_kiu_1887x740.mp4"
+    ]
 };
 
 var vsource = document.getElementById('vsource');
@@ -46,7 +46,8 @@ function vloadPlay() {
 }
 
 function playpause() {
-    thisVideo = this.parentElement.parentElement.parentElement.children[1].id;
+    thisVideo = this.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].id;
+    console.log(thisVideo);
     vsource.src = videos[thisVideo][0];
     if (vplayer.currentSrc === vsource.src) {
         if (vplayer.paused === true) {
@@ -73,26 +74,27 @@ function playpause() {
     else { 
         resetvIcons();
         this.getElementsByClassName('vbi bi-play-fill')[0].style.display = "none";
-        this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "inline-block";
+        this.getElementsByClassName('vbi bi-pause-fill')[0].style.display = "none";
         this.parentElement.children[0].style.display = 'block'; //loader
-        videoLoaded();
         vplaypauseFullScreen.children[0].style.display = "none";
         vplaypauseFullScreen.children[1].style.display = "inline-block";
-        vloadPlay();
+        vplayer.load();
+        videoLoaded();
     }
 }
 
 function videoLoaded() { 
-    vplayer.addEventListener('canplaythrough', function() {
+    vplayer.addEventListener('canplaythrough', function () {
         resetvIcons(); 
         fullScreenBackground.style.display = "block"
         vplayer.style.display = "block";
         vplaypauseFullScreen.style.display = "block";
         exitFullScreen.style.display = "block";
+        vplayer.play();
         setTimeout(function() {
             vplaypauseFullScreen.style.display = "none";
             exitFullScreen.style.display = "none";
-        }, 2000);
+        }, 3000);
         vplayer.addEventListener('mousemove', playpauseFullScreenIO);
         exitFullScreen.addEventListener('click', function() {
             resetvIcons();
@@ -123,8 +125,7 @@ function playpauseFullScreenIO() {
         vplaypauseFullScreen.style.display = "none";
         exitFullScreen.style.display = "none";
         vplayer.addEventListener('mousemove', playpauseFullScreenIO); 
-    }, 2000);
-
+    }, 3000);
 }
 
 function resetvIcons() {

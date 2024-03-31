@@ -13,14 +13,19 @@ var albums = {
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Marco/Marco_Scarassatti_Foundation_1.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Marco/Marco_Scarassatti_Foundation_2.wav"
     ],
-    Conditions: [
+    Condition: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Conditions/Condition_1.wav",
-        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Conditions/Condition_2.wav"
     ],
     Untitled: [
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_1.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_2.wav",
         "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Untitled/Untitled_3.wav"
+    ],
+    Intuition: [
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/SummerBandCamp.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/MinorSong.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/OneDaySong.wav",
+        "https://cloud-cube-us2.s3.amazonaws.com/n76qf8iabaqh/public/sounds/Intuition/Stella.wav",
     ],
 };
 
@@ -28,14 +33,14 @@ var source = document.getElementById('source');
 var player = document.getElementById('player');
 
 var tracks = document.getElementsByTagName('tr');
-var current = document.getElementsByClassName('active');
+var current = document.getElementsByClassName('activeTrack');
 var playpauseTrack = document.getElementsByClassName('playpauseTrack');
 var biplay = document.getElementsByClassName('bi bi-play-fill');
 var bipause = document.getElementsByClassName('bi bi-pause-fill');
 
 for (var j = 0; j < tracks.length; j++) {
     thisTrack = tracks[j];
-    thisTrack.addEventListener('click', active);
+    thisTrack.addEventListener('click', activateTrack);
     thisTrack.addEventListener('dblclick', playTrack);
     var thisplaypause = tracks[j].getElementsByClassName('playpauseTrack');
         for (var k = 0; k < thisplaypause.length; k++) {
@@ -44,14 +49,14 @@ for (var j = 0; j < tracks.length; j++) {
     }
 }
 
-function active() { 
+function activateTrack() { 
     i = this.rowIndex;
     thisthisTrack = this; 
     thisAlbum = this.parentElement.parentElement.parentElement.id;
     
     source.src = albums[thisAlbum][i];
-    current[0].className = current[0].className.replace('active', '');
-    this.className += 'active';
+    current[0].className = current[0].className.replace('activeTrack', '');
+    this.className += ' activeTrack';
 }
 
 function loadPlay() {
@@ -59,12 +64,47 @@ function loadPlay() {
     player.play();
 }
 
+
 function playTrack() {
+    console.log(this);
     i = this.rowIndex;
     source.src = albums[thisAlbum][i];
     loadPlay();
     resetIcons();
-    displayPause();
+    if (player.currentSrc === source.src) {
+        if (player.paused === true) {
+            console.log('source is same, player was paused');
+            resetIcons(); 
+            this.getElementsByClassName('bi bi-play-fill')[0].style.display = "none";
+            this.getElementsByClassName('bi bi-pause-fill')[0].style.display = "inline-block";
+            loadPlay();
+            
+        }
+        else {
+            console.log('source is same, player playing');
+            resetIcons();
+            this.getElementsByClassName('bi bi-play-fill')[0].style.display = "inline-block";
+            this.getElementsByClassName('bi bi-pause-fill')[0].style.display = "none"; 
+            player.pause();
+        }
+    }
+    else {
+        if (player.paused === true) {
+            console.log('source is different, player was paused');
+            resetIcons();
+            this.getElementsByClassName('bi bi-play-fill')[0].style.display = "none";
+            this.getElementsByClassName('bi bi-pause-fill')[0].style.display = "inline-block";
+            loadPlay();
+        }
+        else {
+            console.log('source is different, player was playing');
+            resetIcons();
+            this.getElementsByClassName('bi bi-play-fill')[0].style.display = "none";
+            this.getElementsByClassName('bi bi-pause-fill')[0].style.display = "inline-block";
+            player.pause();
+            loadPlay();
+        }
+    }
 }
 
 function playpauseOnTrack() {
@@ -113,4 +153,3 @@ function resetIcons() {
         bipause[l].style.display = "none";
     }
 }
-
