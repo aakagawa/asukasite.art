@@ -1,0 +1,14 @@
+node_modules 
+*.DS_Store
+.vscode
+
+*.mp4
+*.mov
+
+*.wav
+*.mp3
+
+*.png
+*.jpg
+
+*.ai
