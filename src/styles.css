@@ -719,7 +719,8 @@ footer {
         float: none;
     }
     .content{
-        margin-left: 4px;
+        margin-left: 12px;
+        margin-right: 12px;
         font-size: 10.67px;
         outline-style: solid;
         outline-width: 0.5px;
