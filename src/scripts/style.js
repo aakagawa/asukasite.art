@@ -83,8 +83,8 @@ window.addEventListener('load', windowSize);
 window.addEventListener('resize', windowSize);
 
 function windowSize() {
-    windowWidth = window.innerWidth;
-    windowHeight = window.innerHeight;
+    windowWidth = window.innerWidth / 1.25; // Scaled up (zoom) in css 
+    windowHeight = window.innerHeight / 1.25; // Scaled up (zoom) in css 
 
     for (let i = 1; i <= 6; i++) {
         pages[i] = windowWidth * i;

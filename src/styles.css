@@ -1,9 +1,11 @@
 html {
+    zoom: 1.25;
     scroll-behavior: smooth;
     font-family: 'Courier New', monospace;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+
 }
 body {
     width: 100%;
@@ -11,7 +13,6 @@ body {
     margin: 0px;
     overflow-y: hidden;
 }
-
 #preloader {
     width: 100%;
     height: 100%;
@@ -178,8 +179,8 @@ main {
 }
 #mylogo {
     position: relative;
-    width: 39.69px; 
-    height: 39.69px; 
+    width: 56.692913px;
+    height: 56.692913px;
     float: right; 
 }
 #cvrésumé {
