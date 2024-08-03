@@ -1,11 +1,9 @@
 html {
-    zoom: 1.25;
     scroll-behavior: smooth;
     font-family: 'Courier New', monospace;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-
 }
 body {
     width: 100%;
@@ -52,14 +50,14 @@ header {
     display: inline-block;
 }
 #navbar {
-    height: 26.5px;
+    height: 33.125px;
     position: relative;
     overflow: hidden;
     z-index: 2;
 }
 #name {
-    font-size: 23.44px;
-    margin-left: 12px;
+    font-size: 29.3px; /* 23.44 */
+    margin-left: 15px;
     position: absolute;
     letter-spacing: 6px;
     font-variant: small-caps;
@@ -71,10 +69,10 @@ header {
     display: inline;
 }
 .navicon {
-    font-size: 12px;
+    font-size: 15px;
     float: left;
     display: inline; 
-    margin-right: 60px;
+    margin-right: 75px;
     margin-top: 9.6px;
     outline-style: solid;
     outline-width: 0.5px;
@@ -98,7 +96,7 @@ header {
     opacity: 0%;
 }
 .langSelect {
-    font-size: 12px;
+    font-size: 15px;
     float: left;
     display: inline;
     margin-top: 9.6px;
@@ -145,11 +143,11 @@ main {
     overflow-y: scroll;
 }
 .content {
-    margin-top: 4px;
-    margin-right: 12px;
-    margin-bottom: 42.5px;
-    margin-left: 12px;
-    font-size: 12px;
+    margin-top: 5px;
+    margin-right: 15px;
+    margin-bottom: 53.125px;
+    margin-left: 15px;
+    font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-weight: 80;
@@ -590,7 +588,7 @@ input:hover {
 input[type=text] {
     /* font-family: 'Helvetica Neue', Helvetica, Arial; */
     font-family: 'Courier New', monospace;
-    font-size: 9pt;
+    font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     font-weight: 80;
@@ -642,7 +640,7 @@ footer {
     right: 0px;
     bottom: 38.2vh;
     position: absolute;
-    font-size: 9.6px;
+    font-size: 12px;
 }
 @media(max-width: 1350px) {
     header {
