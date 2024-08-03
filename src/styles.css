@@ -644,7 +644,7 @@ footer {
     position: absolute;
     font-size: 9.6px;
 }
-@media(max-width: 1080px) {
+@media(max-width: 1350px) {
     header {
         height: 74.26px;
     }
