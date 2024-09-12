@@ -100,10 +100,9 @@ container.addEventListener('scroll', scrollPosition);
 let elements = [
     document.getElementById('home'),
     document.getElementById('about'),
+    document.getElementById('interdisciplinary'),
     document.getElementById('sounds'),
     document.getElementById('visuals'),
-    document.getElementById('interdisciplinary'),
-    // document.getElementById('notations'),
     document.getElementById('contact')
 ];
 
@@ -138,9 +137,9 @@ nav2.addEventListener('scroll', navScrollPosition);
 let navElements = [
     document.getElementById('home2'),
     document.getElementById('about2'),
+    document.getElementById('interdisciplinary2'),
     document.getElementById('sounds2'),
     document.getElementById('visuals2'),
-    document.getElementById('interdisciplinary2'),
     // document.getElementById('notations2'),
     document.getElementById('contact2')
 ];

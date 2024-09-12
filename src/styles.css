@@ -89,7 +89,7 @@ header {
     display: none;
 }
 #lang {
-    margin-right: 60px;
+    margin-right: 75px;
     position: relative;
     float: right;
     display: inline;
@@ -294,9 +294,11 @@ colgroup.toggle {
 }
 .bi-play-fill {
     display: inline-block;
+    margin-bottom: 2.5px;
 }
 .bi-pause-fill {
     display: none;
+    margin-bottom: 2.5px;
 }
 tr.sounds {
     outline-style: solid;
@@ -761,6 +763,14 @@ footer {
         width: 100%;
         height: auto;
         margin-left: 0;
+    }
+    .bi-play-fill {
+        display: inline-block;
+        margin-bottom: 1px;
+    }
+    .bi-pause-fill {
+        display: none;
+        margin-bottom: 1px;
     }
     .imgsContainer {
         width: 100%;
